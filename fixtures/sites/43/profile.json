@@ -1,0 +1,76 @@
+{
+  "name": "Castellanos Lab",
+  "summary": {
+    "html": "<p>We develop and apply methods for causal questions in electronic health records and registries.</p>",
+    "json": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "We develop and apply methods for causal questions in electronic health records and registries."
+            }
+          ]
+        }
+      ]
+    },
+    "markdown": "We develop and apply methods for causal questions in electronic health records and registries."
+  },
+  "body": {
+    "html": "<p>The lab is part of the Department of Biostatistics at Northbridge University.</p>",
+    "json": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "The lab is part of the Department of Biostatistics at Northbridge University."
+            }
+          ]
+        }
+      ]
+    },
+    "markdown": "The lab is part of the Department of Biostatistics at Northbridge University."
+  },
+  "about_page": null,
+  "headings": {
+    "body": "About the lab",
+    "credentials": null,
+    "positions": null
+  },
+  "location": "Northbridge, Massachusetts",
+  "email": "castellanos-lab@example.edu",
+  "photo": {
+    "id": 1541,
+    "file_name": "lab-group.svg",
+    "mime_type": "image/svg+xml",
+    "size": 4096,
+    "alt": "Lab members in front of the school of public health",
+    "url": "{{ASSETS}}/1541/lab-group.svg",
+    "conversions": {
+      "thumb": {
+        "url": "{{ASSETS}}/1541/conversions/lab-group-thumb.svg",
+        "width": 300,
+        "height": 300
+      }
+    }
+  },
+  "cv": null,
+  "credentials": [],
+  "positions": [],
+  "links": [
+    {
+      "id": 1521,
+      "type": "service",
+      "service": "github",
+      "label": "GitHub",
+      "url": "https://github.com/example",
+      "open_in_new_tab": true
+    }
+  ],
+  "updated_at": "2026-09-08T12:00:00Z"
+}

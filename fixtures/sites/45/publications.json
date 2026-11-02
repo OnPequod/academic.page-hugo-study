@@ -1,0 +1,73 @@
+[
+  {
+    "id": 3601,
+    "type": "publication",
+    "slug": "hearth-protocol",
+    "path": "/publications/hearth-protocol",
+    "url": "https://hearth.biostatistician.page/publications/hearth-protocol",
+    "title": "Protocol for the HEARTH cohort study of home environment and respiratory health",
+    "publication_type": "article-journal",
+    "authors": "Grace Liu, Imani Castellanos, Daniel Reyes",
+    "year": 2025,
+    "issued_date": "2025-02-10",
+    "container_title": "BMJ Open",
+    "doi": "10.5555/bmjopen.2025.0099",
+    "doi_url": "https://doi.org/10.5555/bmjopen.2025.0099",
+    "official_url": null,
+    "supplementary_links": [],
+    "abstract": null,
+    "description": null,
+    "citation": {
+      "text": "Liu, G., Castellanos, I., & Reyes, D. (2025). Protocol for the HEARTH cohort study of home environment and respiratory health. BMJ Open, 15(2), e088123. https://doi.org/10.5555/bmjopen.2025.0099",
+      "html": "Liu, G., Castellanos, I., &amp; Reyes, D. (2025). Protocol for the HEARTH cohort study of home environment and respiratory health. <i>BMJ Open</i>, <i>15</i>(2), e088123. <a href=\"https://doi.org/10.5555/bmjopen.2025.0099\">https://doi.org/10.5555/bmjopen.2025.0099</a>",
+      "key": "liu2025protocol",
+      "manual": false
+    },
+    "csl": {
+      "id": "liu2025protocol",
+      "type": "article-journal",
+      "title": "Protocol for the HEARTH cohort study of home environment and respiratory health",
+      "author": [
+        {
+          "family": "Liu",
+          "given": "Grace"
+        },
+        {
+          "family": "Castellanos",
+          "given": "Imani"
+        },
+        {
+          "family": "Reyes",
+          "given": "Daniel"
+        }
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2025,
+            2,
+            10
+          ]
+        ]
+      },
+      "container-title": "BMJ Open",
+      "volume": "15",
+      "issue": "2",
+      "page": "e088123",
+      "DOI": "10.5555/bmjopen.2025.0099"
+    },
+    "is_featured": true,
+    "featured_order": 1,
+    "tags": [
+      {
+        "id": 350,
+        "name": "Respiratory health",
+        "slug": "respiratory-health"
+      }
+    ],
+    "created_at": "2025-03-01T12:00:00Z",
+    "updated_at": "2026-07-14T12:00:00Z",
+    "bibtex": "@article{liu2025protocol,\n  title = {{Protocol for the HEARTH cohort study of home environment and respiratory health}},\n  author = {Liu, Grace and Castellanos, Imani and Reyes, Daniel},\n  year = {2025},\n  journal = {BMJ Open},\n  volume = {15},\n  number = {2},\n  pages = {e088123},\n  doi = {10.5555/bmjopen.2025.0099}\n}\n",
+    "year_order": null
+  }
+]

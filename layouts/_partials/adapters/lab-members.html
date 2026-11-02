@@ -1,0 +1,13 @@
+{{- /*
+  Lab members have no pages of their own on Academic.page; each record's
+  path is an anchor on one list page (/members#slug, or /team#slug on study
+  sites). This adds that one page; the template reads the records.
+*/ -}}
+{{- $members := partialCached "api/list.html" "lab-members" "lab-members" -}}
+{{- $path := cond (eq .site.site_type "study") "team" "members" -}}
+{{- with index $members 0 -}}{{- $path = strings.TrimPrefix "/" (index (split .path "#") 0) -}}{{- end -}}
+{{- $title := cond (eq .site.site_type "study") "Study team" "Members" -}}
+{{- range .site.navigation.header -}}
+  {{- if eq .path (printf "/%s" $path) -}}{{- $title = .label -}}{{- end -}}
+{{- end -}}
+{{- .adapter.AddPage (dict "kind" "page" "path" $path "title" $title "params" (dict "api_type" "members")) -}}

@@ -1,0 +1,116 @@
+{
+  "id": 44,
+  "name": "Applied Survival Analysis",
+  "slug": "bios-621",
+  "site_type": "course",
+  "domain": "biostatistician.page",
+  "url": "https://bios621.biostatistician.page",
+  "custom_domain": null,
+  "is_published": true,
+  "published_at": "2025-01-05T18:00:00Z",
+  "content_version": "",
+  "content_updated_at": "2026-10-28T17:22:41Z",
+  "api_url": "{{API}}/content/sites/44",
+  "timezone": "America/New_York",
+  "locale": "en",
+  "accent_color": "#9333ea",
+  "theme": "techne",
+  "allow_search_indexing": true,
+  "footer_text": "BIOS 621, Northbridge University",
+  "favicons": {
+    "favicon-svg": null,
+    "favicon-ico": "{{ASSETS}}/favicons/44/favicon.ico",
+    "favicon-96x96": "{{ASSETS}}/favicons/44/favicon-32.png",
+    "apple-touch-icon": null,
+    "android-chrome-192x192": null,
+    "android-chrome-512x512": null
+  },
+  "sections": [
+    "pages",
+    "posts",
+    "courses"
+  ],
+  "homepage": {
+    "title": "BIOS 621: Applied Survival Analysis",
+    "description": "Fall 2026 at Northbridge University.",
+    "image": null
+  },
+  "navigation": {
+    "header": [
+      {
+        "label": "Course",
+        "description": null,
+        "path": "/",
+        "url": "https://bios621.biostatistician.page/",
+        "open_in_new_tab": false,
+        "children": []
+      },
+      {
+        "label": "Syllabus",
+        "description": null,
+        "path": "/syllabus",
+        "url": "https://bios621.biostatistician.page/syllabus",
+        "open_in_new_tab": false,
+        "children": []
+      },
+      {
+        "label": "Course details",
+        "description": null,
+        "path": null,
+        "url": null,
+        "open_in_new_tab": false,
+        "children": [
+          {
+            "label": "Lessons",
+            "description": null,
+            "path": "/#lessons",
+            "url": "https://bios621.biostatistician.page/#lessons",
+            "open_in_new_tab": false,
+            "children": []
+          },
+          {
+            "label": "Assignments",
+            "description": null,
+            "path": "/#assignments",
+            "url": "https://bios621.biostatistician.page/#assignments",
+            "open_in_new_tab": false,
+            "children": []
+          }
+        ]
+      },
+      {
+        "label": "Announcements",
+        "description": null,
+        "path": "/posts",
+        "url": "https://bios621.biostatistician.page/posts",
+        "open_in_new_tab": false,
+        "children": []
+      },
+      {
+        "label": "Office hours",
+        "description": null,
+        "path": "/office-hours",
+        "url": "https://bios621.biostatistician.page/office-hours",
+        "open_in_new_tab": false,
+        "children": []
+      },
+      {
+        "label": "About the instructor",
+        "description": null,
+        "path": "/about",
+        "url": "https://bios621.biostatistician.page/about",
+        "open_in_new_tab": false,
+        "children": []
+      }
+    ],
+    "footer": []
+  },
+  "links": {
+    "manifest": "{{API}}/content/sites/44/manifest",
+    "tags": "{{API}}/content/sites/44/tags",
+    "media": "{{API}}/content/sites/44/media",
+    "pages": "{{API}}/content/sites/44/pages",
+    "posts": "{{API}}/content/sites/44/posts",
+    "courses": "{{API}}/content/sites/44/courses"
+  }
+}

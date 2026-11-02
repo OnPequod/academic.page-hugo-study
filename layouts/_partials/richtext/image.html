@@ -1,0 +1,26 @@
+{{- /*
+  An image node. When it carries data-media-id, the library record from
+  /media supplies the URL, alt text, size, and caption; otherwise the node's
+  own src and alt are used.
+*/ -}}
+{{- $src := .src | default "" -}}
+{{- $alt := .alt | default "" -}}
+{{- $caption := "" -}}
+{{- $size := "" -}}
+{{- with index . "data-media-id" -}}
+  {{- with index (partialCached "api/index.html" "media" "media") (string .) -}}
+    {{- $alt = .alt | default $alt -}}
+    {{- $caption = .caption | default "" -}}
+    {{- with .file -}}
+      {{- $src = .url -}}
+      {{- with .conversions.large -}}{{- $src = .url -}}{{- end -}}
+    {{- end -}}
+    {{- if and .width .height -}}{{- $size = printf ` width="%d" height="%d"` (int .width) (int .height) -}}{{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $h := "" -}}
+{{- if findRE `^(?i)(https?:|/)` $src -}}
+  {{- $img := printf `<img src="%s" alt="%s"%s loading="lazy">` (htmlEscape $src) (htmlEscape $alt) $size -}}
+  {{- $h = cond (ne $caption "") (printf "<figure>%s<figcaption>%s</figcaption></figure>" $img (htmlEscape $caption)) (printf "<figure>%s</figure>" $img) -}}
+{{- end -}}
+{{- return $h -}}

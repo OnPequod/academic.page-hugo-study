@@ -1,0 +1,13 @@
+{{- /*
+  Returns the data of a single-record endpoint: "site" (the site record
+  itself), "profile", or "study". Returns an empty dict when the API answers
+  404, as it does for the profile of a course site or the study of any other
+  site type. Templates can read fields from it, and `with` treats it as empty.
+*/ -}}
+{{- $cfg := partialCached "api/config.html" "config" -}}
+{{- $url := $cfg.root -}}
+{{- if ne . "site" -}}{{- $url = printf "%s/%s" $url . -}}{{- end -}}
+{{- $data := dict -}}
+{{- $body := partialCached "api/fetch.html" $url $url -}}
+{{- with $body -}}{{- $data = .data -}}{{- end -}}
+{{- return $data -}}

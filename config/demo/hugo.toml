@@ -1,0 +1,5 @@
+# Settings for `make demo` and the tests, which talk to the local mock API.
+# Hugo blocks requests to localhost and IP addresses by default; this
+# environment allows the loopback address and nothing else.
+[security.http]
+  urls = ['^https://', '^http://127\.0\.0\.1:\d+/']

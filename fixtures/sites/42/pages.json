@@ -1,0 +1,211 @@
+[
+  {
+    "id": 201,
+    "type": "page",
+    "slug": "research",
+    "path": "/research",
+    "url": "https://castellanos.biostatistician.page/research",
+    "title": "Research",
+    "full_slug": "research",
+    "parent_id": null,
+    "depth": 0,
+    "sort_order": 1,
+    "excerpt": "Methods for causal questions in routinely collected health data.",
+    "content": {
+      "html": "<p>Our work develops methods for causal questions in routinely collected health data. The projects below are the current focus.</p><h2>Themes</h2><ul><li><p>Target trial emulation with electronic health records.</p></li><li><p>Missing data in registries.</p></li><li><p>Bayesian small-area estimation.</p></li></ul>",
+      "json": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Our work develops methods for causal questions in routinely collected health data. The projects below are the current focus."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Themes"
+              }
+            ]
+          },
+          {
+            "type": "bulletList",
+            "content": [
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Target trial emulation with electronic health records."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Missing data in registries."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Bayesian small-area estimation."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "markdown": "Our work develops methods for causal questions in routinely collected health data. The projects below are the current focus.\n\n## Themes\n\n- Target trial emulation with electronic health records.\n- Missing data in registries.\n- Bayesian small-area estimation."
+    },
+    "featured_image": null,
+    "tags": [
+      {
+        "id": 320,
+        "name": "Causal inference",
+        "slug": "causal-inference"
+      }
+    ],
+    "seo": {
+      "title": null,
+      "description": "Methods for causal questions in routinely collected health data."
+    },
+    "published_at": "2025-02-01T14:00:00Z",
+    "created_at": "2025-02-01T10:00:00Z",
+    "updated_at": "2025-02-01T10:30:00Z"
+  },
+  {
+    "id": 202,
+    "type": "page",
+    "slug": "methods",
+    "path": "/research/methods",
+    "url": "https://castellanos.biostatistician.page/research/methods",
+    "title": "Methods we use",
+    "full_slug": "research/methods",
+    "parent_id": 201,
+    "depth": 1,
+    "sort_order": 1,
+    "excerpt": "Designs that make assumptions visible.",
+    "content": {
+      "html": "<p>We default to designs that make assumptions visible: target trials, causal diagrams, and sensitivity analyses.</p><p>Software is in R and Stan.</p>",
+      "json": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "We default to designs that make assumptions visible: target trials, causal diagrams, and sensitivity analyses."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Software is in R and Stan."
+              }
+            ]
+          }
+        ]
+      },
+      "markdown": "We default to designs that make assumptions visible: target trials, causal diagrams, and sensitivity analyses.\n\nSoftware is in R and Stan."
+    },
+    "featured_image": null,
+    "tags": [],
+    "seo": {
+      "title": null,
+      "description": "Designs that make assumptions visible."
+    },
+    "published_at": "2025-02-02T14:00:00Z",
+    "created_at": "2025-02-02T10:00:00Z",
+    "updated_at": "2025-02-02T10:30:00Z"
+  },
+  {
+    "id": 203,
+    "type": "page",
+    "slug": "teaching",
+    "path": "/teaching",
+    "url": "https://castellanos.biostatistician.page/teaching",
+    "title": "Teaching",
+    "full_slug": "teaching",
+    "parent_id": null,
+    "depth": 0,
+    "sort_order": 2,
+    "excerpt": "Courses and open teaching materials.",
+    "content": {
+      "html": "<p>I teach applied survival analysis and causal inference in the MPH and PhD programs.</p><p>Course pages, slides, and problem sets are open to everyone.</p>",
+      "json": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "I teach applied survival analysis and causal inference in the MPH and PhD programs."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Course pages, slides, and problem sets are open to everyone."
+              }
+            ]
+          }
+        ]
+      },
+      "markdown": "I teach applied survival analysis and causal inference in the MPH and PhD programs.\n\nCourse pages, slides, and problem sets are open to everyone."
+    },
+    "featured_image": null,
+    "tags": [
+      {
+        "id": 325,
+        "name": "Teaching",
+        "slug": "teaching"
+      }
+    ],
+    "seo": {
+      "title": null,
+      "description": "Courses and open teaching materials."
+    },
+    "published_at": "2025-02-03T14:00:00Z",
+    "created_at": "2025-02-03T10:00:00Z",
+    "updated_at": "2025-02-03T10:30:00Z"
+  }
+]

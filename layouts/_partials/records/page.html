@@ -1,0 +1,9 @@
+{{- $r := partial "api/record.html" . }}
+<article class="record">
+  <h1>{{ .Title }}</h1>
+  {{- with $r.featured_image }}
+  <figure class="featured">{{ partial "media-image.html" (dict "file" . "prefer" (slice "large")) }}</figure>
+  {{- end }}
+  <div class="prose">{{ .Content }}</div>
+  {{- with $r }}{{ partial "tag-links.html" .tags }}{{ end }}
+</article>

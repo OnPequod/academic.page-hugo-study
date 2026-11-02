@@ -1,0 +1,31 @@
+{{- $r := partial "api/record.html" . }}
+<article class="record">
+  <header>
+    <h1>{{ .Title }}</h1>
+    <p class="meta">
+      {{- with $r.talk_type }}<span class="badge">{{ partial "labels.html" (dict "kind" "talk" "value" .) }}</span> {{ end -}}
+      {{- partial "talk-date.html" $r }}
+    </p>
+  </header>
+  <dl class="facts">
+    {{- with $r.speaker_name }}<dt>Speaker</dt><dd>{{ . }}{{ with $r.copresenters }}{{ $names := slice }}{{ range . }}{{ if reflect.IsMap . }}{{ $names = $names | append .name }}{{ else }}{{ $names = $names | append . }}{{ end }}{{ end }}, with {{ delimit $names ", " " and " }}{{ end }}</dd>{{ end }}
+    {{- with $r.meeting_name }}<dt>Event</dt><dd>{{ . }}</dd>{{ end }}
+    {{- with $r.location }}<dt>Location</dt><dd>{{ with $r.location_url }}<a href="{{ . }}">{{ $r.location }}</a>{{ else }}{{ . }}{{ end }}</dd>{{ end }}
+  </dl>
+  {{- if .Content }}
+  <h2>Abstract</h2>
+  <div class="prose">{{ .Content }}</div>
+  {{- else }}{{ with $r.excerpt }}<p>{{ . }}</p>{{ end }}{{ end }}
+  {{- $links := slice -}}
+  {{- with $r.slides_url }}{{ $links = $links | append (dict "label" "Slides" "url" .) }}{{ end -}}
+  {{- with $r.slides_file }}{{ $links = $links | append (dict "label" "Slides (PDF)" "url" .url) }}{{ end -}}
+  {{- with $r.paper_url }}{{ $links = $links | append (dict "label" "Paper" "url" .) }}{{ end -}}
+  {{- with $r.paper_file }}{{ $links = $links | append (dict "label" "Paper (PDF)" "url" .url) }}{{ end -}}
+  {{- with $r.recording_url }}{{ $links = $links | append (dict "label" "Recording" "url" .) }}{{ end -}}
+  {{- with $links }}
+  <ul class="links">
+    {{- range . }}<li><a href="{{ partial "path-url.html" .url }}">{{ .label }}</a></li>{{ end }}
+  </ul>
+  {{- end }}
+  {{- partial "tag-links.html" $r.tags }}
+</article>

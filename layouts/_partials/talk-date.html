@@ -1,0 +1,8 @@
+{{- /*
+  A talk's date as the site shows it. A talk known only by its year or month
+  has talk_date_precision "year" or "month", and talk_date_display reads
+  "2025" or "March 2025" rather than the first day of that period.
+*/ -}}
+{{- with .talk_date -}}
+<time datetime="{{ . }}">{{ $.talk_date_display | default (partial "date.html" .) }}</time>
+{{- end -}}

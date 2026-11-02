@@ -1,0 +1,14 @@
+{{- /*
+  Turns an API path ("/research/methods", "/members#ada") into a site URL
+  with Hugo's trailing slash, keeping any fragment. Absolute URLs pass
+  through unchanged.
+*/ -}}
+{{- $url := . | default "/" -}}
+{{- if not (findRE `^[a-z][a-z0-9+.-]*:` $url) -}}
+  {{- $parts := split $url "#" -}}
+  {{- $path := strings.TrimPrefix "/" (index $parts 0) -}}
+  {{- if and $path (not (strings.HasSuffix $path "/")) (not (path.Ext $path)) -}}{{- $path = printf "%s/" $path -}}{{- end -}}
+  {{- $url = cond (eq $path "") site.Home.RelPermalink (relURL $path) -}}
+  {{- if gt (len $parts) 1 -}}{{- $url = printf "%s#%s" $url (index $parts 1) -}}{{- end -}}
+{{- end -}}
+{{- return $url -}}

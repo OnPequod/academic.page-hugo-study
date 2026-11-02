@@ -1,0 +1,28 @@
+{{- /*
+  Talks split into upcoming and past, by talk date at build time. Pages
+  carry the API's order as their weight: newest year first, and within a
+  year the order the site sets. Past talks keep that order. Upcoming talks
+  run the other way, soonest first.
+*/ -}}
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{- $today := now.Format "2006-01-02" -}}
+{{- $upcoming := slice -}}
+{{- $past := slice -}}
+{{- range .Pages.ByWeight.Reverse -}}
+  {{- $r := partial "api/record.html" . -}}
+  {{- if and $r.talk_date (ge $r.talk_date $today) -}}{{- $upcoming = $upcoming | append . -}}{{- else -}}{{- $past = $past | append . -}}{{- end -}}
+{{- end }}
+{{- with $upcoming }}
+<section>
+  <h2>Upcoming</h2>
+  <ul class="entries">{{ range . }}{{ partial "talk-entry.html" . }}{{ end }}</ul>
+</section>
+{{- end }}
+{{- with $past }}
+<section>
+  <h2>Past</h2>
+  <ul class="entries">{{ range collections.Reverse . }}{{ partial "talk-entry.html" . }}{{ end }}</ul>
+</section>
+{{- end }}
+{{ end }}

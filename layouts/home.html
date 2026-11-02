@@ -1,0 +1,93 @@
+{{- /*
+  The home page, from the profile and the site type:
+  - every site: name, photo, summary, contact, and links from the profile;
+  - personal sites without an about page also show the full profile here;
+  - study sites show the study record; course sites show their courses;
+  - then featured publications, upcoming talks, projects, and recent posts
+    for the sections the site has.
+*/ -}}
+{{ define "main" }}
+{{- $site := partialCached "api/site.html" "site" -}}
+{{- $p := partialCached "api/single.html" "profile" "profile" -}}
+<section class="hero">
+  {{- with $p.photo }}{{ partial "media-image.html" (dict "file" . "prefer" (slice "thumb") "class" "portrait" "alt" $p.name) }}{{ end }}
+  <div>
+    <h1>{{ $p.name | default $site.name }}</h1>
+    {{- with $p.positions }}{{ with index . 0 }}{{ if .currently_held }}<p class="lede">{{ .title }}{{ with .employer }}, {{ . }}{{ end }}</p>{{ end }}{{ end }}{{ end }}
+    {{- with $p.summary }}<div class="prose">{{ partial "rich.html" . }}</div>{{ end }}
+    <ul class="contact-list">
+      {{- with $p.location }}<li>{{ . }}</li>{{ end }}
+      {{- with $p.email }}<li><a href="mailto:{{ . }}">{{ . }}</a></li>{{ end }}
+      {{- range $p.links }}<li><a href="{{ partial "path-url.html" .url }}"{{ if .open_in_new_tab }} target="_blank" rel="noopener"{{ end }}>{{ .label | default (humanize .service) }}</a></li>{{ end }}
+    </ul>
+    {{- with $p.about_page }}<p><a href="{{ partial "path-url.html" .path }}">More about {{ $p.name }}</a></p>{{ end }}
+  </div>
+</section>
+
+{{- if not $p.about_page }}
+{{- partial "profile-details.html" $p }}
+{{- end }}
+
+{{- if eq $site.site_type "study" }}
+{{- $study := partialCached "api/single.html" "study" "study" }}
+{{- with $study }}
+{{- partial "study.html" . }}
+{{- end }}
+{{- end }}
+
+{{- if in $site.sections "courses" }}
+{{- with partialCached "course-pages.html" "course-pages" }}
+<section>
+  <h2>{{ (index . 0).Parent.Title }}</h2>
+  <ul class="cards">
+    {{- range . }}
+    {{- $r := partial "api/record.html" . }}
+    <li class="card">
+      <h3 class="entry-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+      {{- with $r.offerings }}{{ range where . "is_current" true }}<p class="meta"><span class="badge">Current</span> {{ partial "labels.html" (dict "kind" "term" "value" .term) }} {{ .year }}</p>{{ end }}{{ end }}
+      {{- with $r.excerpt }}<p>{{ . }}</p>{{ end }}
+    </li>
+    {{- end }}
+  </ul>
+</section>
+{{- end }}
+{{- end }}
+
+{{- if in $site.sections "publications" }}
+{{- $featured := where (partialCached "api/list.html" "publications" "publications") "is_featured" true }}
+{{- with $featured }}
+<section>
+  <h2>Selected publications</h2>
+  <ol class="pubs">{{ range first 5 (sort . "featured_order") }}{{ partial "pub-entry.html" (dict "pub" . "showType" false) }}{{ end }}</ol>
+  <p><a href="{{ "publications/" | relURL }}">All publications</a></p>
+</section>
+{{- end }}
+{{- end }}
+
+{{- with site.GetPage "/talks" }}
+{{- $today := now.Format "2006-01-02" }}
+{{- $upcoming := slice }}
+{{- range .Pages.ByWeight.Reverse }}{{ $r := partial "api/record.html" . }}{{ if and $r.talk_date (ge $r.talk_date $today) }}{{ $upcoming = $upcoming | append . }}{{ end }}{{ end }}
+{{- with $upcoming }}
+<section>
+  <h2>Upcoming talks</h2>
+  <ul class="entries">{{ range first 3 . }}{{ partial "talk-entry.html" . }}{{ end }}</ul>
+</section>
+{{- end }}
+{{- end }}
+
+{{- with site.GetPage "/projects" }}{{ with .Pages }}
+<section>
+  <h2>Projects</h2>
+  <ul class="entries">{{ range first 3 .ByWeight }}{{ partial "entry.html" (dict "page" . "level" 3) }}{{ end }}</ul>
+</section>
+{{- end }}{{ end }}
+
+{{- with site.GetPage "/posts" }}{{ with .Pages }}
+<section>
+  <h2>Recent posts</h2>
+  <ul class="entries">{{ range first 3 .ByDate.Reverse }}{{ partial "entry.html" (dict "page" . "level" 3) }}{{ end }}</ul>
+  <p><a href="{{ "posts/" | relURL }}">All posts</a></p>
+</section>
+{{- end }}{{ end }}
+{{ end }}

@@ -1,0 +1,23 @@
+{{- /*
+  A page in a list: title, date or status, and summary.
+  Context: a page, or dict with page and level (the heading level, default 2).
+*/ -}}
+{{- $level := 2 -}}
+{{- $p := . -}}
+{{- if reflect.IsMap . -}}{{- $p = .page -}}{{- $level = .level | default 2 -}}{{- end -}}
+{{- with $p -}}
+{{- $rec := partial "api/record.html" . }}
+<li class="entry">
+  <h{{ $level }} class="entry-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h{{ $level }}>
+  {{- with $rec }}
+  {{- if eq .type "post" }}
+  <p class="meta"><time datetime="{{ .published_at }}">{{ partial "date.html" .published_at }}</time></p>
+  {{- else if eq .type "project" }}
+  {{- with .status }}<p class="meta"><span class="badge">{{ . | humanize }}</span></p>{{ end }}
+  {{- end }}
+  {{- end }}
+  {{- with .Params.description }}
+  <p>{{ . }}</p>
+  {{- end }}
+</li>
+{{- end -}}

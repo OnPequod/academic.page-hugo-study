@@ -1,0 +1,38 @@
+{{- /*
+  Publications grouped by year (default) or by type, set with
+  params.academicPage.publicationsGroupBy. Each entry shows the formatted
+  citation the API returns, its DOI, and a link to its own page.
+*/ -}}
+{{ define "main" }}
+{{- $all := partialCached "api/list.html" "publications" "publications" -}}
+{{- $by := site.Params.academicPage.publicationsGroupBy | default "year" }}
+<h1>{{ .Title }}</h1>
+<p class="actions">
+  {{- $bib := partialCached "api/bibtex.html" "bib" }}
+  {{- with $bib }}<a class="button" href="{{ .RelPermalink }}" download>Download all as BibTeX</a>{{ end }}
+</p>
+{{- if eq $by "type" }}
+  {{- $types := slice -}}
+  {{- range $all }}{{ $t := .publication_type | default "other" }}{{ if not (in $types $t) }}{{ $types = $types | append $t }}{{ end }}{{ end }}
+  {{- range $types }}
+  {{- $t := . }}
+  <section class="pub-group">
+    <h2 id="{{ $t | urlize }}">{{ partial "labels.html" (dict "kind" "publication" "value" $t) }}</h2>
+    <ol class="pubs">{{ range $all }}{{ if eq (.publication_type | default "other") $t }}{{ partial "pub-entry.html" (dict "pub" . "showType" false) }}{{ end }}{{ end }}</ol>
+  </section>
+  {{- end }}
+{{- else }}
+  {{- $years := slice -}}
+  {{- range $all }}{{ $y := string (.year | default "Undated") }}{{ if not (in $years $y) }}{{ $years = $years | append $y }}{{ end }}{{ end }}
+  {{- if gt (len $years) 1 }}
+  <nav class="jump" aria-label="Years"><ul>{{ range $years }}<li><a href="#year-{{ . | urlize }}">{{ . }}</a></li>{{ end }}</ul></nav>
+  {{- end }}
+  {{- range $years }}
+  {{- $y := . }}
+  <section class="pub-group">
+    <h2 id="year-{{ $y | urlize }}">{{ $y }}</h2>
+    <ol class="pubs">{{ range $all }}{{ if eq (string (.year | default "Undated")) $y }}{{ partial "pub-entry.html" (dict "pub" . "showType" true) }}{{ end }}{{ end }}</ol>
+  </section>
+  {{- end }}
+{{- end }}
+{{ end }}

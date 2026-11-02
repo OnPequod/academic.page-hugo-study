@@ -1,0 +1,2 @@
+{{- /* Renders API rich text inline in a template, marked safe. */ -}}
+{{- with . -}}{{- partial "richtext/render.html" . | safeHTML -}}{{- end -}}

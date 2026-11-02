@@ -1,0 +1,8 @@
+{{- /* Links to tag pages for a record's tags (TagRef list). */ -}}
+{{- with . }}
+<ul class="tags" aria-label="Tags">
+  {{- range . }}
+  <li><a href="{{ printf "tags/%s/" .slug | relURL }}">{{ .name }}</a></li>
+  {{- end }}
+</ul>
+{{- end -}}

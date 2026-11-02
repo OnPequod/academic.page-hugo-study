@@ -1,0 +1,173 @@
+{
+  "id": 42,
+  "name": "Imani Castellanos",
+  "slug": "imani-castellanos",
+  "site_type": "personal",
+  "domain": "biostatistician.page",
+  "url": "https://castellanos.biostatistician.page",
+  "custom_domain": null,
+  "is_published": true,
+  "published_at": "2025-01-05T18:00:00Z",
+  "content_version": "",
+  "content_updated_at": "2026-10-28T17:22:41Z",
+  "api_url": "{{API}}/content/sites/42",
+  "timezone": "America/New_York",
+  "locale": "en",
+  "accent_color": "#1d4ed8",
+  "theme": "pragma",
+  "allow_search_indexing": true,
+  "footer_text": "Content licensed CC BY 4.0 unless noted.",
+  "favicons": {
+    "favicon-svg": null,
+    "favicon-ico": "{{ASSETS}}/favicons/42/favicon.ico",
+    "favicon-96x96": "{{ASSETS}}/favicons/42/favicon-32.png",
+    "apple-touch-icon": null,
+    "android-chrome-192x192": null,
+    "android-chrome-512x512": null
+  },
+  "sections": [
+    "pages",
+    "posts",
+    "projects",
+    "publications",
+    "talks"
+  ],
+  "homepage": {
+    "title": "Imani Castellanos, biostatistician",
+    "description": "Methods for causal questions in routinely collected health data.",
+    "image": {
+      "id": 531,
+      "file_name": "og-home.svg",
+      "mime_type": "image/svg+xml",
+      "size": 4096,
+      "alt": "Imani Castellanos",
+      "url": "{{ASSETS}}/531/og-home.svg",
+      "conversions": {
+        "og": {
+          "url": "{{ASSETS}}/531/conversions/og-home-og.svg",
+          "width": 1200,
+          "height": 630
+        },
+        "thumb": {
+          "url": "{{ASSETS}}/531/conversions/og-home-thumb.svg",
+          "width": 300,
+          "height": 158
+        }
+      }
+    }
+  },
+  "navigation": {
+    "header": [
+      {
+        "label": "Home",
+        "description": null,
+        "path": "/",
+        "url": "https://castellanos.biostatistician.page/",
+        "open_in_new_tab": false,
+        "children": []
+      },
+      {
+        "label": "About",
+        "description": null,
+        "path": "/about",
+        "url": "https://castellanos.biostatistician.page/about",
+        "open_in_new_tab": false,
+        "children": []
+      },
+      {
+        "label": "Research",
+        "description": null,
+        "path": "/research",
+        "url": "https://castellanos.biostatistician.page/research",
+        "open_in_new_tab": false,
+        "children": [
+          {
+            "label": "Methods",
+            "description": null,
+            "path": "/research/methods",
+            "url": "https://castellanos.biostatistician.page/research/methods",
+            "open_in_new_tab": false,
+            "children": []
+          }
+        ]
+      },
+      {
+        "label": "Posts",
+        "description": null,
+        "path": "/posts",
+        "url": "https://castellanos.biostatistician.page/posts",
+        "open_in_new_tab": false,
+        "children": []
+      },
+      {
+        "label": "Publications",
+        "description": null,
+        "path": "/publications",
+        "url": "https://castellanos.biostatistician.page/publications",
+        "open_in_new_tab": false,
+        "children": []
+      },
+      {
+        "label": "Talks",
+        "description": null,
+        "path": "/talks",
+        "url": "https://castellanos.biostatistician.page/talks",
+        "open_in_new_tab": false,
+        "children": []
+      },
+      {
+        "label": "Projects",
+        "description": null,
+        "path": "/projects",
+        "url": "https://castellanos.biostatistician.page/projects",
+        "open_in_new_tab": false,
+        "children": []
+      },
+      {
+        "label": "Teaching",
+        "description": null,
+        "path": "/teaching",
+        "url": "https://castellanos.biostatistician.page/teaching",
+        "open_in_new_tab": false,
+        "children": []
+      },
+      {
+        "label": "CV",
+        "description": null,
+        "path": "/cv",
+        "url": "https://castellanos.biostatistician.page/cv",
+        "open_in_new_tab": false,
+        "children": []
+      }
+    ],
+    "footer": [
+      {
+        "label": "GitHub",
+        "description": null,
+        "path": null,
+        "url": "https://github.com/example",
+        "open_in_new_tab": true,
+        "children": []
+      },
+      {
+        "label": "ORCID",
+        "description": null,
+        "path": null,
+        "url": "https://orcid.org/0000-0002-1825-0097",
+        "open_in_new_tab": true,
+        "children": []
+      }
+    ]
+  },
+  "links": {
+    "profile": "{{API}}/content/sites/42/profile",
+    "manifest": "{{API}}/content/sites/42/manifest",
+    "tags": "{{API}}/content/sites/42/tags",
+    "media": "{{API}}/content/sites/42/media",
+    "pages": "{{API}}/content/sites/42/pages",
+    "posts": "{{API}}/content/sites/42/posts",
+    "projects": "{{API}}/content/sites/42/projects",
+    "publications": "{{API}}/content/sites/42/publications",
+    "talks": "{{API}}/content/sites/42/talks"
+  }
+}

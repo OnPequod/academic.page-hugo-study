@@ -1,0 +1,6 @@
+{{- /* One course reference: authors, title, details, and links. */ -}}
+{{- with .authors }}{{ . }} {{ end -}}
+{{- with .info_url }}<a href="{{ . }}"><cite>{{ $.title }}</cite></a>{{ else }}<cite>{{ .title }}</cite>{{ end -}}
+{{- with .details }}. {{ . }}{{ end -}}
+{{- with .purchase_url }} <a href="{{ . }}">Buy</a>{{ end -}}
+{{- with .file }} <a href="{{ .url }}">PDF</a>{{ end -}}

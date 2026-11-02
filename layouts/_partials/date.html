@@ -1,0 +1,2 @@
+{{- /* Formats an ISO date or date-time string as "March 15, 2026". */ -}}
+{{- with . -}}{{- (time.AsTime .).Format "January 2, 2006" -}}{{- end -}}

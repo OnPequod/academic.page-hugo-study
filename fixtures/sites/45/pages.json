@@ -1,0 +1,51 @@
+[
+  {
+    "id": 3201,
+    "type": "page",
+    "slug": "participate",
+    "path": "/participate",
+    "url": "https://hearth.biostatistician.page/participate",
+    "title": "Take part",
+    "full_slug": "participate",
+    "parent_id": null,
+    "depth": 0,
+    "sort_order": 1,
+    "excerpt": "Who can join and how.",
+    "content": {
+      "html": "<p>Families with a child under two who live in Northbridge County may be eligible.</p><p>Call the study line or email us to learn more.</p>",
+      "json": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Families with a child under two who live in Northbridge County may be eligible."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Call the study line or email us to learn more."
+              }
+            ]
+          }
+        ]
+      },
+      "markdown": "Families with a child under two who live in Northbridge County may be eligible.\n\nCall the study line or email us to learn more."
+    },
+    "featured_image": null,
+    "tags": [],
+    "seo": {
+      "title": null,
+      "description": "Who can join and how."
+    },
+    "published_at": "2025-08-01T14:00:00Z",
+    "created_at": "2025-08-01T10:00:00Z",
+    "updated_at": "2025-08-01T10:30:00Z"
+  }
+]

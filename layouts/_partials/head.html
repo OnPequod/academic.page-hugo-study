@@ -1,0 +1,46 @@
+{{- $p := .page -}}
+{{- $site := .site -}}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{{- $title := $site.name -}}
+{{- if not $p.IsHome -}}{{- $title = printf "%s | %s" $p.Title $site.name -}}{{- else -}}{{- with $site.homepage.title -}}{{- $title = . -}}{{- end -}}{{- end }}
+<title>{{ $title }}</title>
+{{- $description := $p.Params.description | default "" -}}
+{{- if $p.IsHome -}}{{- $description = $site.homepage.description | default "" -}}{{- end -}}
+{{- with $description }}
+<meta name="description" content="{{ . }}">
+{{- end }}
+{{- if not $site.allow_search_indexing }}
+<meta name="robots" content="noindex">
+{{- end }}
+<link rel="canonical" href="{{ $p.Permalink }}">
+<meta property="og:title" content="{{ $p.Title | default $site.name }}">
+<meta property="og:site_name" content="{{ $site.name }}">
+{{- with $description }}
+<meta property="og:description" content="{{ . }}">
+{{- end }}
+{{- if $p.IsHome }}{{ with $site.homepage.image }}
+<meta property="og:image" content="{{ (.conversions.og | default .).url }}">
+{{- end }}{{ end }}
+{{- with $site.favicons }}
+{{- with index . "favicon-96x96" }}
+<link rel="icon" type="image/png" sizes="96x96" href="{{ . }}">
+{{- end }}
+{{- with index . "favicon-svg" }}
+<link rel="icon" type="image/svg+xml" href="{{ . }}">
+{{- end }}
+{{- with index . "favicon-ico" }}
+<link rel="shortcut icon" href="{{ . }}">
+{{- end }}
+{{- with index . "apple-touch-icon" }}
+<link rel="apple-touch-icon" sizes="180x180" href="{{ . }}">
+{{- end }}
+{{- end }}
+{{- with site.GetPage "/posts" }}{{ with .OutputFormats.Get "rss" }}
+<link rel="alternate" type="application/rss+xml" title="{{ $site.name }}" href="{{ .Permalink }}">
+{{- end }}{{ end }}
+{{- $css := resources.Get "css/site.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{- with $site.accent_color }}{{ if findRE `^#[0-9A-Fa-f]{3,8}$` . }}
+<style>:root { --accent: {{ . | safeCSS }}; }</style>
+{{- end }}{{ end }}

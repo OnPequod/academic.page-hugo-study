@@ -1,0 +1,9 @@
+{{- /*
+  Tag pages. Records carry tag slugs as Hugo "tags" terms; this gives each
+  term page the tag's display name and description from the API.
+*/ -}}
+{{- $a := .adapter -}}
+{{- $a.AddPage (dict "kind" "taxonomy" "path" "tags" "title" "Tags") -}}
+{{- range partialCached "api/list.html" "tags" "tags" -}}
+  {{- $a.AddPage (dict "kind" "term" "path" (printf "tags/%s" .slug) "title" .name "params" (dict "description" (.description | default "") "api_type" "tag")) -}}
+{{- end -}}

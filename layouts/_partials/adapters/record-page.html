@@ -1,0 +1,36 @@
+{{- /*
+  Turns one API record into the dict content adapters pass to AddPage.
+
+  Context: dict with
+    record      the API record
+    collection  its API collection, such as "posts"
+    type        the record type used to pick a template, such as "post"
+    body        rich text ({html, json}) to use as the page content, or nil
+    date        the date string that orders the record, or nil
+    weight      an explicit order, or nil
+    kind        "page" (default) or "section"
+*/ -}}
+{{- $r := .record -}}
+{{- $path := strings.TrimPrefix "/" ($r.path | default (printf "%s/%s" .collection $r.slug)) -}}
+{{- $path = index (split $path "#") 0 -}}
+{{- $params := dict "api_collection" .collection "api_id" $r.id "api_type" .type -}}
+{{- $tags := slice -}}
+{{- range $r.tags -}}{{- $tags = $tags | append .slug -}}{{- end -}}
+{{- $params = merge $params (dict "tags" $tags) -}}
+{{- $description := "" -}}
+{{- with $r.seo -}}{{- $description = .description | default "" -}}{{- end -}}
+{{- $description = $description | default $r.excerpt | default "" -}}
+{{- $params = merge $params (dict "description" $description) -}}
+{{- $page := dict "kind" (.kind | default "page") "path" $path "title" ($r.title | default $r.name) "params" $params -}}
+{{- with .body -}}
+  {{- $page = merge $page (dict "content" (dict "mediaType" "text/html" "value" (partial "richtext/render.html" .))) -}}
+{{- end -}}
+{{- with $r.excerpt -}}
+  {{- $page = merge $page (dict "summary" .) -}}
+{{- end -}}
+{{- $dates := dict -}}
+{{- with .date -}}{{- $dates = merge $dates (dict "date" (time.AsTime .)) -}}{{- end -}}
+{{- with $r.updated_at -}}{{- $dates = merge $dates (dict "lastmod" (time.AsTime .)) -}}{{- end -}}
+{{- if $dates -}}{{- $page = merge $page (dict "dates" $dates) -}}{{- end -}}
+{{- with .weight -}}{{- $page = merge $page (dict "weight" .) -}}{{- end -}}
+{{- return $page -}}

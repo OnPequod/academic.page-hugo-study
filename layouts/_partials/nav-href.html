@@ -1,0 +1,37 @@
+{{- /*
+  Where a menu item links to in this build. Returns "" when the build has
+  no page for an internal link, so the menu can leave the item out.
+
+  Menus come from the Academic.page site and can link to pages that
+  Academic.page builds in for a site type, which the API does not return as
+  pages. Those go to the place this site shows the same content:
+  - study sites: /resources and /contact go to those parts of the home page;
+  - course sites: /syllabus and the course page's sections (/#lessons,
+    /#assignments, /#texts-resources, /#offerings) go to the course's page.
+  Any other internal path without a page here, such as a course site's
+  built-in /about page, returns "".
+*/ -}}
+{{- $item := . -}}
+{{- $href := "" -}}
+{{- with $item.path -}}
+  {{- $site := partialCached "api/site.html" "site" -}}
+  {{- $parts := split . "#" -}}
+  {{- $base := strings.TrimSuffix "/" (index $parts 0) | default "/" -}}
+  {{- $fragment := cond (gt (len $parts) 1) (index $parts 1) "" -}}
+  {{- $course := "" -}}
+  {{- if eq $site.site_type "course" -}}
+    {{- with partialCached "course-pages.html" "course-pages" -}}{{- $course = (index . 0).RelPermalink -}}{{- end -}}
+  {{- end -}}
+  {{- if and (eq $site.site_type "study") (in (slice "/resources" "/contact") $base) -}}
+    {{- $href = printf "%s#%s" site.Home.RelPermalink (strings.TrimPrefix "/" $base) -}}
+  {{- else if and $course (eq $base "/syllabus") -}}
+    {{- $href = printf "%s#syllabus" $course -}}
+  {{- else if and $course (eq $base "/") $fragment -}}
+    {{- $href = printf "%s#%s" $course $fragment -}}
+  {{- else if or (eq $base "/") (site.GetPage $base) -}}
+    {{- $href = partial "path-url.html" . -}}
+  {{- end -}}
+{{- else -}}
+  {{- $href = $item.url | default "" -}}
+{{- end -}}
+{{- return $href -}}

@@ -1,0 +1,12 @@
+{{- /* A list of course materials (lesson or course level). */ -}}
+<ul class="materials">
+  {{- range sort . "sort_order" }}
+  <li>
+    {{- $href := .url | default .external_url | default (.file).url -}}
+    {{- with .file }}{{ $href = .url }}{{ end -}}
+    {{- if $href }}<a href="{{ $href }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}
+    {{- with .type }} <span class="badge">{{ humanize . }}</span>{{ end }}
+    {{- with .description }}<br><span class="muted">{{ . }}</span>{{ end }}
+  </li>
+  {{- end }}
+</ul>

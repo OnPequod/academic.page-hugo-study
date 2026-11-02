@@ -1,0 +1,420 @@
+[
+  {
+    "id": 2001,
+    "type": "course",
+    "slug": "applied-survival-analysis",
+    "path": "/teaching/applied-survival-analysis",
+    "url": "https://bios621.biostatistician.page/teaching/applied-survival-analysis",
+    "title": "BIOS 621: Applied Survival Analysis",
+    "instructor_name": "Imani Castellanos",
+    "primary_institution": "Northbridge University School of Public Health",
+    "excerpt": "Methods for time-to-event data, from Kaplan-Meier curves to competing risks.",
+    "content": {
+      "html": "<p>This course covers the analysis of time-to-event data in health research. Students fit and check models in R and write up one full analysis.</p><h2>Prerequisites</h2><p>BIOS 601 and 602, or permission of the instructor.</p>",
+      "json": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "This course covers the analysis of time-to-event data in health research. Students fit and check models in R and write up one full analysis."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Prerequisites"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "BIOS 601 and 602, or permission of the instructor."
+              }
+            ]
+          }
+        ]
+      },
+      "markdown": "This course covers the analysis of time-to-event data in health research. Students fit and check models in R and write up one full analysis.\n\n## Prerequisites\n\nBIOS 601 and 602, or permission of the instructor."
+    },
+    "offerings": [
+      {
+        "course_number": "BIOS 621",
+        "institution": "Northbridge University",
+        "term": "fall",
+        "custom_term": null,
+        "year": 2026,
+        "starts_on": "2026-09-01",
+        "ends_on": "2026-12-15",
+        "is_current": true
+      },
+      {
+        "course_number": "BIOS 621",
+        "institution": "Northbridge University",
+        "term": "fall",
+        "custom_term": null,
+        "year": 2025,
+        "starts_on": "2025-09-02",
+        "ends_on": "2025-12-16",
+        "is_current": false
+      }
+    ],
+    "display_order": 1,
+    "featured_image": {
+      "id": 2051,
+      "file_name": "survival-curve-banner.svg",
+      "mime_type": "image/svg+xml",
+      "size": 4096,
+      "alt": "A stepped survival curve",
+      "url": "{{ASSETS}}/2051/survival-curve-banner.svg",
+      "conversions": {
+        "thumb": {
+          "url": "{{ASSETS}}/2051/conversions/survival-curve-banner-thumb.svg",
+          "width": 300,
+          "height": 300
+        },
+        "large": {
+          "url": "{{ASSETS}}/2051/conversions/survival-curve-banner-large.svg",
+          "width": 1200,
+          "height": 630
+        }
+      }
+    },
+    "syllabus": {
+      "url": "https://bios621.biostatistician.page/teaching/applied-survival-analysis/syllabus",
+      "download_url": "https://bios621.biostatistician.page/teaching/applied-survival-analysis/syllabus/download",
+      "file": {
+        "id": 2251,
+        "file_name": "bios621-syllabus-fall-2026.pdf",
+        "mime_type": "application/pdf",
+        "size": 160220,
+        "alt": null,
+        "url": "{{ASSETS}}/2251/bios621-syllabus-fall-2026.pdf",
+        "conversions": {}
+      }
+    },
+    "lessons": [
+      {
+        "id": 2501,
+        "title": "Time, censoring, and the Kaplan-Meier estimator",
+        "lesson_number": 1,
+        "overview": "What makes time-to-event data different, and the product-limit estimator.",
+        "sort_order": 1,
+        "materials": [
+          {
+            "id": 2601,
+            "lesson_id": 2501,
+            "title": "Lecture 1 slides",
+            "type": "slides",
+            "description": null,
+            "external_url": null,
+            "url": "https://bios621.biostatistician.page/teaching/applied-survival-analysis/materials/2601",
+            "file": {
+              "id": 2651,
+              "file_name": "lecture-01.pdf",
+              "mime_type": "application/pdf",
+              "size": 182044,
+              "alt": null,
+              "url": "{{ASSETS}}/2651/lecture-01.pdf",
+              "conversions": {}
+            },
+            "sort_order": 1
+          },
+          {
+            "id": 2602,
+            "lesson_id": 2501,
+            "title": "Lab 1 notebook",
+            "type": "code",
+            "description": "Quarto notebook with the lab exercises.",
+            "external_url": "https://github.com/example/bios621/blob/main/lab-01.qmd",
+            "url": "https://github.com/example/bios621/blob/main/lab-01.qmd",
+            "file": null,
+            "sort_order": 2
+          }
+        ],
+        "references": [
+          {
+            "reference_id": 2301,
+            "required_note": "Required: chapters 1 and 2",
+            "sort_order": 1
+          },
+          {
+            "reference_id": 2303,
+            "required_note": null,
+            "sort_order": 2
+          }
+        ],
+        "assignment_ids": [
+          2401
+        ]
+      },
+      {
+        "id": 2502,
+        "title": "The Cox proportional hazards model",
+        "lesson_number": 2,
+        "overview": "Semi-parametric regression for hazards and how to check its assumptions.",
+        "sort_order": 2,
+        "materials": [
+          {
+            "id": 2603,
+            "lesson_id": 2502,
+            "title": "Lecture 2 slides",
+            "type": "slides",
+            "description": null,
+            "external_url": null,
+            "url": "https://bios621.biostatistician.page/teaching/applied-survival-analysis/materials/2603",
+            "file": {
+              "id": 2652,
+              "file_name": "lecture-02.pdf",
+              "mime_type": "application/pdf",
+              "size": 182044,
+              "alt": null,
+              "url": "{{ASSETS}}/2652/lecture-02.pdf",
+              "conversions": {}
+            },
+            "sort_order": 1
+          }
+        ],
+        "references": [
+          {
+            "reference_id": 2301,
+            "required_note": "Required: chapter 3",
+            "sort_order": 1
+          }
+        ],
+        "assignment_ids": [
+          2402
+        ]
+      },
+      {
+        "id": 2503,
+        "title": "Competing risks",
+        "lesson_number": 3,
+        "overview": "Cumulative incidence and the Fine-Gray model.",
+        "sort_order": 3,
+        "materials": [],
+        "references": [
+          {
+            "reference_id": 2302,
+            "required_note": "Required",
+            "sort_order": 1
+          }
+        ],
+        "assignment_ids": []
+      },
+      {
+        "id": 2504,
+        "title": "Time-varying covariates",
+        "lesson_number": 4,
+        "overview": null,
+        "sort_order": 4,
+        "materials": [],
+        "references": [],
+        "assignment_ids": []
+      }
+    ],
+    "materials": [
+      {
+        "id": 2604,
+        "lesson_id": null,
+        "title": "R setup guide",
+        "type": "guide",
+        "description": "Install R, RStudio, and the course packages.",
+        "external_url": "https://example.org/bios621/setup",
+        "url": "https://example.org/bios621/setup",
+        "file": null,
+        "sort_order": 1
+      }
+    ],
+    "references": [
+      {
+        "id": 2301,
+        "kind": "book",
+        "title": "Survival Analysis: A Self-Learning Text",
+        "authors": "Kleinbaum, D. G., & Klein, M.",
+        "details": "3rd ed., Springer, 2012.",
+        "info_url": "https://example.org/books/kleinbaum",
+        "purchase_url": null,
+        "file": null,
+        "sort_order": 1
+      },
+      {
+        "id": 2302,
+        "kind": "article",
+        "title": "Competing risks in epidemiology: possibilities and pitfalls",
+        "authors": "Andersen, P. K., et al.",
+        "details": "International Journal of Epidemiology, 2012.",
+        "info_url": "https://doi.org/10.5555/ije.2012.001",
+        "purchase_url": null,
+        "file": null,
+        "sort_order": 2
+      },
+      {
+        "id": 2303,
+        "kind": "software",
+        "title": "survival package for R",
+        "authors": "Therneau, T.",
+        "details": "CRAN.",
+        "info_url": "https://cran.r-project.org/package=survival",
+        "purchase_url": null,
+        "file": null,
+        "sort_order": 3
+      }
+    ],
+    "assignments": [
+      {
+        "id": 2401,
+        "slug": "problem-set-1",
+        "lesson_id": 2501,
+        "title": "Problem set 1: Kaplan-Meier by hand",
+        "excerpt": "Estimate a survival curve without software.",
+        "content": {
+          "html": "<p>Use the 12 observations in the handout. Show each step of the product-limit estimator.</p><pre><code class=\"language-r\">library(survival)\nfit &lt;- survfit(Surv(time, status) ~ 1, data = ps1)\nsummary(fit)</code></pre>",
+          "json": {
+            "type": "doc",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Use the 12 observations in the handout. Show each step of the product-limit estimator."
+                  }
+                ]
+              },
+              {
+                "type": "codeBlock",
+                "attrs": {
+                  "language": "r"
+                },
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "library(survival)\nfit <- survfit(Surv(time, status) ~ 1, data = ps1)\nsummary(fit)"
+                  }
+                ]
+              }
+            ]
+          },
+          "markdown": "Use the 12 observations in the handout. Show each step of the product-limit estimator.\n\n```r\nlibrary(survival)\nfit <- survfit(Surv(time, status) ~ 1, data = ps1)\nsummary(fit)\n```"
+        },
+        "due_at": "2026-09-18T03:59:00Z",
+        "file": {
+          "id": 2451,
+          "file_name": "ps1-data.pdf",
+          "mime_type": "application/pdf",
+          "size": 40210,
+          "alt": null,
+          "url": "{{ASSETS}}/2451/ps1-data.pdf",
+          "conversions": {}
+        },
+        "sort_order": 1,
+        "published_at": "2026-09-02T14:00:00Z",
+        "updated_at": "2026-09-02T14:00:00Z"
+      },
+      {
+        "id": 2402,
+        "slug": "problem-set-2",
+        "lesson_id": 2502,
+        "title": "Problem set 2: Cox models",
+        "excerpt": "Fit and check a proportional hazards model.",
+        "content": {
+          "html": "<p>Fit the model, test proportional hazards with <code>cox.zph()</code>, and interpret the hazard ratio for treatment.</p>",
+          "json": {
+            "type": "doc",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Fit the model, test proportional hazards with "
+                  },
+                  {
+                    "type": "text",
+                    "text": "cox.zph()",
+                    "marks": [
+                      {
+                        "type": "code"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": ", and interpret the hazard ratio for treatment."
+                  }
+                ]
+              }
+            ]
+          },
+          "markdown": "Fit the model, test proportional hazards with `cox.zph()`, and interpret the hazard ratio for treatment."
+        },
+        "due_at": "2026-10-09T03:59:00Z",
+        "file": null,
+        "sort_order": 2,
+        "published_at": "2026-09-24T14:00:00Z",
+        "updated_at": "2026-09-24T14:00:00Z"
+      },
+      {
+        "id": 2403,
+        "slug": "final-project",
+        "lesson_id": null,
+        "title": "Final project",
+        "excerpt": "Analyze a public data set and write a short report.",
+        "content": {
+          "html": "<p>Choose a data set from the list, state an estimand, and report your analysis in no more than 2,000 words.</p>",
+          "json": {
+            "type": "doc",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Choose a data set from the list, state an estimand, and report your analysis in no more than 2,000 words."
+                  }
+                ]
+              }
+            ]
+          },
+          "markdown": "Choose a data set from the list, state an estimand, and report your analysis in no more than 2,000 words."
+        },
+        "due_at": "2026-12-11T22:00:00Z",
+        "file": null,
+        "sort_order": 3,
+        "published_at": "2026-09-02T14:00:00Z",
+        "updated_at": "2026-09-02T14:00:00Z"
+      }
+    ],
+    "tags": [
+      {
+        "id": 341,
+        "name": "Survival analysis",
+        "slug": "survival-analysis"
+      },
+      {
+        "id": 340,
+        "name": "Teaching",
+        "slug": "teaching"
+      }
+    ],
+    "seo": {
+      "title": null,
+      "description": "Methods for time-to-event data."
+    },
+    "published_at": "2026-08-15T14:00:00Z",
+    "created_at": "2026-06-01T14:00:00Z",
+    "updated_at": "2026-10-20T14:00:00Z"
+  }
+]

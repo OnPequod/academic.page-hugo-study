@@ -1,0 +1,60 @@
+[
+  {
+    "id": 1401,
+    "type": "project",
+    "slug": "target-trial-toolkit",
+    "path": "/projects/target-trial-toolkit",
+    "url": "https://castellanos-lab.biostatistician.page/projects/target-trial-toolkit",
+    "title": "Target Trial Emulation Toolkit",
+    "excerpt": "An R package for reproducible emulations.",
+    "content": {
+      "html": "<p>The lab's main software project.</p>",
+      "json": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "The lab's main software project."
+              }
+            ]
+          }
+        ]
+      },
+      "markdown": "The lab's main software project."
+    },
+    "status": "active",
+    "project_url": null,
+    "repository_url": "https://github.com/example/ttetools",
+    "technologies": [
+      "R",
+      "Stan"
+    ],
+    "start_date": "2024-09-01",
+    "end_date": null,
+    "display_order": 1,
+    "featured_image": null,
+    "gallery": [],
+    "tags": [
+      {
+        "id": 332,
+        "name": "Causal inference",
+        "slug": "causal-inference"
+      },
+      {
+        "id": 333,
+        "name": "R",
+        "slug": "r"
+      }
+    ],
+    "seo": {
+      "title": null,
+      "description": "An R package for reproducible emulations."
+    },
+    "published_at": "2024-10-01T14:00:00Z",
+    "created_at": "2024-10-01T08:00:00Z",
+    "updated_at": "2024-10-01T16:00:00Z"
+  }
+]

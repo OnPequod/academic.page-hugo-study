@@ -1,0 +1,34 @@
+{{- $r := partial "api/record.html" . }}
+<article class="record">
+  <header>
+    <h1>{{ .Title }}</h1>
+    <p class="meta">
+      {{- with $r.status }}<span class="badge">{{ . | humanize }}</span> {{ end -}}
+      {{- with $r.start_date }}{{ (time.AsTime .).Format "January 2006" }}{{ end -}}
+      {{- if $r.start_date }} – {{ with $r.end_date }}{{ (time.AsTime .).Format "January 2006" }}{{ else }}present{{ end }}{{ end -}}
+    </p>
+    {{- with $r.excerpt }}<p class="lede">{{ . }}</p>{{ end }}
+  </header>
+  {{- with $r.featured_image }}
+  <figure class="featured">{{ partial "media-image.html" (dict "file" . "prefer" (slice "large")) }}</figure>
+  {{- end }}
+  <div class="prose">{{ .Content }}</div>
+  {{- if or $r.project_url $r.repository_url }}
+  <ul class="links">
+    {{- with $r.project_url }}<li><a href="{{ . }}">Project website</a></li>{{ end }}
+    {{- with $r.repository_url }}<li><a href="{{ . }}">Source code</a></li>{{ end }}
+  </ul>
+  {{- end }}
+  {{- with $r.technologies }}
+  <p><strong>Technologies:</strong> {{ delimit . ", " }}</p>
+  {{- end }}
+  {{- with $r.gallery }}
+  <h2>Gallery</h2>
+  <div class="gallery">
+    {{- range . }}
+    <figure>{{ partial "media-image.html" (dict "file" . "prefer" (slice "medium" "large")) }}{{ with .alt }}<figcaption>{{ . }}</figcaption>{{ end }}</figure>
+    {{- end }}
+  </div>
+  {{- end }}
+  {{- partial "tag-links.html" $r.tags }}
+</article>

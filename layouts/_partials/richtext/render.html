@@ -1,0 +1,32 @@
+{{- /*
+  Renders an API rich-text value ({html, json}) and returns an HTML string.
+
+  By default it uses "html", which Academic.page renders and sanitizes the
+  same way the public site does. With params.academicPage.richText = "json",
+  or when "html" is missing, it renders the Tiptap (ProseMirror) document with
+  node.html, which supports a safe subset and escapes all text.
+*/ -}}
+{{- $out := "" -}}
+{{- with . -}}
+  {{- $mode := site.Params.academicPage.richText | default "html" -}}
+  {{- if and .html (ne $mode "json") -}}
+    {{- $out = .html -}}
+  {{- else if .json -}}
+    {{- $out = partial "richtext/node.html" .json -}}
+  {{- else -}}
+    {{- $out = .html | default "" -}}
+  {{- end -}}
+{{- end -}}
+{{- /*
+  Links and images inside rich text that start with "/" point at the site's
+  root. When the site is served from a folder (a baseURL with a path, such as
+  a GitHub Pages project site), they get that folder in front.
+*/ -}}
+{{- /* From baseURL, because this also runs in the content adapter, before site.Home exists. */ -}}
+{{- $home := (urls.Parse site.BaseURL).Path | default "/" -}}
+{{- if not (strings.HasSuffix $home "/") -}}{{- $home = printf "%s/" $home -}}{{- end -}}
+{{- if and $out (ne $home "/") -}}
+  {{- $out = replaceRE `(href|src)="/"` (printf `$1="%s"` $home) $out -}}
+  {{- $out = replaceRE `(href|src)="/([^/"])` (printf `$1="%s$2` $home) $out -}}
+{{- end -}}
+{{- return $out -}}

@@ -1,0 +1,13 @@
+{{- /*
+  Adds a section's list page. Its title is the label the site's own header
+  menu uses for that path, so a lab that calls its posts "News" keeps that.
+  Context: dict with adapter, site, path, title (fallback), and outputs.
+*/ -}}
+{{- $title := .title -}}
+{{- $path := .path -}}
+{{- range .site.navigation.header -}}
+  {{- if eq .path (printf "/%s" $path) -}}{{- $title = .label -}}{{- end -}}
+{{- end -}}
+{{- $page := dict "kind" "section" "path" $path "title" $title "params" (dict "api_type" "section") -}}
+{{- with .outputs -}}{{- $page = merge $page (dict "outputs" .) -}}{{- end -}}
+{{- .adapter.AddPage $page -}}

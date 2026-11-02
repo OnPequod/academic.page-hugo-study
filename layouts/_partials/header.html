@@ -1,0 +1,29 @@
+{{- /*
+  The header menu comes from the site's own navigation settings in the API.
+  If the site has none, it falls back to one link per section.
+*/ -}}
+{{- $p := .page -}}
+{{- $site := .site -}}
+{{- $items := $site.navigation.header -}}
+{{- if not $items -}}
+  {{- $items = slice (dict "label" "Home" "path" "/") -}}
+  {{- $labels := dict "posts" "Posts" "pages" "" "projects" "Projects" "publications" "Publications" "talks" "Talks" "courses" "Courses" "lab-members" "Members" -}}
+  {{- range $site.sections -}}
+    {{- $label := index $labels . -}}
+    {{- $path := printf "/%s" . -}}
+    {{- if eq . "lab-members" -}}{{- $path = cond (eq $site.site_type "study") "/team" "/members" -}}{{- end -}}
+    {{- with $label -}}{{- $items = $items | append (dict "label" . "path" $path) -}}{{- end -}}
+  {{- end -}}
+{{- end }}
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="site-name" href="{{ site.Home.RelPermalink }}">{{ $site.name }}</a>
+    <nav aria-label="Main">
+      <ul class="menu">
+        {{- range $items }}
+        {{- partial "menu-item.html" (dict "item" . "page" $p) }}
+        {{- end }}
+      </ul>
+    </nav>
+  </div>
+</header>

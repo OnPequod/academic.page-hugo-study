@@ -1,0 +1,322 @@
+[
+  {
+    "id": 701,
+    "type": "talk",
+    "slug": "messy-ehr-target-trials",
+    "path": "/talks/messy-ehr-target-trials",
+    "url": "https://castellanos.biostatistician.page/talks/messy-ehr-target-trials",
+    "title": "Target trial emulation with messy EHR data",
+    "excerpt": "What breaks when the trial protocol meets real records.",
+    "abstract": {
+      "html": "<p>Target trial emulation promises clear estimands. Real records bring irregular visits, informative missingness, and shifting codes. This talk walks through three studies and the fixes that held up.</p>",
+      "json": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Target trial emulation promises clear estimands. Real records bring irregular visits, informative missingness, and shifting codes. This talk walks through three studies and the fixes that held up."
+              }
+            ]
+          }
+        ]
+      },
+      "markdown": "Target trial emulation promises clear estimands. Real records bring irregular visits, informative missingness, and shifting codes. This talk walks through three studies and the fixes that held up."
+    },
+    "speaker_name": "Imani Castellanos",
+    "copresenters": [],
+    "talk_type": "invited",
+    "talk_date": "2026-12-08",
+    "meeting_name": "Joint Biostatistics Seminar",
+    "location": "Boston, MA",
+    "location_url": "https://example.edu/seminars",
+    "slides_url": null,
+    "paper_url": null,
+    "recording_url": null,
+    "slides_file": null,
+    "paper_file": null,
+    "is_featured": true,
+    "display_order": 1,
+    "featured_image": null,
+    "tags": [
+      {
+        "id": 320,
+        "name": "Causal inference",
+        "slug": "causal-inference"
+      },
+      {
+        "id": 322,
+        "name": "Electronic health records",
+        "slug": "ehr"
+      }
+    ],
+    "seo": {
+      "title": null,
+      "description": "What breaks when the trial protocol meets real records."
+    },
+    "published_at": "2025-01-10T14:00:00Z",
+    "created_at": "2025-01-10T09:00:00Z",
+    "updated_at": "2026-09-01T11:00:00Z",
+    "talk_date_precision": "day",
+    "talk_date_display": "December 8, 2026",
+    "year_order": null
+  },
+  {
+    "id": 702,
+    "type": "talk",
+    "slug": "jsm-2026-delay-emulation",
+    "path": "/talks/jsm-2026-delay-emulation",
+    "url": "https://castellanos.biostatistician.page/talks/jsm-2026-delay-emulation",
+    "title": "Emulating trials of treatment delay",
+    "excerpt": "Results from the registry linkage study.",
+    "abstract": {
+      "html": "<p>We present the delay emulation and its sensitivity analyses.</p>",
+      "json": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "We present the delay emulation and its sensitivity analyses."
+              }
+            ]
+          }
+        ]
+      },
+      "markdown": "We present the delay emulation and its sensitivity analyses."
+    },
+    "speaker_name": "Imani Castellanos",
+    "copresenters": [
+      {
+        "name": "Daniel Reyes"
+      }
+    ],
+    "talk_type": "contributed",
+    "talk_date": "2026-08-05",
+    "meeting_name": "Joint Statistical Meetings 2026",
+    "location": "Boston, MA",
+    "location_url": null,
+    "slides_url": "https://example.org/slides/jsm-2026.pdf",
+    "paper_url": "https://doi.org/10.5555/aje.2026.0142",
+    "recording_url": "https://example.org/recordings/jsm-2026",
+    "slides_file": null,
+    "paper_file": null,
+    "is_featured": true,
+    "display_order": 2,
+    "featured_image": null,
+    "tags": [
+      {
+        "id": 320,
+        "name": "Causal inference",
+        "slug": "causal-inference"
+      }
+    ],
+    "seo": {
+      "title": null,
+      "description": "Results from the registry linkage study."
+    },
+    "published_at": "2025-01-10T14:00:00Z",
+    "created_at": "2025-01-10T09:00:00Z",
+    "updated_at": "2026-09-01T11:00:00Z",
+    "talk_date_precision": "day",
+    "talk_date_display": "August 5, 2026",
+    "year_order": null
+  },
+  {
+    "id": 703,
+    "type": "talk",
+    "slug": "missing-stage-seminar",
+    "path": "/talks/missing-stage-seminar",
+    "url": "https://castellanos.biostatistician.page/talks/missing-stage-seminar",
+    "title": "Missing stage in cancer registries",
+    "excerpt": "Imputation models that use outcome information, and when that is allowed.",
+    "abstract": {
+      "html": "<p>A seminar on the 2025 paper, with code.</p>",
+      "json": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "A seminar on the 2025 paper, with code."
+              }
+            ]
+          }
+        ]
+      },
+      "markdown": "A seminar on the 2025 paper, with code."
+    },
+    "speaker_name": "Imani Castellanos",
+    "copresenters": [],
+    "talk_type": "seminar",
+    "talk_date": "2026-03-12",
+    "meeting_name": "Department of Epidemiology Seminar",
+    "location": "Northbridge University",
+    "location_url": null,
+    "slides_url": null,
+    "paper_url": null,
+    "recording_url": null,
+    "slides_file": {
+      "id": 721,
+      "file_name": "missing-stage-slides.pdf",
+      "mime_type": "application/pdf",
+      "size": 182044,
+      "alt": null,
+      "url": "{{ASSETS}}/721/missing-stage-slides.pdf",
+      "conversions": {}
+    },
+    "paper_file": null,
+    "is_featured": false,
+    "display_order": null,
+    "featured_image": null,
+    "tags": [
+      {
+        "id": 323,
+        "name": "Missing data",
+        "slug": "missing-data"
+      }
+    ],
+    "seo": {
+      "title": null,
+      "description": "Imputation models that use outcome information, and when that is allowed."
+    },
+    "published_at": "2025-01-10T14:00:00Z",
+    "created_at": "2025-01-10T09:00:00Z",
+    "updated_at": "2026-09-01T11:00:00Z",
+    "talk_date_precision": "day",
+    "talk_date_display": "March 12, 2026",
+    "year_order": null
+  },
+  {
+    "id": 705,
+    "type": "talk",
+    "slug": "renv-workshop",
+    "path": "/talks/renv-workshop",
+    "url": "https://castellanos.biostatistician.page/talks/renv-workshop",
+    "title": "Reproducible R projects with renv",
+    "excerpt": "A hands-on workshop.",
+    "abstract": {
+      "html": "<p>Bring a laptop with R 4.4 or later.</p><pre><code class=\"language-r\">install.packages(\"renv\")\nrenv::init()</code></pre>",
+      "json": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Bring a laptop with R 4.4 or later."
+              }
+            ]
+          },
+          {
+            "type": "codeBlock",
+            "attrs": {
+              "language": "r"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "install.packages(\"renv\")\nrenv::init()"
+              }
+            ]
+          }
+        ]
+      },
+      "markdown": "Bring a laptop with R 4.4 or later.\n\n```r\ninstall.packages(\"renv\")\nrenv::init()\n```"
+    },
+    "speaker_name": "Imani Castellanos",
+    "copresenters": [],
+    "talk_type": "workshop",
+    "talk_date": "2025-06-02",
+    "meeting_name": "Northbridge Data Science Week",
+    "location": "Northbridge University",
+    "location_url": null,
+    "slides_url": null,
+    "paper_url": null,
+    "recording_url": null,
+    "slides_file": null,
+    "paper_file": null,
+    "is_featured": false,
+    "display_order": null,
+    "featured_image": null,
+    "tags": [
+      {
+        "id": 324,
+        "name": "R",
+        "slug": "r"
+      },
+      {
+        "id": 321,
+        "name": "Open science",
+        "slug": "open-science"
+      }
+    ],
+    "seo": {
+      "title": null,
+      "description": "A hands-on workshop."
+    },
+    "published_at": "2025-01-10T14:00:00Z",
+    "created_at": "2025-01-10T09:00:00Z",
+    "updated_at": "2026-09-01T11:00:00Z",
+    "talk_date_precision": "day",
+    "talk_date_display": "June 2, 2025",
+    "year_order": 1
+  },
+  {
+    "id": 704,
+    "type": "talk",
+    "slug": "small-area-poster",
+    "path": "/talks/small-area-poster",
+    "url": "https://castellanos.biostatistician.page/talks/small-area-poster",
+    "title": "Partial pooling for county asthma rates",
+    "excerpt": "A poster on hierarchical models for small-area rates.",
+    "abstract": null,
+    "speaker_name": "Imani Castellanos",
+    "copresenters": [],
+    "talk_type": "poster",
+    "talk_date": "2025-11-01",
+    "meeting_name": "Society for Epidemiologic Research",
+    "location": "Online",
+    "location_url": null,
+    "slides_url": null,
+    "paper_url": null,
+    "recording_url": null,
+    "slides_file": null,
+    "paper_file": {
+      "id": 722,
+      "file_name": "small-area-poster.pdf",
+      "mime_type": "application/pdf",
+      "size": 2400000,
+      "alt": null,
+      "url": "{{ASSETS}}/722/small-area-poster.pdf",
+      "conversions": {}
+    },
+    "is_featured": false,
+    "display_order": null,
+    "featured_image": null,
+    "tags": [
+      {
+        "id": 327,
+        "name": "Bayesian methods",
+        "slug": "bayesian"
+      }
+    ],
+    "seo": {
+      "title": null,
+      "description": "A poster on hierarchical models for small-area rates."
+    },
+    "published_at": "2025-01-10T14:00:00Z",
+    "created_at": "2025-01-10T09:00:00Z",
+    "updated_at": "2026-09-01T11:00:00Z",
+    "talk_date_precision": "month",
+    "talk_date_display": "November 2025",
+    "year_order": 2
+  }
+]

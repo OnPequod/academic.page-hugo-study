@@ -1,0 +1,114 @@
+{
+  "id": 43,
+  "name": "Castellanos Lab",
+  "slug": "castellanos-lab",
+  "site_type": "lab",
+  "domain": "biostatistician.page",
+  "url": "https://castellanos-lab.biostatistician.page",
+  "custom_domain": null,
+  "is_published": true,
+  "published_at": "2025-01-05T18:00:00Z",
+  "content_version": "",
+  "content_updated_at": "2026-10-28T17:22:41Z",
+  "api_url": "{{API}}/content/sites/43",
+  "timezone": "America/New_York",
+  "locale": "en",
+  "accent_color": "#0f766e",
+  "theme": "modern",
+  "allow_search_indexing": true,
+  "footer_text": null,
+  "favicons": {
+    "favicon-svg": null,
+    "favicon-ico": "{{ASSETS}}/favicons/43/favicon.ico",
+    "favicon-96x96": "{{ASSETS}}/favicons/43/favicon-32.png",
+    "apple-touch-icon": null,
+    "android-chrome-192x192": null,
+    "android-chrome-512x512": null
+  },
+  "sections": [
+    "pages",
+    "posts",
+    "projects",
+    "publications",
+    "talks",
+    "lab-members"
+  ],
+  "homepage": {
+    "title": "Castellanos Lab",
+    "description": "Causal inference for health records.",
+    "image": null
+  },
+  "navigation": {
+    "header": [
+      {
+        "label": "Home",
+        "description": null,
+        "path": "/",
+        "url": "https://castellanos-lab.biostatistician.page/",
+        "open_in_new_tab": false,
+        "children": []
+      },
+      {
+        "label": "Members",
+        "description": null,
+        "path": "/members",
+        "url": "https://castellanos-lab.biostatistician.page/members",
+        "open_in_new_tab": false,
+        "children": []
+      },
+      {
+        "label": "Projects",
+        "description": null,
+        "path": "/projects",
+        "url": "https://castellanos-lab.biostatistician.page/projects",
+        "open_in_new_tab": false,
+        "children": []
+      },
+      {
+        "label": "Publications",
+        "description": null,
+        "path": "/publications",
+        "url": "https://castellanos-lab.biostatistician.page/publications",
+        "open_in_new_tab": false,
+        "children": []
+      },
+      {
+        "label": "Talks",
+        "description": null,
+        "path": "/talks",
+        "url": "https://castellanos-lab.biostatistician.page/talks",
+        "open_in_new_tab": false,
+        "children": []
+      },
+      {
+        "label": "News",
+        "description": null,
+        "path": "/posts",
+        "url": "https://castellanos-lab.biostatistician.page/posts",
+        "open_in_new_tab": false,
+        "children": []
+      },
+      {
+        "label": "Join",
+        "description": null,
+        "path": "/join",
+        "url": "https://castellanos-lab.biostatistician.page/join",
+        "open_in_new_tab": false,
+        "children": []
+      }
+    ],
+    "footer": []
+  },
+  "links": {
+    "profile": "{{API}}/content/sites/43/profile",
+    "manifest": "{{API}}/content/sites/43/manifest",
+    "tags": "{{API}}/content/sites/43/tags",
+    "media": "{{API}}/content/sites/43/media",
+    "pages": "{{API}}/content/sites/43/pages",
+    "posts": "{{API}}/content/sites/43/posts",
+    "projects": "{{API}}/content/sites/43/projects",
+    "publications": "{{API}}/content/sites/43/publications",
+    "talks": "{{API}}/content/sites/43/talks",
+    "lab-members": "{{API}}/content/sites/43/lab-members"
+  }
+}

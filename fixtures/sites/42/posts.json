@@ -1,0 +1,992 @@
+[
+  {
+    "id": 1001,
+    "type": "post",
+    "slug": "why-we-preregister-ehr-analyses",
+    "path": "/posts/why-we-preregister-ehr-analyses",
+    "url": "https://castellanos.biostatistician.page/posts/why-we-preregister-ehr-analyses",
+    "title": "Why we preregister our EHR analyses",
+    "excerpt": "Writing the analysis plan before touching outcomes changes which questions we can answer honestly.",
+    "content": {
+      "html": "<p>Electronic health records invite endless re-analysis. Every extraction can be filtered, linked, and re-coded, and each choice moves the estimate a little. We now <strong>preregister</strong> every EHR analysis before we look at outcome data.</p><h2>What goes in the plan</h2><ul><li><p>The target trial: eligibility, treatment strategies, and time zero.</p></li><li><p>The causal diagram and the adjustment set it implies.</p></li><li><p>How we handle <em>missing</em> covariates and loss to follow-up.</p></li></ul><figure><img src=\"{{ASSETS}}/9101/conversions/dag-confounding-large.svg\" alt=\"A directed acyclic graph with treatment, outcome, and two confounders\" data-media-id=\"101\" loading=\"lazy\"><figcaption>The causal diagram we commit to before looking at outcomes.</figcaption></figure><h2>What it costs</h2><p>About two weeks per project. The plan template is on <a href=\"https://osf.io/\">OSF</a>, and the protocol for our registry linkage study is linked from the <a href=\"/projects/registry-linkage\">project page</a>.</p><blockquote><p>A plan written after the results is a description of the results.</p></blockquote>",
+      "json": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Electronic health records invite endless re-analysis. Every extraction can be filtered, linked, and re-coded, and each choice moves the estimate a little. We now "
+              },
+              {
+                "type": "text",
+                "text": "preregister",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " every EHR analysis before we look at outcome data."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "What goes in the plan"
+              }
+            ]
+          },
+          {
+            "type": "bulletList",
+            "content": [
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "The target trial: eligibility, treatment strategies, and time zero."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "The causal diagram and the adjustment set it implies."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "How we handle "
+                      },
+                      {
+                        "type": "text",
+                        "text": "missing",
+                        "marks": [
+                          {
+                            "type": "italic"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": " covariates and loss to follow-up."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "image",
+            "attrs": {
+              "src": "{{ASSETS}}/9101/conversions/dag-confounding-large.svg",
+              "alt": "A directed acyclic graph with treatment, outcome, and two confounders",
+              "title": null,
+              "data-media-id": "101"
+            }
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "What it costs"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "About two weeks per project. The plan template is on "
+              },
+              {
+                "type": "text",
+                "text": "OSF",
+                "marks": [
+                  {
+                    "type": "link",
+                    "attrs": {
+                      "href": "https://osf.io/",
+                      "target": null
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ", and the protocol for our registry linkage study is linked from the "
+              },
+              {
+                "type": "text",
+                "text": "project page",
+                "marks": [
+                  {
+                    "type": "link",
+                    "attrs": {
+                      "href": "/projects/registry-linkage",
+                      "target": null
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          },
+          {
+            "type": "blockquote",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "A plan written after the results is a description of the results."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "markdown": "Electronic health records invite endless re-analysis. Every extraction can be filtered, linked, and re-coded, and each choice moves the estimate a little. We now **preregister** every EHR analysis before we look at outcome data.\n\n## What goes in the plan\n\n- The target trial: eligibility, treatment strategies, and time zero.\n- The causal diagram and the adjustment set it implies.\n- How we handle *missing* covariates and loss to follow-up.\n\n![A directed acyclic graph with treatment, outcome, and two confounders]({{ASSETS}}/9101/conversions/dag-confounding-large.svg)\n\n## What it costs\n\nAbout two weeks per project. The plan template is on [OSF](https://osf.io/), and the protocol for our registry linkage study is linked from the [project page](/projects/registry-linkage).\n\n> A plan written after the results is a description of the results."
+    },
+    "author": {
+      "name": "Imani Castellanos"
+    },
+    "featured_image": {
+      "id": 9101,
+      "file_name": "dag-confounding.svg",
+      "mime_type": "image/svg+xml",
+      "size": 4096,
+      "alt": "A directed acyclic graph with treatment, outcome, and two confounders",
+      "url": "{{ASSETS}}/9101/dag-confounding.svg",
+      "conversions": {
+        "thumb": {
+          "url": "{{ASSETS}}/9101/conversions/dag-confounding-thumb.svg",
+          "width": 300,
+          "height": null
+        },
+        "medium": {
+          "url": "{{ASSETS}}/9101/conversions/dag-confounding-medium.svg",
+          "width": 800,
+          "height": null
+        },
+        "large": {
+          "url": "{{ASSETS}}/9101/conversions/dag-confounding-large.svg",
+          "width": 1200,
+          "height": null
+        }
+      }
+    },
+    "tags": [
+      {
+        "id": 320,
+        "name": "Causal inference",
+        "slug": "causal-inference"
+      },
+      {
+        "id": 321,
+        "name": "Open science",
+        "slug": "open-science"
+      },
+      {
+        "id": 322,
+        "name": "Electronic health records",
+        "slug": "ehr"
+      }
+    ],
+    "seo": {
+      "title": null,
+      "description": "Writing the analysis plan before touching outcomes changes which questions we can answer honestly."
+    },
+    "published_at": "2026-10-02T14:00:00Z",
+    "created_at": "2026-10-02T09:12:00Z",
+    "updated_at": "2026-10-02T15:40:00Z"
+  },
+  {
+    "id": 1002,
+    "type": "post",
+    "slug": "multiple-imputation-chained-equations",
+    "path": "/posts/multiple-imputation-chained-equations",
+    "url": "https://castellanos.biostatistician.page/posts/multiple-imputation-chained-equations",
+    "title": "Notes on multiple imputation with chained equations",
+    "excerpt": "A working checklist for MICE in R, with the defaults I change and why.",
+    "content": {
+      "html": "<p>These notes collect what I tell students before they run <code>mice()</code> on a real data set.</p><h2>Set up the predictor matrix first</h2><p>The default uses every variable to impute every other variable. That is rarely what you want when the data include IDs or derived scores.</p><pre><code class=\"language-r\">library(mice)\nimp &lt;- mice(dat, m = 20, maxit = 0)\npred &lt;- imp$predictorMatrix\npred[, \"patient_id\"] &lt;- 0\nfit &lt;- with(mice(dat, m = 20, predictorMatrix = pred), lm(sbp ~ age + bmi))\npool(fit)</code></pre><h3>Check convergence</h3><p>Plot the chains with <code>plot(imp)</code>. If the means drift after iteration 10, raise <code>maxit</code> and look for variables that predict each other almost perfectly.</p>",
+      "json": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "These notes collect what I tell students before they run "
+              },
+              {
+                "type": "text",
+                "text": "mice()",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " on a real data set."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Set up the predictor matrix first"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "The default uses every variable to impute every other variable. That is rarely what you want when the data include IDs or derived scores."
+              }
+            ]
+          },
+          {
+            "type": "codeBlock",
+            "attrs": {
+              "language": "r"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "library(mice)\nimp <- mice(dat, m = 20, maxit = 0)\npred <- imp$predictorMatrix\npred[, \"patient_id\"] <- 0\nfit <- with(mice(dat, m = 20, predictorMatrix = pred), lm(sbp ~ age + bmi))\npool(fit)"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 3
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Check convergence"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Plot the chains with "
+              },
+              {
+                "type": "text",
+                "text": "plot(imp)",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ". If the means drift after iteration 10, raise "
+              },
+              {
+                "type": "text",
+                "text": "maxit",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " and look for variables that predict each other almost perfectly."
+              }
+            ]
+          }
+        ]
+      },
+      "markdown": "These notes collect what I tell students before they run `mice()` on a real data set.\n\n## Set up the predictor matrix first\n\nThe default uses every variable to impute every other variable. That is rarely what you want when the data include IDs or derived scores.\n\n```r\nlibrary(mice)\nimp <- mice(dat, m = 20, maxit = 0)\npred <- imp$predictorMatrix\npred[, \"patient_id\"] <- 0\nfit <- with(mice(dat, m = 20, predictorMatrix = pred), lm(sbp ~ age + bmi))\npool(fit)\n```\n\n### Check convergence\n\nPlot the chains with `plot(imp)`. If the means drift after iteration 10, raise `maxit` and look for variables that predict each other almost perfectly."
+    },
+    "author": {
+      "name": "Imani Castellanos"
+    },
+    "featured_image": null,
+    "tags": [
+      {
+        "id": 323,
+        "name": "Missing data",
+        "slug": "missing-data"
+      },
+      {
+        "id": 324,
+        "name": "R",
+        "slug": "r"
+      }
+    ],
+    "seo": {
+      "title": null,
+      "description": "A working checklist for MICE in R, with the defaults I change and why."
+    },
+    "published_at": "2026-08-20T14:00:00Z",
+    "created_at": "2026-08-20T09:12:00Z",
+    "updated_at": "2026-08-20T15:40:00Z"
+  },
+  {
+    "id": 1003,
+    "type": "post",
+    "slug": "target-trial-emulation-reading-list",
+    "path": "/posts/target-trial-emulation-reading-list",
+    "url": "https://castellanos.biostatistician.page/posts/target-trial-emulation-reading-list",
+    "title": "A short reading list for target trial emulation",
+    "excerpt": "Five papers I assign before students design their first emulation.",
+    "content": {
+      "html": "<p>Start with these, in this order:</p><ol><li><p>Hernán and Robins on using big data to emulate a target trial.</p></li><li><p>The protocol checklist papers, for the components of a trial specification.</p></li><li><p>A worked example with sustained treatment strategies.</p></li><li><p>A paper on immortal time bias, to see what goes wrong without a clear time zero.</p></li><li><p>A critique, so the method does not look like a solved problem.</p></li></ol><p>The full citations are on the <a href=\"/publications\">publications page</a> under the teaching tag.</p>",
+      "json": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Start with these, in this order:"
+              }
+            ]
+          },
+          {
+            "type": "orderedList",
+            "attrs": {
+              "start": 1
+            },
+            "content": [
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Hernán and Robins on using big data to emulate a target trial."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "The protocol checklist papers, for the components of a trial specification."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "A worked example with sustained treatment strategies."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "A paper on immortal time bias, to see what goes wrong without a clear time zero."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "A critique, so the method does not look like a solved problem."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "The full citations are on the "
+              },
+              {
+                "type": "text",
+                "text": "publications page",
+                "marks": [
+                  {
+                    "type": "link",
+                    "attrs": {
+                      "href": "/publications",
+                      "target": null
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " under the teaching tag."
+              }
+            ]
+          }
+        ]
+      },
+      "markdown": "Start with these, in this order:\n\n1. Hernán and Robins on using big data to emulate a target trial.\n2. The protocol checklist papers, for the components of a trial specification.\n3. A worked example with sustained treatment strategies.\n4. A paper on immortal time bias, to see what goes wrong without a clear time zero.\n5. A critique, so the method does not look like a solved problem.\n\nThe full citations are on the [publications page](/publications) under the teaching tag."
+    },
+    "author": {
+      "name": "Imani Castellanos"
+    },
+    "featured_image": null,
+    "tags": [
+      {
+        "id": 320,
+        "name": "Causal inference",
+        "slug": "causal-inference"
+      },
+      {
+        "id": 325,
+        "name": "Teaching",
+        "slug": "teaching"
+      }
+    ],
+    "seo": {
+      "title": null,
+      "description": "Five papers I assign before students design their first emulation."
+    },
+    "published_at": "2026-06-11T14:00:00Z",
+    "created_at": "2026-06-11T09:12:00Z",
+    "updated_at": "2026-06-11T15:40:00Z"
+  },
+  {
+    "id": 1004,
+    "type": "post",
+    "slug": "reviewing-forty-survival-analyses",
+    "path": "/posts/reviewing-forty-survival-analyses",
+    "url": "https://castellanos.biostatistician.page/posts/reviewing-forty-survival-analyses",
+    "title": "What I learned reviewing 40 survival analyses",
+    "excerpt": "Most problems came from the time axis, not the model.",
+    "content": {
+      "html": "<p>Last year I reviewed forty manuscripts that used Cox models. The <strong><em>same three problems</em></strong> came up again and again.</p><figure><img src=\"{{ASSETS}}/9103/conversions/km-curves-large.svg\" alt=\"Two Kaplan-Meier survival curves that cross at month 18\" data-media-id=\"103\" loading=\"lazy\"><figcaption>Crossing curves are a reason to look past the hazard ratio.</figcaption></figure><ol><li><p>Time zero did not match eligibility.</p></li><li><p>Hazard ratios were reported for crossing curves.</p></li><li><p>Competing risks were treated as censoring.</p></li></ol><p>The fix for the first one is cheap.<br>The fix for the third one is not, and it changes the estimand. <s>Reporting a sensitivity analysis is enough.</s> A sensitivity analysis does not fix the estimand.</p>",
+      "json": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Last year I reviewed forty manuscripts that used Cox models. The "
+              },
+              {
+                "type": "text",
+                "text": "same three problems",
+                "marks": [
+                  {
+                    "type": "bold"
+                  },
+                  {
+                    "type": "italic"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " came up again and again."
+              }
+            ]
+          },
+          {
+            "type": "image",
+            "attrs": {
+              "src": "{{ASSETS}}/9103/conversions/km-curves-large.svg",
+              "alt": "Two Kaplan-Meier survival curves that cross at month 18",
+              "title": null,
+              "data-media-id": "103"
+            }
+          },
+          {
+            "type": "orderedList",
+            "attrs": {
+              "start": 1
+            },
+            "content": [
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Time zero did not match eligibility."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Hazard ratios were reported for crossing curves."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Competing risks were treated as censoring."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "The fix for the first one is cheap."
+              },
+              {
+                "type": "hardBreak"
+              },
+              {
+                "type": "text",
+                "text": "The fix for the third one is not, and it changes the estimand. "
+              },
+              {
+                "type": "text",
+                "text": "Reporting a sensitivity analysis is enough.",
+                "marks": [
+                  {
+                    "type": "strike"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " A sensitivity analysis does not fix the estimand."
+              }
+            ]
+          }
+        ]
+      },
+      "markdown": "Last year I reviewed forty manuscripts that used Cox models. The ***same three problems*** came up again and again.\n\n![Two Kaplan-Meier survival curves that cross at month 18]({{ASSETS}}/9103/conversions/km-curves-large.svg)\n\n1. Time zero did not match eligibility.\n2. Hazard ratios were reported for crossing curves.\n3. Competing risks were treated as censoring.\n\nThe fix for the first one is cheap.  \nThe fix for the third one is not, and it changes the estimand. ~~Reporting a sensitivity analysis is enough.~~ A sensitivity analysis does not fix the estimand."
+    },
+    "author": {
+      "name": "Imani Castellanos"
+    },
+    "featured_image": null,
+    "tags": [
+      {
+        "id": 326,
+        "name": "Survival analysis",
+        "slug": "survival-analysis"
+      }
+    ],
+    "seo": {
+      "title": null,
+      "description": "Most problems came from the time axis, not the model."
+    },
+    "published_at": "2026-04-03T14:00:00Z",
+    "created_at": "2026-04-03T09:12:00Z",
+    "updated_at": "2026-04-03T15:40:00Z"
+  },
+  {
+    "id": 1005,
+    "type": "post",
+    "slug": "sharing-code-with-papers",
+    "path": "/posts/sharing-code-with-papers",
+    "url": "https://castellanos.biostatistician.page/posts/sharing-code-with-papers",
+    "title": "Sharing code with the papers: a checklist",
+    "excerpt": "What our group checks before a repository goes public with a paper.",
+    "content": {
+      "html": "<p>Every paper from our group ships with code. Before a repository goes public we check five things.</p><ul><li><p>It runs from a clean checkout with <code>renv::restore()</code>.</p></li><li><p>Paths are relative.</p></li><li><p>Simulated data stand in for restricted data.</p></li><li><p>The README names the R version.</p></li><li><p>A license file exists.</p></li></ul><hr><p>None of this takes long once it is a habit.</p>",
+      "json": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Every paper from our group ships with code. Before a repository goes public we check five things."
+              }
+            ]
+          },
+          {
+            "type": "bulletList",
+            "content": [
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "It runs from a clean checkout with "
+                      },
+                      {
+                        "type": "text",
+                        "text": "renv::restore()",
+                        "marks": [
+                          {
+                            "type": "code"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": "."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Paths are relative."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Simulated data stand in for restricted data."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "The README names the R version."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "A license file exists."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "horizontalRule"
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "None of this takes long once it is a habit."
+              }
+            ]
+          }
+        ]
+      },
+      "markdown": "Every paper from our group ships with code. Before a repository goes public we check five things.\n\n- It runs from a clean checkout with `renv::restore()`.\n- Paths are relative.\n- Simulated data stand in for restricted data.\n- The README names the R version.\n- A license file exists.\n\n---\n\nNone of this takes long once it is a habit."
+    },
+    "author": {
+      "name": "Imani Castellanos"
+    },
+    "featured_image": null,
+    "tags": [
+      {
+        "id": 321,
+        "name": "Open science",
+        "slug": "open-science"
+      },
+      {
+        "id": 324,
+        "name": "R",
+        "slug": "r"
+      }
+    ],
+    "seo": {
+      "title": null,
+      "description": "What our group checks before a repository goes public with a paper."
+    },
+    "published_at": "2026-02-15T14:00:00Z",
+    "created_at": "2026-02-15T09:12:00Z",
+    "updated_at": "2026-02-15T15:40:00Z"
+  },
+  {
+    "id": 1006,
+    "type": "post",
+    "slug": "welcome-fall-cohort",
+    "path": "/posts/welcome-fall-cohort",
+    "url": "https://castellanos.biostatistician.page/posts/welcome-fall-cohort",
+    "title": "Welcome, fall cohort",
+    "excerpt": "Office hours, reading groups, and where to find the course materials.",
+    "content": {
+      "html": "<p>Welcome to the new biostatistics cohort. My office hours are Tuesdays from 2 to 4 p.m. in Room 412.</p><p>The methods reading group meets every other Friday. Email me to join the list.</p>",
+      "json": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Welcome to the new biostatistics cohort. My office hours are Tuesdays from 2 to 4 p.m. in Room 412."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "The methods reading group meets every other Friday. Email me to join the list."
+              }
+            ]
+          }
+        ]
+      },
+      "markdown": "Welcome to the new biostatistics cohort. My office hours are Tuesdays from 2 to 4 p.m. in Room 412.\n\nThe methods reading group meets every other Friday. Email me to join the list."
+    },
+    "author": {
+      "name": "Imani Castellanos"
+    },
+    "featured_image": null,
+    "tags": [
+      {
+        "id": 325,
+        "name": "Teaching",
+        "slug": "teaching"
+      }
+    ],
+    "seo": {
+      "title": null,
+      "description": "Office hours, reading groups, and where to find the course materials."
+    },
+    "published_at": "2025-09-01T14:00:00Z",
+    "created_at": "2025-09-01T09:12:00Z",
+    "updated_at": "2025-09-02T08:00:00Z"
+  },
+  {
+    "id": 1007,
+    "type": "post",
+    "slug": "hierarchical-models-small-area-rates",
+    "path": "/posts/hierarchical-models-small-area-rates",
+    "url": "https://castellanos.biostatistician.page/posts/hierarchical-models-small-area-rates",
+    "title": "Hierarchical models for small-area rates",
+    "excerpt": "Why raw county rates mislead and how partial pooling helps.",
+    "content": {
+      "html": "<p>Raw rates from small counties swing wildly. A county with 40 children and 3 cases has a rate of 75 per 1,000, and nobody believes it.</p><figure><img src=\"{{ASSETS}}/9102/conversions/county-rates-map-large.svg\" alt=\"Map of smoothed county asthma rates in shades of blue\" data-media-id=\"102\" loading=\"lazy\"><figcaption>Smoothed rates shrink small counties toward their neighbors.</figcaption></figure><h2>Partial pooling</h2><p>A hierarchical model shrinks each county toward the regional mean in proportion to how little data it has. In code the filter is <code>rate &lt; 0.05 &amp; n &gt; 30</code> for counties we trust without pooling.</p><pre><code class=\"language-stan\">model {\n  theta ~ normal(mu, tau);\n  y ~ binomial_logit(n, theta);\n}</code></pre>",
+      "json": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Raw rates from small counties swing wildly. A county with 40 children and 3 cases has a rate of 75 per 1,000, and nobody believes it."
+              }
+            ]
+          },
+          {
+            "type": "image",
+            "attrs": {
+              "src": "{{ASSETS}}/9102/conversions/county-rates-map-large.svg",
+              "alt": "Map of smoothed county asthma rates in shades of blue",
+              "title": null,
+              "data-media-id": "102"
+            }
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Partial pooling"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "A hierarchical model shrinks each county toward the regional mean in proportion to how little data it has. In code the filter is "
+              },
+              {
+                "type": "text",
+                "text": "rate < 0.05 & n > 30",
+                "marks": [
+                  {
+                    "type": "code"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " for counties we trust without pooling."
+              }
+            ]
+          },
+          {
+            "type": "codeBlock",
+            "attrs": {
+              "language": "stan"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "model {\n  theta ~ normal(mu, tau);\n  y ~ binomial_logit(n, theta);\n}"
+              }
+            ]
+          }
+        ]
+      },
+      "markdown": "Raw rates from small counties swing wildly. A county with 40 children and 3 cases has a rate of 75 per 1,000, and nobody believes it.\n\n![Map of smoothed county asthma rates in shades of blue]({{ASSETS}}/9102/conversions/county-rates-map-large.svg)\n\n## Partial pooling\n\nA hierarchical model shrinks each county toward the regional mean in proportion to how little data it has. In code the filter is `rate < 0.05 & n > 30` for counties we trust without pooling.\n\n```stan\nmodel {\n  theta ~ normal(mu, tau);\n  y ~ binomial_logit(n, theta);\n}\n```"
+    },
+    "author": null,
+    "featured_image": null,
+    "tags": [
+      {
+        "id": 327,
+        "name": "Bayesian methods",
+        "slug": "bayesian"
+      }
+    ],
+    "seo": {
+      "title": null,
+      "description": "Why raw county rates mislead and how partial pooling helps."
+    },
+    "published_at": "2025-05-20T14:00:00Z",
+    "created_at": "2025-05-20T09:12:00Z",
+    "updated_at": "2025-05-20T15:40:00Z"
+  }
+]

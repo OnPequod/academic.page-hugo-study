@@ -1,0 +1,66 @@
+[
+  {
+    "id": 2201,
+    "type": "page",
+    "slug": "office-hours",
+    "path": "/office-hours",
+    "url": "https://bios621.biostatistician.page/office-hours",
+    "title": "Office hours",
+    "full_slug": "office-hours",
+    "parent_id": null,
+    "depth": 0,
+    "sort_order": 1,
+    "excerpt": "When and where to find the teaching team.",
+    "content": {
+      "html": "<ul><li><p>Tuesdays, 2 to 4 p.m., Room 412.</p></li><li><p>Thursdays, 10 to 11 a.m., online.</p></li></ul>",
+      "json": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "bulletList",
+            "content": [
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Tuesdays, 2 to 4 p.m., Room 412."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Thursdays, 10 to 11 a.m., online."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "markdown": "- Tuesdays, 2 to 4 p.m., Room 412.\n- Thursdays, 10 to 11 a.m., online."
+    },
+    "featured_image": null,
+    "tags": [],
+    "seo": {
+      "title": null,
+      "description": "When and where to find the teaching team."
+    },
+    "published_at": "2025-08-01T14:00:00Z",
+    "created_at": "2025-08-01T10:00:00Z",
+    "updated_at": "2025-08-01T10:30:00Z"
+  }
+]

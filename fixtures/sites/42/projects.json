@@ -1,0 +1,256 @@
+[
+  {
+    "id": 401,
+    "type": "project",
+    "slug": "target-trial-toolkit",
+    "path": "/projects/target-trial-toolkit",
+    "url": "https://castellanos.biostatistician.page/projects/target-trial-toolkit",
+    "title": "Target Trial Emulation Toolkit",
+    "excerpt": "An R package that turns a trial protocol into a reproducible emulation.",
+    "content": {
+      "html": "<p>The toolkit takes a protocol written as a structured file and produces the analysis data set, weights, and estimates.</p><p>It is used in three ongoing studies.</p>",
+      "json": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "The toolkit takes a protocol written as a structured file and produces the analysis data set, weights, and estimates."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "It is used in three ongoing studies."
+              }
+            ]
+          }
+        ]
+      },
+      "markdown": "The toolkit takes a protocol written as a structured file and produces the analysis data set, weights, and estimates.\n\nIt is used in three ongoing studies."
+    },
+    "status": "active",
+    "project_url": "https://example.org/ttetools",
+    "repository_url": "https://github.com/example/ttetools",
+    "technologies": [
+      "R",
+      "Stan",
+      "Quarto"
+    ],
+    "start_date": "2024-09-01",
+    "end_date": null,
+    "display_order": 1,
+    "featured_image": {
+      "id": 501,
+      "file_name": "toolkit-cover.svg",
+      "mime_type": "image/svg+xml",
+      "size": 4096,
+      "alt": "The toolkit's hex logo",
+      "url": "{{ASSETS}}/501/toolkit-cover.svg",
+      "conversions": {
+        "thumb": {
+          "url": "{{ASSETS}}/501/conversions/toolkit-cover-thumb.svg",
+          "width": 300,
+          "height": 300
+        },
+        "large": {
+          "url": "{{ASSETS}}/501/conversions/toolkit-cover-large.svg",
+          "width": 1200,
+          "height": 630
+        }
+      }
+    },
+    "gallery": [
+      {
+        "id": 511,
+        "file_name": "toolkit-diagram.svg",
+        "mime_type": "image/svg+xml",
+        "size": 4096,
+        "alt": "Flowchart of the toolkit's steps from protocol to estimate",
+        "url": "{{ASSETS}}/511/toolkit-diagram.svg",
+        "conversions": {
+          "thumb": {
+            "url": "{{ASSETS}}/511/conversions/toolkit-diagram-thumb.svg",
+            "width": 300,
+            "height": null
+          },
+          "medium": {
+            "url": "{{ASSETS}}/511/conversions/toolkit-diagram-medium.svg",
+            "width": 800,
+            "height": null
+          },
+          "large": {
+            "url": "{{ASSETS}}/511/conversions/toolkit-diagram-large.svg",
+            "width": 1200,
+            "height": null
+          }
+        }
+      },
+      {
+        "id": 512,
+        "file_name": "toolkit-output.svg",
+        "mime_type": "image/svg+xml",
+        "size": 4096,
+        "alt": "Forest plot from the toolkit's example analysis",
+        "url": "{{ASSETS}}/512/toolkit-output.svg",
+        "conversions": {
+          "thumb": {
+            "url": "{{ASSETS}}/512/conversions/toolkit-output-thumb.svg",
+            "width": 300,
+            "height": null
+          },
+          "medium": {
+            "url": "{{ASSETS}}/512/conversions/toolkit-output-medium.svg",
+            "width": 800,
+            "height": null
+          },
+          "large": {
+            "url": "{{ASSETS}}/512/conversions/toolkit-output-large.svg",
+            "width": 1200,
+            "height": null
+          }
+        }
+      }
+    ],
+    "tags": [
+      {
+        "id": 320,
+        "name": "Causal inference",
+        "slug": "causal-inference"
+      },
+      {
+        "id": 324,
+        "name": "R",
+        "slug": "r"
+      },
+      {
+        "id": 321,
+        "name": "Open science",
+        "slug": "open-science"
+      }
+    ],
+    "seo": {
+      "title": null,
+      "description": "An R package that turns a trial protocol into a reproducible emulation."
+    },
+    "published_at": "2024-10-01T14:00:00Z",
+    "created_at": "2024-10-01T08:00:00Z",
+    "updated_at": "2024-10-01T16:00:00Z"
+  },
+  {
+    "id": 402,
+    "type": "project",
+    "slug": "registry-linkage",
+    "path": "/projects/registry-linkage",
+    "url": "https://castellanos.biostatistician.page/projects/registry-linkage",
+    "title": "Regional Cancer Registry Linkage",
+    "excerpt": "Linking registry and claims data to study treatment delays.",
+    "content": {
+      "html": "<p>We linked 14 years of registry records to claims data to study delays between diagnosis and first treatment.</p>",
+      "json": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "We linked 14 years of registry records to claims data to study delays between diagnosis and first treatment."
+              }
+            ]
+          }
+        ]
+      },
+      "markdown": "We linked 14 years of registry records to claims data to study delays between diagnosis and first treatment."
+    },
+    "status": "completed",
+    "project_url": null,
+    "repository_url": null,
+    "technologies": [
+      "R",
+      "SQL"
+    ],
+    "start_date": "2021-01-15",
+    "end_date": "2024-06-30",
+    "display_order": 2,
+    "featured_image": null,
+    "gallery": [],
+    "tags": [
+      {
+        "id": 322,
+        "name": "Electronic health records",
+        "slug": "ehr"
+      },
+      {
+        "id": 326,
+        "name": "Survival analysis",
+        "slug": "survival-analysis"
+      }
+    ],
+    "seo": {
+      "title": null,
+      "description": "Linking registry and claims data to study treatment delays."
+    },
+    "published_at": "2023-03-01T14:00:00Z",
+    "created_at": "2023-03-01T08:00:00Z",
+    "updated_at": "2023-03-01T16:00:00Z"
+  },
+  {
+    "id": 403,
+    "type": "project",
+    "slug": "open-biostat-materials",
+    "path": "/projects/open-biostat-materials",
+    "url": "https://castellanos.biostatistician.page/projects/open-biostat-materials",
+    "title": "Open Teaching Materials for Biostatistics",
+    "excerpt": "Slides, labs, and data sets for two graduate courses.",
+    "content": {
+      "html": "<p>All materials are licensed CC BY 4.0.</p>",
+      "json": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "All materials are licensed CC BY 4.0."
+              }
+            ]
+          }
+        ]
+      },
+      "markdown": "All materials are licensed CC BY 4.0."
+    },
+    "status": "ongoing",
+    "project_url": "https://example.org/biostat-materials",
+    "repository_url": "https://github.com/example/biostat-materials",
+    "technologies": [
+      "Quarto",
+      "R"
+    ],
+    "start_date": "2022-08-15",
+    "end_date": null,
+    "display_order": 3,
+    "featured_image": null,
+    "gallery": [],
+    "tags": [
+      {
+        "id": 325,
+        "name": "Teaching",
+        "slug": "teaching"
+      }
+    ],
+    "seo": {
+      "title": null,
+      "description": "Slides, labs, and data sets for two graduate courses."
+    },
+    "published_at": "2022-09-01T14:00:00Z",
+    "created_at": "2022-09-01T08:00:00Z",
+    "updated_at": "2022-09-01T16:00:00Z"
+  }
+]

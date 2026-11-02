@@ -1,0 +1,11 @@
+{{- /* One publication in a list. Context: dict with pub and showType. */ -}}
+{{- $r := .pub }}
+<li class="pub">
+  {{- if .showType }}{{ with $r.publication_type }}<span class="badge">{{ partial "labels.html" (dict "kind" "publication-one" "value" .) }}</span> {{ end }}{{ end }}
+  {{- if $r.is_featured }}<span class="badge badge-accent">Featured</span> {{ end }}
+  <span class="citation">{{ $r.citation.html | default $r.citation.text | default $r.title | safeHTML }}</span>
+  <span class="pub-links">
+    {{- with $r.path }}<a href="{{ partial "path-url.html" . }}">Details<span class="visually-hidden"> for {{ $r.title }}</span></a>{{ end }}
+    {{- with $r.doi_url }} · <a href="{{ . }}">DOI</a>{{ end }}
+  </span>
+</li>

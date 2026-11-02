@@ -1,0 +1,9 @@
+{{- $r := partial "api/record.html" . }}
+<li class="entry">
+  <h3 class="entry-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+  <p class="meta">
+    {{- with $r.talk_type }}<span class="badge">{{ partial "labels.html" (dict "kind" "talk" "value" .) }}</span> {{ end -}}
+    {{- partial "talk-date.html" $r }}
+    {{- with $r.meeting_name }} · {{ . }}{{ end }}{{ with $r.location }} · {{ . }}{{ end }}
+  </p>
+</li>

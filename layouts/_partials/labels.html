@@ -1,0 +1,22 @@
+{{- /*
+  Human labels for API codes. Context: dict with kind ("publication" for plural group
+  headings, "publication-one", "talk", "member", "term") and value. Unknown values are humanized.
+*/ -}}
+{{- $maps := dict
+  "publication" (dict
+    "article-journal" "Journal articles" "article" "Preprints" "paper-conference" "Conference papers"
+    "chapter" "Book chapters" "book" "Books" "report" "Reports" "thesis" "Theses" "software" "Software"
+    "dataset" "Data sets" "manuscript" "Manuscripts" "review" "Reviews" "article-magazine" "Magazine articles"
+    "article-newspaper" "Newspaper articles" "post-weblog" "Blog posts" "webpage" "Web pages")
+  "publication-one" (dict
+    "article-journal" "Journal article" "article" "Preprint" "paper-conference" "Conference paper"
+    "chapter" "Book chapter" "book" "Book" "report" "Report" "thesis" "Thesis" "software" "Software"
+    "dataset" "Data set" "manuscript" "Manuscript" "review" "Review" "article-magazine" "Magazine article"
+    "article-newspaper" "Newspaper article" "post-weblog" "Blog post" "webpage" "Web page")
+  "talk" (dict "invited" "Invited talk" "contributed" "Contributed talk" "keynote" "Keynote" "seminar" "Seminar" "poster" "Poster" "workshop" "Workshop" "panel" "Panel")
+  "member" (dict "principal_investigator" "Principal investigators" "faculty" "Faculty" "postdoc" "Postdoctoral fellows" "staff" "Staff" "graduate_student" "Graduate students" "undergraduate" "Undergraduates" "member" "Members" "collaborator" "Collaborators")
+  "term" (dict "spring" "Spring" "summer" "Summer" "fall" "Fall" "winter" "Winter" "q1" "Q1" "q2" "Q2" "q3" "Q3" "q4" "Q4")
+-}}
+{{- $v := .value | default "" -}}
+{{- $label := index (index $maps .kind) $v | default (humanize $v) -}}
+{{- return $label -}}

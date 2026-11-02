@@ -1,0 +1,19 @@
+{{- /*
+  GETs one Content API URL and returns the decoded JSON body, or false when
+  the API answers 404. Any other failure fails the build with the status and
+  the URL, and returns dict "error" true so callers can skip follow-on
+  errors. The key travels only in the Authorization header, so it never appears
+  in URLs, error messages, or Hugo's cache file names.
+*/ -}}
+{{- $cfg := partialCached "api/config.html" "config" -}}
+{{- $url := . -}}
+{{- $body := false -}}
+{{- with try (resources.GetRemote $url (dict "headers" $cfg.headers)) -}}
+  {{- with .Err -}}
+    {{- errorf "Academic.page API request to %s failed: %s. Check ACADEMIC_PAGE_TOKEN (a content key on a Pro plan) and ACADEMIC_PAGE_SITE." $url . -}}
+    {{- $body = dict "error" true -}}
+  {{- else with .Value -}}
+    {{- $body = . | transform.Unmarshal -}}
+  {{- end -}}
+{{- end -}}
+{{- return $body -}}

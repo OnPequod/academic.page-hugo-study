@@ -1,0 +1,8 @@
+{{- $a := .adapter -}}
+{{- partial "adapters/section.html" (dict "adapter" $a "site" .site "path" "publications" "title" "Publications") -}}
+{{- range partialCached "api/list.html" "publications" "publications" -}}
+  {{- $date := .issued_date -}}
+  {{- if and (not $date) .year -}}{{- $date = printf "%d-01-01" (int .year) -}}{{- end -}}
+  {{- if not .slug -}}{{- continue -}}{{- end -}}
+  {{- $a.AddPage (partial "adapters/record-page.html" (dict "record" . "collection" "publications" "type" "publication" "body" .description "date" $date)) -}}
+{{- end -}}

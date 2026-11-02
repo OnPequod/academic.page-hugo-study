@@ -1,0 +1,15 @@
+{{- $site := partialCached "api/site.html" "site" -}}
+<!doctype html>
+<html lang="{{ $site.locale | default site.Language.Locale }}">
+<head>
+  {{- partial "head.html" (dict "page" . "site" $site) }}
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  {{- partial "header.html" (dict "page" . "site" $site) }}
+  <main id="main" class="container" tabindex="-1">
+    {{- block "main" . }}{{ end }}
+  </main>
+  {{- partial "footer.html" (dict "page" . "site" $site) }}
+</body>
+</html>

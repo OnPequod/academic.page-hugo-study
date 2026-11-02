@@ -1,0 +1,47 @@
+[
+  {
+    "id": 3101,
+    "type": "post",
+    "slug": "enrollment-milestone",
+    "path": "/posts/enrollment-milestone",
+    "url": "https://hearth.biostatistician.page/posts/enrollment-milestone",
+    "title": "We passed 500 families",
+    "excerpt": "Enrollment reached 500 families in July.",
+    "content": {
+      "html": "<p>Thank you to every family taking part. We aim to enroll 800 by the end of 2027.</p>",
+      "json": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Thank you to every family taking part. We aim to enroll 800 by the end of 2027."
+              }
+            ]
+          }
+        ]
+      },
+      "markdown": "Thank you to every family taking part. We aim to enroll 800 by the end of 2027."
+    },
+    "author": {
+      "name": "HEARTH Study Team"
+    },
+    "featured_image": null,
+    "tags": [
+      {
+        "id": 350,
+        "name": "Respiratory health",
+        "slug": "respiratory-health"
+      }
+    ],
+    "seo": {
+      "title": null,
+      "description": "Enrollment reached 500 families in July."
+    },
+    "published_at": "2026-07-21T14:00:00Z",
+    "created_at": "2026-07-21T09:12:00Z",
+    "updated_at": "2026-07-21T15:40:00Z"
+  }
+]

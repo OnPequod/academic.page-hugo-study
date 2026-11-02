@@ -1,0 +1,27 @@
+{{- /* A study site's study record. */ -}}
+<section class="study">
+  <h2>About the study</h2>
+  {{- with .featured_image }}<figure class="featured">{{ partial "media-image.html" (dict "file" . "prefer" (slice "large")) }}</figure>{{ end }}
+  {{- with .summary }}<p class="lede">{{ . }}</p>{{ end }}
+  {{- with .description }}<div class="prose">{{ partial "rich.html" . }}</div>{{ end }}
+  <dl class="facts">
+    {{- with .status }}<dt>Status</dt><dd>{{ . }}</dd>{{ end }}
+    {{- with .study_type }}<dt>Design</dt><dd>{{ . }}</dd>{{ end }}
+    {{- with .topic }}<dt>Topic</dt><dd>{{ . }}</dd>{{ end }}
+    {{- if or .starts_on .ends_on }}<dt>Dates</dt><dd>{{ partial "date.html" .starts_on }} to {{ with .ends_on }}{{ partial "date.html" . }}{{ else }}ongoing{{ end }}</dd>{{ end }}
+    {{- with .institution }}<dt>Institution</dt><dd>{{ . }}</dd>{{ end }}
+    {{- with .funder }}<dt>Funder</dt><dd>{{ . }}</dd>{{ end }}
+    {{- with .registry_label }}<dt>Registration</dt><dd>{{ with $.registry_url }}<a href="{{ . }}">{{ $.registry_label }}</a>{{ else }}{{ . }}{{ end }}</dd>{{ end }}
+    {{- with .protocol_url }}<dt>Protocol</dt><dd><a href="{{ partial "path-url.html" . }}">Read the protocol</a></dd>{{ end }}
+  </dl>
+  {{- with .resources }}
+  <h3 id="resources">Resources</h3>
+  <ul class="links">
+    {{- range $res := . }}<li>{{ with $res.url }}<a href="{{ partial "path-url.html" . }}">{{ $res.title }}</a>{{ else }}{{ $res.title }}{{ end }}{{ with $res.description }}: {{ . }}{{ end }}</li>{{ end }}
+  </ul>
+  {{- end }}
+  {{- with .contact }}{{ if or .email .text }}
+  <h3 id="contact">Contact</h3>
+  <p>{{ with .text }}{{ . }} {{ end }}{{ with .email }}<a href="mailto:{{ . }}">{{ . }}</a>{{ end }}</p>
+  {{- end }}{{ end }}
+</section>

@@ -1,0 +1,582 @@
+[
+  {
+    "id": 601,
+    "type": "publication",
+    "slug": "emulating-trials-ehr-delays",
+    "path": "/publications/emulating-trials-ehr-delays",
+    "url": "https://castellanos.biostatistician.page/publications/emulating-trials-ehr-delays",
+    "title": "Emulating target trials of treatment delay with linked registry data",
+    "publication_type": "article-journal",
+    "authors": "Imani Castellanos, Daniel Reyes, Chidinma A. Okafor",
+    "year": 2026,
+    "issued_date": "2026-03-15",
+    "container_title": "American Journal of Epidemiology",
+    "doi": "10.5555/aje.2026.0142",
+    "doi_url": "https://doi.org/10.5555/aje.2026.0142",
+    "official_url": null,
+    "supplementary_links": [
+      {
+        "type": "code",
+        "label": "Code",
+        "url": "https://github.com/example/delay-emulation"
+      },
+      {
+        "type": "data",
+        "label": "Synthetic data",
+        "url": "https://osf.io/abcd1/"
+      }
+    ],
+    "abstract": "We emulated a target trial of surgical delay using linked registry and claims data from 14 years of diagnoses.",
+    "description": null,
+    "citation": {
+      "text": "Castellanos, I., Reyes, D., & Okafor, C. A. (2026). Emulating target trials of treatment delay with linked registry data. American Journal of Epidemiology, 195(3), 412-424. https://doi.org/10.5555/aje.2026.0142",
+      "html": "Castellanos, I., Reyes, D., &amp; Okafor, C. A. (2026). Emulating target trials of treatment delay with linked registry data. <i>American Journal of Epidemiology</i>, <i>195</i>(3), 412-424. <a href=\"https://doi.org/10.5555/aje.2026.0142\">https://doi.org/10.5555/aje.2026.0142</a>",
+      "key": "castellanos2026emulating",
+      "manual": false
+    },
+    "csl": {
+      "id": "castellanos2026emulating",
+      "type": "article-journal",
+      "title": "Emulating target trials of treatment delay with linked registry data",
+      "author": [
+        {
+          "family": "Castellanos",
+          "given": "Imani"
+        },
+        {
+          "family": "Reyes",
+          "given": "Daniel"
+        },
+        {
+          "family": "Okafor",
+          "given": "Chidinma A."
+        }
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2026,
+            3,
+            15
+          ]
+        ]
+      },
+      "container-title": "American Journal of Epidemiology",
+      "volume": "195",
+      "issue": "3",
+      "page": "412-424",
+      "DOI": "10.5555/aje.2026.0142"
+    },
+    "is_featured": true,
+    "featured_order": 1,
+    "tags": [
+      {
+        "id": 320,
+        "name": "Causal inference",
+        "slug": "causal-inference"
+      },
+      {
+        "id": 322,
+        "name": "Electronic health records",
+        "slug": "ehr"
+      }
+    ],
+    "created_at": "2025-03-01T12:00:00Z",
+    "updated_at": "2026-07-14T12:00:00Z",
+    "bibtex": "@article{castellanos2026emulating,\n  title = {{Emulating target trials of treatment delay with linked registry data}},\n  author = {Castellanos, Imani and Reyes, Daniel and Okafor, Chidinma A.},\n  year = {2026},\n  journal = {American Journal of Epidemiology},\n  volume = {195},\n  number = {3},\n  pages = {412--424},\n  doi = {10.5555/aje.2026.0142}\n}\n",
+    "year_order": null
+  },
+  {
+    "id": 602,
+    "type": "publication",
+    "slug": "sensitivity-unmeasured-confounding-preprint",
+    "path": "/publications/sensitivity-unmeasured-confounding-preprint",
+    "url": "https://castellanos.biostatistician.page/publications/sensitivity-unmeasured-confounding-preprint",
+    "title": "A sensitivity analysis for unmeasured confounding in emulated trials",
+    "publication_type": "article",
+    "authors": "Imani Castellanos, Sara Lindqvist",
+    "year": 2026,
+    "issued_date": "2026-09-02",
+    "container_title": "medRxiv",
+    "doi": "10.5555/2026.09.02.26012345",
+    "doi_url": "https://doi.org/10.5555/2026.09.02.26012345",
+    "official_url": null,
+    "supplementary_links": [],
+    "abstract": null,
+    "description": null,
+    "citation": {
+      "text": "Castellanos, I., & Lindqvist, S. (2026). A sensitivity analysis for unmeasured confounding in emulated trials. medRxiv. https://doi.org/10.5555/2026.09.02.26012345",
+      "html": "Castellanos, I., &amp; Lindqvist, S. (2026). A sensitivity analysis for unmeasured confounding in emulated trials. <i>medRxiv</i>. <a href=\"https://doi.org/10.5555/2026.09.02.26012345\">https://doi.org/10.5555/2026.09.02.26012345</a>",
+      "key": "castellanos2026a",
+      "manual": false
+    },
+    "csl": {
+      "id": "castellanos2026a",
+      "type": "article",
+      "title": "A sensitivity analysis for unmeasured confounding in emulated trials",
+      "author": [
+        {
+          "family": "Castellanos",
+          "given": "Imani"
+        },
+        {
+          "family": "Lindqvist",
+          "given": "Sara"
+        }
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2026,
+            9,
+            2
+          ]
+        ]
+      },
+      "container-title": "medRxiv",
+      "DOI": "10.5555/2026.09.02.26012345",
+      "genre": "Preprint"
+    },
+    "is_featured": false,
+    "featured_order": null,
+    "tags": [
+      {
+        "id": 320,
+        "name": "Causal inference",
+        "slug": "causal-inference"
+      }
+    ],
+    "created_at": "2025-03-01T12:00:00Z",
+    "updated_at": "2026-07-14T12:00:00Z",
+    "bibtex": "@misc{castellanos2026a,\n  title = {{A sensitivity analysis for unmeasured confounding in emulated trials}},\n  author = {Castellanos, Imani and Lindqvist, Sara},\n  year = {2026},\n  howpublished = {medRxiv},\n  doi = {10.5555/2026.09.02.26012345}\n}\n",
+    "year_order": null
+  },
+  {
+    "id": 603,
+    "type": "publication",
+    "slug": "mice-registry-covariates",
+    "path": "/publications/mice-registry-covariates",
+    "url": "https://castellanos.biostatistician.page/publications/mice-registry-covariates",
+    "title": "Multiple imputation of staging variables in population cancer registries",
+    "publication_type": "article-journal",
+    "authors": "Chidinma A. Okafor, Imani Castellanos",
+    "year": 2025,
+    "issued_date": "2025-06-01",
+    "container_title": "Statistics in Medicine",
+    "doi": "10.5555/sim.2025.10231",
+    "doi_url": "https://doi.org/10.5555/sim.2025.10231",
+    "official_url": null,
+    "supplementary_links": [],
+    "abstract": "Stage is missing for about a fifth of registry cases. We compare imputation models that use treatment and survival information.",
+    "description": null,
+    "citation": {
+      "text": "Okafor, C. A., & Castellanos, I. (2025). Multiple imputation of staging variables in population cancer registries. Statistics in Medicine, 44(12), 2201-2219. https://doi.org/10.5555/sim.2025.10231",
+      "html": "Okafor, C. A., &amp; Castellanos, I. (2025). Multiple imputation of staging variables in population cancer registries. <i>Statistics in Medicine</i>, <i>44</i>(12), 2201-2219. <a href=\"https://doi.org/10.5555/sim.2025.10231\">https://doi.org/10.5555/sim.2025.10231</a>",
+      "key": "okafor2025multiple",
+      "manual": false
+    },
+    "csl": {
+      "id": "okafor2025multiple",
+      "type": "article-journal",
+      "title": "Multiple imputation of staging variables in population cancer registries",
+      "author": [
+        {
+          "family": "Okafor",
+          "given": "Chidinma A."
+        },
+        {
+          "family": "Castellanos",
+          "given": "Imani"
+        }
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2025,
+            6,
+            1
+          ]
+        ]
+      },
+      "container-title": "Statistics in Medicine",
+      "volume": "44",
+      "issue": "12",
+      "page": "2201-2219",
+      "DOI": "10.5555/sim.2025.10231"
+    },
+    "is_featured": true,
+    "featured_order": 2,
+    "tags": [
+      {
+        "id": 323,
+        "name": "Missing data",
+        "slug": "missing-data"
+      }
+    ],
+    "created_at": "2025-03-01T12:00:00Z",
+    "updated_at": "2026-07-14T12:00:00Z",
+    "bibtex": "@article{okafor2025multiple,\n  title = {{Multiple imputation of staging variables in population cancer registries}},\n  author = {Okafor, Chidinma A. and Castellanos, Imani},\n  year = {2025},\n  journal = {Statistics in Medicine},\n  volume = {44},\n  number = {12},\n  pages = {2201--2219},\n  doi = {10.5555/sim.2025.10231}\n}\n",
+    "year_order": null
+  },
+  {
+    "id": 604,
+    "type": "publication",
+    "slug": "bayesian-small-area-asthma",
+    "path": "/publications/bayesian-small-area-asthma",
+    "url": "https://castellanos.biostatistician.page/publications/bayesian-small-area-asthma",
+    "title": "Bayesian small-area estimation of pediatric asthma rates",
+    "publication_type": "paper-conference",
+    "authors": "Imani Castellanos, Jules Moreau",
+    "year": 2025,
+    "issued_date": "2025-08-05",
+    "container_title": "Proceedings of the Joint Statistical Meetings",
+    "doi": null,
+    "doi_url": null,
+    "official_url": null,
+    "supplementary_links": [],
+    "abstract": null,
+    "description": null,
+    "citation": {
+      "text": "Castellanos, I., & Moreau, J. (2025). Bayesian small-area estimation of pediatric asthma rates. Proceedings of the Joint Statistical Meetings, 88-97.",
+      "html": "Castellanos, I., &amp; Moreau, J. (2025). Bayesian small-area estimation of pediatric asthma rates. <i>Proceedings of the Joint Statistical Meetings</i>, 88-97.",
+      "key": "castellanos2025bayesian",
+      "manual": false
+    },
+    "csl": {
+      "id": "castellanos2025bayesian",
+      "type": "paper-conference",
+      "title": "Bayesian small-area estimation of pediatric asthma rates",
+      "author": [
+        {
+          "family": "Castellanos",
+          "given": "Imani"
+        },
+        {
+          "family": "Moreau",
+          "given": "Jules"
+        }
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2025,
+            8,
+            5
+          ]
+        ]
+      },
+      "container-title": "Proceedings of the Joint Statistical Meetings",
+      "page": "88-97",
+      "publisher": "American Statistical Association"
+    },
+    "is_featured": false,
+    "featured_order": null,
+    "tags": [
+      {
+        "id": 327,
+        "name": "Bayesian methods",
+        "slug": "bayesian"
+      }
+    ],
+    "created_at": "2025-03-01T12:00:00Z",
+    "updated_at": "2026-07-14T12:00:00Z",
+    "bibtex": "@inproceedings{castellanos2025bayesian,\n  title = {{Bayesian small-area estimation of pediatric asthma rates}},\n  author = {Castellanos, Imani and Moreau, Jules},\n  year = {2025},\n  booktitle = {Proceedings of the Joint Statistical Meetings},\n  pages = {88--97},\n  publisher = {American Statistical Association}\n}\n",
+    "year_order": null
+  },
+  {
+    "id": 605,
+    "type": "publication",
+    "slug": "competing-risks-chapter",
+    "path": "/publications/competing-risks-chapter",
+    "url": "https://castellanos.biostatistician.page/publications/competing-risks-chapter",
+    "title": "Competing risks in clinical cohorts",
+    "publication_type": "chapter",
+    "authors": "Imani Castellanos",
+    "year": 2024,
+    "issued_date": "2024-11-01",
+    "container_title": "Handbook of Applied Survival Analysis",
+    "doi": null,
+    "doi_url": null,
+    "official_url": null,
+    "supplementary_links": [],
+    "abstract": null,
+    "description": null,
+    "citation": {
+      "text": "Castellanos, I. (2024). Competing risks in clinical cohorts. Handbook of Applied Survival Analysis, 233-260.",
+      "html": "Castellanos, I. (2024). Competing risks in clinical cohorts. <i>Handbook of Applied Survival Analysis</i>, 233-260.",
+      "key": "castellanos2024competing",
+      "manual": false
+    },
+    "csl": {
+      "id": "castellanos2024competing",
+      "type": "chapter",
+      "title": "Competing risks in clinical cohorts",
+      "author": [
+        {
+          "family": "Castellanos",
+          "given": "Imani"
+        }
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2024,
+            11,
+            1
+          ]
+        ]
+      },
+      "container-title": "Handbook of Applied Survival Analysis",
+      "page": "233-260",
+      "publisher": "Northbridge University Press"
+    },
+    "is_featured": false,
+    "featured_order": null,
+    "tags": [
+      {
+        "id": 326,
+        "name": "Survival analysis",
+        "slug": "survival-analysis"
+      }
+    ],
+    "created_at": "2025-03-01T12:00:00Z",
+    "updated_at": "2026-07-14T12:00:00Z",
+    "bibtex": "@incollection{castellanos2024competing,\n  title = {{Competing risks in clinical cohorts}},\n  author = {Castellanos, Imani},\n  year = {2024},\n  booktitle = {Handbook of Applied Survival Analysis},\n  pages = {233--260},\n  publisher = {Northbridge University Press}\n}\n",
+    "year_order": null
+  },
+  {
+    "id": 606,
+    "type": "publication",
+    "slug": "ttetools-software",
+    "path": "/publications/ttetools-software",
+    "url": "https://castellanos.biostatistician.page/publications/ttetools-software",
+    "title": "ttetools: Target trial emulation in R",
+    "publication_type": "software",
+    "authors": "Imani Castellanos, Daniel Reyes",
+    "year": 2024,
+    "issued_date": "2024-09-10",
+    "container_title": null,
+    "doi": "10.5555/zenodo.1234567",
+    "doi_url": "https://doi.org/10.5555/zenodo.1234567",
+    "official_url": "https://github.com/example/ttetools",
+    "supplementary_links": [],
+    "abstract": null,
+    "description": null,
+    "citation": {
+      "text": "Castellanos, I., & Reyes, D. (2024). ttetools: Target trial emulation in R. Zenodo. https://doi.org/10.5555/zenodo.1234567",
+      "html": "Castellanos, I., &amp; Reyes, D. (2024). ttetools: Target trial emulation in R. Zenodo. <a href=\"https://doi.org/10.5555/zenodo.1234567\">https://doi.org/10.5555/zenodo.1234567</a>",
+      "key": "castellanos2024ttetools",
+      "manual": false
+    },
+    "csl": {
+      "id": "castellanos2024ttetools",
+      "type": "software",
+      "title": "ttetools: Target trial emulation in R",
+      "author": [
+        {
+          "family": "Castellanos",
+          "given": "Imani"
+        },
+        {
+          "family": "Reyes",
+          "given": "Daniel"
+        }
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2024,
+            9,
+            10
+          ]
+        ]
+      },
+      "publisher": "Zenodo",
+      "DOI": "10.5555/zenodo.1234567",
+      "URL": "https://github.com/example/ttetools",
+      "version": "0.4.0"
+    },
+    "is_featured": false,
+    "featured_order": null,
+    "tags": [
+      {
+        "id": 320,
+        "name": "Causal inference",
+        "slug": "causal-inference"
+      },
+      {
+        "id": 324,
+        "name": "R",
+        "slug": "r"
+      },
+      {
+        "id": 321,
+        "name": "Open science",
+        "slug": "open-science"
+      }
+    ],
+    "created_at": "2025-03-01T12:00:00Z",
+    "updated_at": "2026-07-14T12:00:00Z",
+    "bibtex": "@software{castellanos2024ttetools,\n  title = {{ttetools: Target trial emulation in R}},\n  author = {Castellanos, Imani and Reyes, Daniel},\n  year = {2024},\n  publisher = {Zenodo},\n  doi = {10.5555/zenodo.1234567},\n  url = {https://github.com/example/ttetools}\n}\n",
+    "year_order": null
+  },
+  {
+    "id": 607,
+    "type": "publication",
+    "slug": "registry-data-quality-report",
+    "path": "/publications/registry-data-quality-report",
+    "url": "https://castellanos.biostatistician.page/publications/registry-data-quality-report",
+    "title": "Data quality in the regional cancer registry, 2010-2022",
+    "publication_type": "report",
+    "authors": "Imani Castellanos, Chidinma A. Okafor, Minh Tran",
+    "year": 2023,
+    "issued_date": "2023-05-30",
+    "container_title": null,
+    "doi": null,
+    "doi_url": null,
+    "official_url": "https://example.edu/reports/tr-2023-04.pdf",
+    "supplementary_links": [],
+    "abstract": null,
+    "description": null,
+    "citation": {
+      "text": "Castellanos, I., Okafor, C. A., & Tran, M. (2023). Data quality in the regional cancer registry, 2010-2022. Northbridge University School of Public Health.",
+      "html": "Castellanos, I., Okafor, C. A., &amp; Tran, M. (2023). Data quality in the regional cancer registry, 2010-2022. Northbridge University School of Public Health.",
+      "key": "castellanos2023data",
+      "manual": false
+    },
+    "csl": {
+      "id": "castellanos2023data",
+      "type": "report",
+      "title": "Data quality in the regional cancer registry, 2010-2022",
+      "author": [
+        {
+          "family": "Castellanos",
+          "given": "Imani"
+        },
+        {
+          "family": "Okafor",
+          "given": "Chidinma A."
+        },
+        {
+          "family": "Tran",
+          "given": "Minh"
+        }
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2023,
+            5,
+            30
+          ]
+        ]
+      },
+      "publisher": "Northbridge University School of Public Health",
+      "URL": "https://example.edu/reports/tr-2023-04.pdf",
+      "number": "TR-2023-04"
+    },
+    "is_featured": false,
+    "featured_order": null,
+    "tags": [
+      {
+        "id": 322,
+        "name": "Electronic health records",
+        "slug": "ehr"
+      }
+    ],
+    "created_at": "2025-03-01T12:00:00Z",
+    "updated_at": "2026-07-14T12:00:00Z",
+    "bibtex": "@techreport{castellanos2023data,\n  title = {{Data quality in the regional cancer registry, 2010-2022}},\n  author = {Castellanos, Imani and Okafor, Chidinma A. and Tran, Minh},\n  year = {2023},\n  number = {TR-2023-04},\n  institution = {Northbridge University School of Public Health},\n  url = {https://example.edu/reports/tr-2023-04.pdf}\n}\n",
+    "year_order": null
+  },
+  {
+    "id": 608,
+    "type": "publication",
+    "slug": "dissertation",
+    "path": "/publications/dissertation",
+    "url": "https://castellanos.biostatistician.page/publications/dissertation",
+    "title": "Methods for time-varying confounding in observational cohorts",
+    "publication_type": "thesis",
+    "authors": "Imani Castellanos",
+    "year": 2019,
+    "issued_date": "2019-05-15",
+    "container_title": null,
+    "doi": null,
+    "doi_url": null,
+    "official_url": null,
+    "supplementary_links": [],
+    "abstract": null,
+    "description": {
+      "html": "<p>Advised by <em>Prof. Helen Ward</em>. Chapters 2 and 3 became the 2020 papers on weighting.</p>",
+      "json": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Advised by "
+              },
+              {
+                "type": "text",
+                "text": "Prof. Helen Ward",
+                "marks": [
+                  {
+                    "type": "italic"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": ". Chapters 2 and 3 became the 2020 papers on weighting."
+              }
+            ]
+          }
+        ]
+      },
+      "markdown": "Advised by *Prof. Helen Ward*. Chapters 2 and 3 became the 2020 papers on weighting."
+    },
+    "citation": {
+      "text": "Castellanos, I. (2019). Methods for time-varying confounding in observational cohorts. University of Lakeshore.",
+      "html": "Castellanos, I. (2019). Methods for time-varying confounding in observational cohorts. University of Lakeshore.",
+      "key": "castellanos2019methods",
+      "manual": false
+    },
+    "csl": {
+      "id": "castellanos2019methods",
+      "type": "thesis",
+      "title": "Methods for time-varying confounding in observational cohorts",
+      "author": [
+        {
+          "family": "Castellanos",
+          "given": "Imani"
+        }
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2019,
+            5,
+            15
+          ]
+        ]
+      },
+      "publisher": "University of Lakeshore",
+      "genre": "PhD dissertation"
+    },
+    "is_featured": false,
+    "featured_order": null,
+    "tags": [
+      {
+        "id": 320,
+        "name": "Causal inference",
+        "slug": "causal-inference"
+      }
+    ],
+    "created_at": "2025-03-01T12:00:00Z",
+    "updated_at": "2026-07-14T12:00:00Z",
+    "bibtex": "@phdthesis{castellanos2019methods,\n  title = {{Methods for time-varying confounding in observational cohorts}},\n  author = {Castellanos, Imani},\n  year = {2019},\n  school = {University of Lakeshore}\n}\n",
+    "year_order": null
+  }
+]

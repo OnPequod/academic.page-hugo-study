@@ -1,0 +1,33 @@
+{{- $r := partial "api/record.html" . }}
+<article class="record">
+  <header>
+    <h1>{{ .Title }}</h1>
+    <p class="meta">
+      {{- with $r.publication_type }}<span class="badge">{{ partial "labels.html" (dict "kind" "publication-one" "value" .) }}</span> {{ end -}}
+      {{- with $r.year }}{{ . }}{{ end -}}
+      {{- with $r.container_title }} · <em>{{ . }}</em>{{ end -}}
+    </p>
+    {{- with $r.authors }}<p class="authors">{{ . }}</p>{{ end }}
+  </header>
+  <h2>Citation</h2>
+  <blockquote class="citation">{{ $r.citation.html | default $r.citation.text | safeHTML }}</blockquote>
+  {{- with $r.abstract }}
+  <h2>Abstract</h2>
+  <p>{{ . }}</p>
+  {{- end }}
+  {{- with .Content }}
+  <div class="prose">{{ . }}</div>
+  {{- end }}
+  <ul class="links">
+    {{- with $r.doi_url }}<li><a href="{{ . }}">DOI: {{ $r.doi }}</a></li>{{ end }}
+    {{- with $r.official_url }}<li><a href="{{ . }}">Publisher's version</a></li>{{ end }}
+    {{- range $r.supplementary_links }}<li><a href="{{ partial "path-url.html" .url }}">{{ .label | default .type | default .url }}</a></li>{{ end }}
+    {{- with $r.csl }}
+    {{- $csl := resources.FromString (printf "publications/%s.csl.json" $r.slug) (jsonify (dict "indent" "  ") (slice .)) }}
+    <li><a href="{{ $csl.RelPermalink }}" download>CSL-JSON</a></li>
+    {{- end }}
+    {{- $bib := partialCached "api/bibtex.html" "bib" }}
+    {{- with $bib }}<li><a href="{{ .RelPermalink }}" download>BibTeX (all publications)</a></li>{{ end }}
+  </ul>
+  {{- partial "tag-links.html" $r.tags }}
+</article>

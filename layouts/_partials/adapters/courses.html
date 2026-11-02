@@ -1,0 +1,18 @@
+{{- /*
+  Courses live under the folder their paths name: /teaching/<slug> on
+  Academic.page today, /courses/<slug> on older sites. The section list page
+  goes in that folder, so each course page sits in the section that lists it.
+*/ -}}
+{{- $a := .adapter -}}
+{{- $courses := partialCached "api/list.html" "courses" "courses" -}}
+{{- $dir := "courses" -}}
+{{- with $courses -}}
+  {{- with (index . 0).path -}}
+    {{- $first := index (split (strings.TrimPrefix "/" .) "/") 0 -}}
+    {{- if and $first (ne $first (strings.TrimPrefix "/" .)) -}}{{- $dir = $first -}}{{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- partial "adapters/section.html" (dict "adapter" $a "site" .site "path" $dir "title" "Courses") -}}
+{{- range $i, $r := $courses -}}
+  {{- $a.AddPage (partial "adapters/record-page.html" (dict "record" $r "collection" "courses" "type" "course" "body" $r.content "date" $r.published_at "weight" (add $i 1))) -}}
+{{- end -}}

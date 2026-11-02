@@ -1,0 +1,19 @@
+{{- $r := partial "api/record.html" . }}
+<article class="record">
+  <header>
+    <h1>{{ .Title }}</h1>
+    <p class="meta">
+      <time datetime="{{ $r.published_at }}">{{ partial "date.html" $r.published_at }}</time>
+      {{- with $r.author }} · {{ .name }}{{ end }}
+    </p>
+  </header>
+  {{- with $r.featured_image }}
+  <figure class="featured">{{ partial "media-image.html" (dict "file" . "prefer" (slice "large") "alt" "") }}</figure>
+  {{- end }}
+  <div class="prose">{{ .Content }}</div>
+  {{- partial "tag-links.html" $r.tags }}
+  <nav class="pager" aria-label="More posts">
+    {{- with .NextInSection }}<a rel="prev" href="{{ .RelPermalink }}">← {{ .Title }}</a>{{ end }}
+    {{- with .PrevInSection }}<a rel="next" href="{{ .RelPermalink }}">{{ .Title }} →</a>{{ end }}
+  </nav>
+</article>

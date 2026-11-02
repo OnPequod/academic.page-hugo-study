@@ -1,0 +1,116 @@
+[
+  {
+    "id": 101,
+    "type": "media",
+    "media_type": "image",
+    "file_name": "dag-confounding.svg",
+    "alt": "A directed acyclic graph with treatment, outcome, and two confounders",
+    "caption": "The causal diagram we commit to before looking at outcomes.",
+    "description": "Figure for the preregistration post.",
+    "width": 1200,
+    "height": 675,
+    "file": {
+      "id": 9101,
+      "file_name": "dag-confounding.svg",
+      "mime_type": "image/svg+xml",
+      "size": 4096,
+      "alt": "A directed acyclic graph with treatment, outcome, and two confounders",
+      "url": "{{ASSETS}}/9101/dag-confounding.svg",
+      "conversions": {
+        "thumb": {
+          "url": "{{ASSETS}}/9101/conversions/dag-confounding-thumb.svg",
+          "width": 300,
+          "height": null
+        },
+        "medium": {
+          "url": "{{ASSETS}}/9101/conversions/dag-confounding-medium.svg",
+          "width": 800,
+          "height": null
+        },
+        "large": {
+          "url": "{{ASSETS}}/9101/conversions/dag-confounding-large.svg",
+          "width": 1200,
+          "height": null
+        }
+      }
+    },
+    "created_at": "2026-09-28T14:00:00Z",
+    "updated_at": "2026-09-28T14:00:00Z"
+  },
+  {
+    "id": 102,
+    "type": "media",
+    "media_type": "image",
+    "file_name": "county-rates-map.svg",
+    "alt": "Map of smoothed county asthma rates in shades of blue",
+    "caption": "Smoothed rates shrink small counties toward their neighbors.",
+    "description": null,
+    "width": 1200,
+    "height": 800,
+    "file": {
+      "id": 9102,
+      "file_name": "county-rates-map.svg",
+      "mime_type": "image/svg+xml",
+      "size": 4096,
+      "alt": "Map of smoothed county asthma rates in shades of blue",
+      "url": "{{ASSETS}}/9102/county-rates-map.svg",
+      "conversions": {
+        "thumb": {
+          "url": "{{ASSETS}}/9102/conversions/county-rates-map-thumb.svg",
+          "width": 300,
+          "height": null
+        },
+        "medium": {
+          "url": "{{ASSETS}}/9102/conversions/county-rates-map-medium.svg",
+          "width": 800,
+          "height": null
+        },
+        "large": {
+          "url": "{{ASSETS}}/9102/conversions/county-rates-map-large.svg",
+          "width": 1200,
+          "height": null
+        }
+      }
+    },
+    "created_at": "2025-05-18T14:00:00Z",
+    "updated_at": "2025-05-18T14:00:00Z"
+  },
+  {
+    "id": 103,
+    "type": "media",
+    "media_type": "image",
+    "file_name": "km-curves.svg",
+    "alt": "Two Kaplan-Meier survival curves that cross at month 18",
+    "caption": "Crossing curves are a reason to look past the hazard ratio.",
+    "description": null,
+    "width": 1200,
+    "height": 700,
+    "file": {
+      "id": 9103,
+      "file_name": "km-curves.svg",
+      "mime_type": "image/svg+xml",
+      "size": 4096,
+      "alt": "Two Kaplan-Meier survival curves that cross at month 18",
+      "url": "{{ASSETS}}/9103/km-curves.svg",
+      "conversions": {
+        "thumb": {
+          "url": "{{ASSETS}}/9103/conversions/km-curves-thumb.svg",
+          "width": 300,
+          "height": null
+        },
+        "medium": {
+          "url": "{{ASSETS}}/9103/conversions/km-curves-medium.svg",
+          "width": 800,
+          "height": null
+        },
+        "large": {
+          "url": "{{ASSETS}}/9103/conversions/km-curves-large.svg",
+          "width": 1200,
+          "height": null
+        }
+      }
+    },
+    "created_at": "2026-04-01T14:00:00Z",
+    "updated_at": "2026-04-01T14:00:00Z"
+  }
+]

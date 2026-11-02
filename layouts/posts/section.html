@@ -1,0 +1,22 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{- $pager := .Paginate .Pages.ByDate.Reverse }}
+<ul class="entries">
+  {{- range $pager.Pages }}
+  {{- $r := partial "api/record.html" . }}
+  <li class="entry">
+    <h2 class="entry-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    <p class="meta"><time datetime="{{ $r.published_at }}">{{ partial "date.html" $r.published_at }}</time>{{ with $r.author }} · {{ .name }}{{ end }}</p>
+    {{- with $r.excerpt }}<p>{{ . }}</p>{{ end }}
+    {{- partial "tag-links.html" $r.tags }}
+  </li>
+  {{- end }}
+</ul>
+{{- if gt $pager.TotalPages 1 }}
+<nav class="pager" aria-label="Pages">
+  {{- with $pager.Prev }}<a rel="prev" href="{{ .URL }}">← Newer posts</a>{{ end }}
+  <span>Page {{ $pager.PageNumber }} of {{ $pager.TotalPages }}</span>
+  {{- with $pager.Next }}<a rel="next" href="{{ .URL }}">Older posts →</a>{{ end }}
+</nav>
+{{- end }}
+{{ end }}

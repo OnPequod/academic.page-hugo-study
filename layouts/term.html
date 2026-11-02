@@ -1,0 +1,14 @@
+{{- /* Everything tagged with one tag, grouped by section. */ -}}
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{- with .Params.description }}<p class="lede">{{ . }}</p>{{ end }}
+{{- $groups := dict "posts" "Posts" "publications" "Publications" "talks" "Talks" "projects" "Projects" "courses" "Courses" "pages" "Pages" -}}
+{{- range $coll := slice "posts" "publications" "talks" "projects" "courses" "pages" }}
+  {{- with where $.Pages "Params.api_collection" $coll }}
+  <section>
+    <h2>{{ index $groups $coll }}</h2>
+    <ul class="entries">{{ range .ByDate.Reverse }}{{ partial "entry.html" (dict "page" . "level" 3) }}{{ end }}</ul>
+  </section>
+  {{- end }}
+{{- end }}
+{{ end }}

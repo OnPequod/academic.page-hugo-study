@@ -1,0 +1,6 @@
+{{- $a := .adapter -}}
+{{- partial "adapters/section.html" (dict "adapter" $a "site" .site "path" "talks" "title" "Talks") -}}
+{{- /* The weight keeps the API's order: newest year first, and within a year the order the site sets, which may be a hand order. */ -}}
+{{- range $i, $r := partialCached "api/list.html" "talks" "talks" -}}
+  {{- $a.AddPage (partial "adapters/record-page.html" (dict "record" $r "collection" "talks" "type" "talk" "body" $r.abstract "date" ($r.talk_date | default $r.published_at) "weight" (add $i 1))) -}}
+{{- end -}}

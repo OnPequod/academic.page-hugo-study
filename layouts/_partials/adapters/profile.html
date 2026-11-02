@@ -1,0 +1,24 @@
+{{- /*
+  The profile drives the home page (see layouts/home.html). It also has an
+  about page and a CV page on Academic.page; this adds them unless a page
+  from the API already uses the path.
+*/ -}}
+{{- $a := .adapter -}}
+{{- $profile := partialCached "api/single.html" "profile" "profile" -}}
+{{- $taken := slice -}}
+{{- if in .site.sections "pages" -}}
+  {{- range partialCached "api/list.html" "pages" "pages" -}}{{- $taken = $taken | append (strings.TrimPrefix "/" .path) -}}{{- end -}}
+{{- end -}}
+{{- with $profile -}}
+  {{- with .about_page -}}
+    {{- $path := strings.TrimPrefix "/" .path -}}
+    {{- if not (in $taken $path) -}}
+      {{- $a.AddPage (dict "kind" "page" "path" $path "title" (.title | default "About") "params" (dict "api_type" "about")) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- with .cv -}}
+    {{- if and .file (not (in $taken "cv")) -}}
+      {{- $a.AddPage (dict "kind" "page" "path" "cv" "title" "CV" "params" (dict "api_type" "cv")) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}

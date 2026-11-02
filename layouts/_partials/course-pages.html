@@ -1,0 +1,2 @@
+{{- /* Every course page, in the API's order. Courses can live under /courses or /teaching, so they are found by type. */ -}}
+{{- return (where site.RegularPages "Params.api_type" "course").ByWeight -}}

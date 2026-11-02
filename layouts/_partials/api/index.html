@@ -1,0 +1,6 @@
+{{- /* A collection as a dict keyed by record ID, for lookups from templates. */ -}}
+{{- $index := dict -}}
+{{- range partialCached "api/list.html" . . -}}
+  {{- $index = merge $index (dict (string .id) .) -}}
+{{- end -}}
+{{- return $index -}}

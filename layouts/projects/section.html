@@ -1,0 +1,14 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+<ul class="cards">
+  {{- range .Pages.ByWeight }}
+  {{- $r := partial "api/record.html" . }}
+  <li class="card">
+    {{- with $r.featured_image }}{{ partial "media-image.html" (dict "file" . "prefer" (slice "thumb" "large") "alt" "") }}{{ end }}
+    <h2 class="entry-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    {{- with $r.status }}<p class="meta"><span class="badge">{{ . | humanize }}</span></p>{{ end }}
+    {{- with $r.excerpt }}<p>{{ . }}</p>{{ end }}
+  </li>
+  {{- end }}
+</ul>
+{{ end }}

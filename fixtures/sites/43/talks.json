@@ -1,0 +1,63 @@
+[
+  {
+    "id": 1701,
+    "type": "talk",
+    "slug": "lab-methods-workshop",
+    "path": "/talks/lab-methods-workshop",
+    "url": "https://castellanos-lab.biostatistician.page/talks/lab-methods-workshop",
+    "title": "Causal diagrams for clinicians",
+    "excerpt": "A workshop for clinical researchers.",
+    "abstract": {
+      "html": "<p>How to draw and read a causal diagram before choosing covariates.</p>",
+      "json": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "How to draw and read a causal diagram before choosing covariates."
+              }
+            ]
+          }
+        ]
+      },
+      "markdown": "How to draw and read a causal diagram before choosing covariates."
+    },
+    "speaker_name": "Daniel Reyes",
+    "copresenters": [
+      "Imani Castellanos"
+    ],
+    "talk_type": "workshop",
+    "talk_date": "2026-11-20",
+    "meeting_name": "Northbridge Medical Center Grand Rounds",
+    "location": "Northbridge, MA",
+    "location_url": null,
+    "slides_url": null,
+    "paper_url": null,
+    "recording_url": null,
+    "slides_file": null,
+    "paper_file": null,
+    "is_featured": true,
+    "display_order": 1,
+    "featured_image": null,
+    "tags": [
+      {
+        "id": 332,
+        "name": "Causal inference",
+        "slug": "causal-inference"
+      }
+    ],
+    "seo": {
+      "title": null,
+      "description": "A workshop for clinical researchers."
+    },
+    "published_at": "2025-01-10T14:00:00Z",
+    "created_at": "2025-01-10T09:00:00Z",
+    "updated_at": "2026-09-01T11:00:00Z",
+    "talk_date_precision": "day",
+    "talk_date_display": "November 20, 2026",
+    "year_order": null
+  }
+]

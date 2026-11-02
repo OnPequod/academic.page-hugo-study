@@ -1,0 +1,72 @@
+# Builds this example site from Academic.page and publishes it with GitHub
+# Pages, every day, on each push to main, and when started by hand or by a
+# repository_dispatch event (for example from a relay that receives
+# Academic.page's content webhook).
+#
+# Settings (Settings > Secrets and variables > Actions):
+#   secret ACADEMIC_PAGE_TOKEN  a content key that can read the site below
+#
+# Pages must be set to deploy from GitHub Actions (Settings > Pages).
+
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "17 6 * * *"
+  repository_dispatch:
+    types: [academic-page-content-updated]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+env:
+  # The site's ID: the number in its admin address on Academic.page.
+  ACADEMIC_PAGE_SITE: "182"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+
+      - name: Cache the pinned Hugo build
+        uses: actions/cache@v4
+        with:
+          path: bin/hugo
+          key: hugo-${{ runner.os }}-${{ hashFiles('Makefile') }}
+
+      - id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Build
+        env:
+          ACADEMIC_PAGE_TOKEN: ${{ secrets.ACADEMIC_PAGE_TOKEN }}
+          HUGO_BASEURL: ${{ steps.pages.outputs.base_url }}/
+        run: make build
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

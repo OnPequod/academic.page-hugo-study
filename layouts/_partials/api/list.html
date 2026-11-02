@@ -1,0 +1,16 @@
+{{- /*
+  Returns every record in a collection ("posts", "talks", ...), following
+  links.next until the last page. Requests 100 records per page, the API's
+  maximum, unless ACADEMIC_PAGE_PER_PAGE says otherwise. The seq bound only guards against a runaway loop.
+*/ -}}
+{{- $cfg := partialCached "api/config.html" "config" -}}
+{{- $url := printf "%s/%s?per_page=%d" $cfg.root . $cfg.perPage -}}
+{{- $all := slice -}}
+{{- range seq 1000 -}}
+  {{- if not $url -}}{{- break -}}{{- end -}}
+  {{- $page := partialCached "api/fetch.html" $url $url -}}
+  {{- if not $page -}}{{- break -}}{{- end -}}
+  {{- range $page.data -}}{{- $all = $all | append . -}}{{- end -}}
+  {{- $url = $page.links.next -}}
+{{- end -}}
+{{- return $all -}}

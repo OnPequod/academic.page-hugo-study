@@ -1,0 +1,5 @@
+{{- /* Follows the site's search indexing setting from the API. */ -}}
+{{- $site := partialCached "api/site.html" "site" -}}
+User-agent: *
+{{ if $site.allow_search_indexing }}Allow: /
+Sitemap: {{ "sitemap.xml" | absURL }}{{ else }}Disallow: /{{ end }}

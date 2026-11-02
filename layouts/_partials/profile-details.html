@@ -1,0 +1,28 @@
+{{- /* The profile body, positions, and credentials, with the site's headings. */ -}}
+{{- with .body }}
+{{- with $.headings.body }}<h2>{{ . }}</h2>{{ end }}
+<div class="prose">{{ partial "rich.html" . }}</div>
+{{- end }}
+{{- with .positions }}
+<h2>{{ $.headings.positions | default "Positions" }}</h2>
+<ul class="timeline">
+  {{- range . }}
+  <li>
+    <strong>{{ .title }}</strong>{{ with .employer }}, {{ . }}{{ end }}
+    <span class="meta">{{ .from }}–{{ if .currently_held }}present{{ else }}{{ .to }}{{ end }}</span>
+    {{- with .description }}<br>{{ . }}{{ end }}
+  </li>
+  {{- end }}
+</ul>
+{{- end }}
+{{- with .credentials }}
+<h2>{{ $.headings.credentials | default "Education" }}</h2>
+<ul class="timeline">
+  {{- range . }}
+  <li>{{ .display | default (printf "%s, %s" .degree .institution) }}{{ if .in_progress }} (in progress){{ end }}</li>
+  {{- end }}
+</ul>
+{{- end }}
+{{- with .cv }}{{ with .file }}
+<p><a href="{{ .url }}">Download my CV</a></p>
+{{- end }}{{ end }}

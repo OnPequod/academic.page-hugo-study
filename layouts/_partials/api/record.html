@@ -1,0 +1,10 @@
+{{- /*
+  The API record behind a page built by a content adapter. Adapters store
+  only the collection and ID in front matter, because Hugo lowercases param
+  keys and some fields (CSL-JSON's DOI and URL) are case-sensitive.
+*/ -}}
+{{- $rec := false -}}
+{{- with .Params.api_collection -}}
+  {{- $rec = index (partialCached "api/index.html" . .) (string $.Params.api_id) -}}
+{{- end -}}
+{{- return $rec -}}

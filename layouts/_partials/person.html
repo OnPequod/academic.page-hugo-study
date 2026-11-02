@@ -1,0 +1,17 @@
+{{- /* One lab or team member card. */ -}}
+<li class="person" id="{{ .slug }}">
+  {{- with .photo }}{{ partial "media-image.html" (dict "file" . "prefer" (slice "thumb") "class" "avatar" "alt" "") }}{{ else }}<span class="avatar avatar-empty" aria-hidden="true">{{ substr $.name 0 1 }}</span>{{ end }}
+  <div>
+    <h3>{{ .name }}</h3>
+    {{- with .role }}<p class="meta">{{ . }}</p>{{ end }}
+    {{- with .bio }}<div class="prose">{{ partial "rich.html" . }}</div>{{ end }}
+    {{- with .research_interests }}
+    <p><strong>Interests:</strong> {{ if reflect.IsSlice . }}{{ delimit . ", " }}{{ else }}{{ . }}{{ end }}</p>
+    {{- end }}
+    {{- if eq .status "alumni" }}{{ with .left_on }}<p class="meta">Until {{ (time.AsTime .).Format "2006" }}</p>{{ end }}{{ end }}
+    <p class="contact">
+      {{- with .email }}<a href="mailto:{{ . }}">{{ . }}</a>{{ end }}
+      {{- with .website_url }}{{ if $.email }} · {{ end }}<a href="{{ . }}">Website<span class="visually-hidden"> of {{ $.name }}</span></a>{{ end }}
+    </p>
+  </div>
+</li>

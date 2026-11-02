@@ -1,0 +1,25 @@
+{{- /*
+  Reads the API settings from the environment.
+
+  ACADEMIC_PAGE_TOKEN     a content API key (required, never printed)
+  ACADEMIC_PAGE_SITE      the site's numeric ID (required)
+  ACADEMIC_PAGE_BASE_URL  defaults to https://academic.page/api/v1
+  ACADEMIC_PAGE_PER_PAGE  records per list request, 1 to 100 (default 100)
+
+  Returns a dict with base, site, root (the site's content API URL),
+  perPage, and headers (the request headers, including the key).
+*/ -}}
+{{- $base := os.Getenv "ACADEMIC_PAGE_BASE_URL" | default "https://academic.page/api/v1" -}}
+{{- $base = strings.TrimSuffix "/" $base -}}
+{{- $token := os.Getenv "ACADEMIC_PAGE_TOKEN" -}}
+{{- $site := os.Getenv "ACADEMIC_PAGE_SITE" -}}
+{{- if not $token -}}
+  {{- errorf "ACADEMIC_PAGE_TOKEN is not set. Create a content key at https://academic.page/admin/account/api, or run `make demo` to use the mock API." -}}
+{{- end -}}
+{{- if not (findRE `^[0-9]+$` $site) -}}
+  {{- errorf "ACADEMIC_PAGE_SITE must be the site's numeric ID (the number in its admin address, such as 42 in /sites/42/posts)." -}}
+{{- end -}}
+{{- $perPage := int (os.Getenv "ACADEMIC_PAGE_PER_PAGE" | default "100") -}}
+{{- if or (lt $perPage 1) (gt $perPage 100) -}}{{- $perPage = 100 -}}{{- end -}}
+{{- $headers := dict "Authorization" (printf "Bearer %s" $token) "Accept" "application/json" -}}
+{{- return dict "base" $base "site" $site "root" (printf "%s/content/sites/%s" $base $site) "perPage" $perPage "headers" $headers -}}

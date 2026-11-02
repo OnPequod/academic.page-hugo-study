@@ -1,0 +1,300 @@
+[
+  {
+    "id": 1801,
+    "type": "lab_member",
+    "slug": "imani-castellanos",
+    "path": "/members#imani-castellanos",
+    "url": "https://castellanos-lab.biostatistician.page/members#imani-castellanos",
+    "name": "Imani Castellanos",
+    "role": "Principal Investigator",
+    "member_type": "principal_investigator",
+    "status": "current",
+    "bio": {
+      "html": "<p>Associate professor of biostatistics. Leads the lab's work on causal inference with health records.</p>",
+      "json": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Associate professor of biostatistics. Leads the lab's work on causal inference with health records."
+              }
+            ]
+          }
+        ]
+      },
+      "markdown": "Associate professor of biostatistics. Leads the lab's work on causal inference with health records."
+    },
+    "email": "imani.castellanos@example.edu",
+    "website_url": "https://castellanos.biostatistician.page",
+    "research_interests": [
+      "causal inference",
+      "registries",
+      "Bayesian methods"
+    ],
+    "joined_on": "2021-07-01",
+    "left_on": null,
+    "sort_order": 1,
+    "photo": {
+      "id": 1851,
+      "file_name": "castellanos.svg",
+      "mime_type": "image/svg+xml",
+      "size": 4096,
+      "alt": "Imani Castellanos",
+      "url": "{{ASSETS}}/1851/castellanos.svg",
+      "conversions": {
+        "thumb": {
+          "url": "{{ASSETS}}/1851/conversions/castellanos-thumb.svg",
+          "width": 300,
+          "height": 300
+        }
+      }
+    },
+    "published_at": "2021-07-01T14:00:00Z",
+    "created_at": "2021-07-01T09:00:00Z",
+    "updated_at": "2026-09-15T09:00:00Z"
+  },
+  {
+    "id": 1802,
+    "type": "lab_member",
+    "slug": "daniel-reyes",
+    "path": "/members#daniel-reyes",
+    "url": "https://castellanos-lab.biostatistician.page/members#daniel-reyes",
+    "name": "Daniel Reyes",
+    "role": "Postdoctoral Fellow",
+    "member_type": "postdoc",
+    "status": "current",
+    "bio": {
+      "html": "<p>Works on sensitivity analysis for unmeasured confounding.</p>",
+      "json": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Works on sensitivity analysis for unmeasured confounding."
+              }
+            ]
+          }
+        ]
+      },
+      "markdown": "Works on sensitivity analysis for unmeasured confounding."
+    },
+    "email": "daniel.reyes@example.edu",
+    "website_url": null,
+    "research_interests": [
+      "sensitivity analysis",
+      "target trials"
+    ],
+    "joined_on": "2024-09-01",
+    "left_on": null,
+    "sort_order": 2,
+    "photo": {
+      "id": 1852,
+      "file_name": "reyes.svg",
+      "mime_type": "image/svg+xml",
+      "size": 4096,
+      "alt": "Daniel Reyes",
+      "url": "{{ASSETS}}/1852/reyes.svg",
+      "conversions": {
+        "thumb": {
+          "url": "{{ASSETS}}/1852/conversions/reyes-thumb.svg",
+          "width": 300,
+          "height": 300
+        }
+      }
+    },
+    "published_at": "2024-09-01T14:00:00Z",
+    "created_at": "2024-09-01T09:00:00Z",
+    "updated_at": "2026-09-15T09:00:00Z"
+  },
+  {
+    "id": 1803,
+    "type": "lab_member",
+    "slug": "chidinma-okafor",
+    "path": "/members#chidinma-okafor",
+    "url": "https://castellanos-lab.biostatistician.page/members#chidinma-okafor",
+    "name": "Chidinma A. Okafor",
+    "role": "PhD Candidate",
+    "member_type": "graduate_student",
+    "status": "current",
+    "bio": {
+      "html": "<p>Studies missing data in cancer registries.</p>",
+      "json": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Studies missing data in cancer registries."
+              }
+            ]
+          }
+        ]
+      },
+      "markdown": "Studies missing data in cancer registries."
+    },
+    "email": null,
+    "website_url": null,
+    "research_interests": [
+      "missing data",
+      "registries"
+    ],
+    "joined_on": "2022-09-01",
+    "left_on": null,
+    "sort_order": 3,
+    "photo": null,
+    "published_at": "2022-09-01T14:00:00Z",
+    "created_at": "2022-09-01T09:00:00Z",
+    "updated_at": "2026-09-15T09:00:00Z"
+  },
+  {
+    "id": 1804,
+    "type": "lab_member",
+    "slug": "priya-natarajan",
+    "path": "/members#priya-natarajan",
+    "url": "https://castellanos-lab.biostatistician.page/members#priya-natarajan",
+    "name": "Priya Natarajan",
+    "role": "PhD Student",
+    "member_type": "graduate_student",
+    "status": "current",
+    "bio": null,
+    "email": null,
+    "website_url": null,
+    "research_interests": [],
+    "joined_on": "2026-09-01",
+    "left_on": null,
+    "sort_order": 4,
+    "photo": null,
+    "published_at": "2026-09-01T14:00:00Z",
+    "created_at": "2026-09-01T09:00:00Z",
+    "updated_at": "2026-09-15T09:00:00Z"
+  },
+  {
+    "id": 1805,
+    "type": "lab_member",
+    "slug": "tomas-ferreira",
+    "path": "/members#tomas-ferreira",
+    "url": "https://castellanos-lab.biostatistician.page/members#tomas-ferreira",
+    "name": "Tomás Ferreira",
+    "role": "Research Assistant",
+    "member_type": "undergraduate",
+    "status": "current",
+    "bio": {
+      "html": "<p>Undergraduate in applied mathematics.</p>",
+      "json": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Undergraduate in applied mathematics."
+              }
+            ]
+          }
+        ]
+      },
+      "markdown": "Undergraduate in applied mathematics."
+    },
+    "email": null,
+    "website_url": null,
+    "research_interests": [],
+    "joined_on": "2026-09-01",
+    "left_on": null,
+    "sort_order": 5,
+    "photo": null,
+    "published_at": "2026-09-01T14:00:00Z",
+    "created_at": "2026-09-01T09:00:00Z",
+    "updated_at": "2026-09-15T09:00:00Z"
+  },
+  {
+    "id": 1806,
+    "type": "lab_member",
+    "slug": "grace-liu",
+    "path": "/members#grace-liu",
+    "url": "https://castellanos-lab.biostatistician.page/members#grace-liu",
+    "name": "Grace Liu",
+    "role": "Collaborator",
+    "member_type": "collaborator",
+    "status": "current",
+    "bio": {
+      "html": "<p>Pediatric pulmonologist at Northbridge Medical Center.</p>",
+      "json": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Pediatric pulmonologist at Northbridge Medical Center."
+              }
+            ]
+          }
+        ]
+      },
+      "markdown": "Pediatric pulmonologist at Northbridge Medical Center."
+    },
+    "email": null,
+    "website_url": "https://example.org/gliu",
+    "research_interests": [
+      "asthma"
+    ],
+    "joined_on": "2026-09-01",
+    "left_on": null,
+    "sort_order": 6,
+    "photo": null,
+    "published_at": "2026-09-01T14:00:00Z",
+    "created_at": "2026-09-01T09:00:00Z",
+    "updated_at": "2026-09-15T09:00:00Z"
+  },
+  {
+    "id": 1807,
+    "type": "lab_member",
+    "slug": "minh-tran",
+    "path": "/members#minh-tran",
+    "url": "https://castellanos-lab.biostatistician.page/members#minh-tran",
+    "name": "Minh Tran",
+    "role": "Former Data Analyst",
+    "member_type": "staff",
+    "status": "alumni",
+    "bio": {
+      "html": "<p>Built the registry linkage pipeline. Now at the state health department.</p>",
+      "json": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Built the registry linkage pipeline. Now at the state health department."
+              }
+            ]
+          }
+        ]
+      },
+      "markdown": "Built the registry linkage pipeline. Now at the state health department."
+    },
+    "email": null,
+    "website_url": null,
+    "research_interests": [
+      "record linkage"
+    ],
+    "joined_on": "2021-09-01",
+    "left_on": "2024-08-31",
+    "sort_order": 7,
+    "photo": null,
+    "published_at": "2021-09-01T14:00:00Z",
+    "created_at": "2021-09-01T09:00:00Z",
+    "updated_at": "2026-09-15T09:00:00Z"
+  }
+]

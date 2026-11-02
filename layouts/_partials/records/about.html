@@ -1,0 +1,6 @@
+{{- /* The profile's about page: body, positions, credentials, and CV. */ -}}
+{{- $p := partialCached "api/single.html" "profile" "profile" }}
+<article class="record">
+  <h1>{{ .Title }}</h1>
+  {{- partial "profile-details.html" $p }}
+</article>

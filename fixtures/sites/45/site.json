@@ -1,0 +1,129 @@
+{
+  "id": 45,
+  "name": "HEARTH Study",
+  "slug": "hearth-study",
+  "site_type": "study",
+  "domain": "biostatistician.page",
+  "url": "https://hearth.biostatistician.page",
+  "custom_domain": null,
+  "is_published": true,
+  "published_at": "2025-01-05T18:00:00Z",
+  "content_version": "",
+  "content_updated_at": "2026-10-28T17:22:41Z",
+  "api_url": "{{API}}/content/sites/45",
+  "timezone": "America/New_York",
+  "locale": "en",
+  "accent_color": "#b45309",
+  "theme": "modern",
+  "allow_search_indexing": true,
+  "footer_text": null,
+  "favicons": {
+    "favicon-svg": null,
+    "favicon-ico": "{{ASSETS}}/favicons/45/favicon.ico",
+    "favicon-96x96": "{{ASSETS}}/favicons/45/favicon-32.png",
+    "apple-touch-icon": null,
+    "android-chrome-192x192": null,
+    "android-chrome-512x512": null
+  },
+  "sections": [
+    "pages",
+    "posts",
+    "publications",
+    "lab-members"
+  ],
+  "homepage": {
+    "title": "HEARTH Study",
+    "description": "Home environment and respiratory health in toddlers.",
+    "image": null
+  },
+  "navigation": {
+    "header": [
+      {
+        "label": "Home",
+        "description": null,
+        "path": "/",
+        "url": "https://hearth.biostatistician.page/",
+        "open_in_new_tab": false,
+        "children": []
+      },
+      {
+        "label": "Take part",
+        "description": null,
+        "path": "/participate",
+        "url": "https://hearth.biostatistician.page/participate",
+        "open_in_new_tab": false,
+        "children": []
+      },
+      {
+        "label": "Team",
+        "description": null,
+        "path": "/team",
+        "url": "https://hearth.biostatistician.page/team",
+        "open_in_new_tab": false,
+        "children": []
+      },
+      {
+        "label": "Publications",
+        "description": null,
+        "path": "/publications",
+        "url": "https://hearth.biostatistician.page/publications",
+        "open_in_new_tab": false,
+        "children": []
+      },
+      {
+        "label": "News",
+        "description": null,
+        "path": "/posts",
+        "url": "https://hearth.biostatistician.page/posts",
+        "open_in_new_tab": false,
+        "children": []
+      },
+      {
+        "label": "Materials",
+        "description": null,
+        "path": null,
+        "url": null,
+        "open_in_new_tab": false,
+        "children": [
+          {
+            "label": "Study materials",
+            "description": null,
+            "path": "/resources",
+            "url": "https://hearth.biostatistician.page/resources",
+            "open_in_new_tab": false,
+            "children": []
+          },
+          {
+            "label": "Contact",
+            "description": null,
+            "path": "/contact",
+            "url": "https://hearth.biostatistician.page/contact",
+            "open_in_new_tab": false,
+            "children": []
+          }
+        ]
+      }
+    ],
+    "footer": [
+      {
+        "label": "Contact",
+        "description": null,
+        "path": null,
+        "url": "mailto:hearth@example.edu",
+        "open_in_new_tab": false,
+        "children": []
+      }
+    ]
+  },
+  "links": {
+    "profile": "{{API}}/content/sites/45/profile",
+    "manifest": "{{API}}/content/sites/45/manifest",
+    "tags": "{{API}}/content/sites/45/tags",
+    "media": "{{API}}/content/sites/45/media",
+    "pages": "{{API}}/content/sites/45/pages",
+    "posts": "{{API}}/content/sites/45/posts",
+    "publications": "{{API}}/content/sites/45/publications",
+    "lab-members": "{{API}}/content/sites/45/lab-members",
+    "study": "{{API}}/content/sites/45/study"
+  }
+}

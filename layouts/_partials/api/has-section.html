@@ -1,0 +1,3 @@
+{{- /* Whether the site uses a section, by API path segment ("posts", "lab-members", ...). */ -}}
+{{- $site := partialCached "api/site.html" "site" -}}
+{{- return in $site.sections . -}}

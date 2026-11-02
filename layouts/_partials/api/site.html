@@ -1,0 +1,14 @@
+{{- /*
+  The site record: name, type, sections, navigation, and settings.
+  After a failed request it returns an empty stand-in, so the build reports
+  the one real error and not a cascade of follow-on errors.
+*/ -}}
+{{- $cfg := partialCached "api/config.html" "config" -}}
+{{- $body := partialCached "api/fetch.html" $cfg.root $cfg.root -}}
+{{- $site := dict "name" "" "sections" slice "navigation" dict "homepage" dict -}}
+{{- if and $body $body.data -}}
+  {{- $site = $body.data -}}
+{{- else if not (and $body $body.error) -}}
+  {{- errorf "Academic.page site %s was not found for this key." $cfg.site -}}
+{{- end -}}
+{{- return $site -}}

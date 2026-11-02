@@ -1,0 +1,98 @@
+{{- $r := partial "api/record.html" . }}
+{{- /* Show due times in the site's own timezone. */ -}}
+{{- $site := partialCached "api/site.html" "site" -}}
+{{- $loc := (time.AsTime "2000-01-01T00:00:00" ($site.timezone | default "UTC")).Location -}}
+{{- $refs := dict -}}
+{{- range $r.references }}{{ $refs = merge $refs (dict (string .id) .) }}{{ end -}}
+{{- $assignments := dict -}}
+{{- range $r.assignments }}{{ $assignments = merge $assignments (dict (string .id) .) }}{{ end }}
+<article class="record course">
+  <header>
+    <h1>{{ .Title }}</h1>
+    <p class="meta">
+      {{- with $r.instructor_name }}{{ . }}{{ end }}{{ with $r.primary_institution }} · {{ . }}{{ end }}
+    </p>
+    {{- with $r.excerpt }}<p class="lede">{{ . }}</p>{{ end }}
+  </header>
+  {{- with $r.featured_image }}
+  <figure class="featured">{{ partial "media-image.html" (dict "file" . "prefer" (slice "large")) }}</figure>
+  {{- end }}
+  {{- with $r.offerings }}
+  <h2 id="offerings">Offerings</h2>
+  <ul class="offerings">
+    {{- range . }}
+    <li>
+      {{- $term := cond (eq .term "other") (.custom_term | default "") (partial "labels.html" (dict "kind" "term" "value" .term)) -}}
+      {{ with .course_number }}{{ . }}, {{ end }}{{ $term }} {{ .year }}{{ with .institution }}, {{ . }}{{ end }}
+      {{- if .is_current }} <span class="badge">Current</span>{{ end }}
+    </li>
+    {{- end }}
+  </ul>
+  {{- end }}
+  {{- with $r.syllabus }}
+  <p id="syllabus"><a class="button" href="{{ (.file).url | default .download_url | default .url }}">Download the syllabus{{ with .file }} ({{ .file_name }}){{ end }}</a></p>
+  {{- end }}
+  <div class="prose">{{ .Content }}</div>
+
+  {{- with $r.lessons }}
+  <h2 id="lessons">Lessons</h2>
+  <ol class="lessons">
+    {{- range sort . "sort_order" }}
+    <li id="lesson-{{ .id }}">
+      <h3>{{ with .lesson_number }}Lesson {{ . }}: {{ end }}{{ .title }}</h3>
+      {{- with .overview }}<p>{{ . }}</p>{{ end }}
+      {{- with .materials }}
+      <h4>Materials</h4>
+      {{ partial "course-materials.html" . }}
+      {{- end }}
+      {{- with .references }}
+      <h4>Readings</h4>
+      <ul>
+        {{- range $att := sort . "sort_order" }}
+        {{- with index $refs (string $att.reference_id) }}
+        <li>{{ partial "course-reference.html" . }}{{ with $att.required_note }} <span class="note">({{ . }})</span>{{ end }}</li>
+        {{- end }}
+        {{- end }}
+      </ul>
+      {{- end }}
+      {{- with .assignment_ids }}
+      <h4>Assignments</h4>
+      <ul>
+        {{- range . }}{{ with index $assignments (string .) }}
+        <li><a href="#assignment-{{ .slug | default .id }}">{{ .title }}</a>{{ with .due_at }}, due {{ ((time.AsTime .).In $loc).Format "January 2, 2006" }}{{ end }}</li>
+        {{- end }}{{ end }}
+      </ul>
+      {{- end }}
+    </li>
+    {{- end }}
+  </ol>
+  {{- end }}
+
+  {{- with $r.materials }}
+  <h2 id="materials">Course materials</h2>
+  {{ partial "course-materials.html" . }}
+  {{- end }}
+
+  {{- with $r.assignments }}
+  <h2 id="assignments">Assignments</h2>
+  {{- range sort . "sort_order" }}
+  <section class="assignment" id="assignment-{{ .slug | default .id }}">
+    <h3>{{ .title }}</h3>
+    {{- with .due_at }}<p class="meta">Due <time datetime="{{ . }}">{{ ((time.AsTime .).In $loc).Format "Monday, January 2, 2006, 3:04 PM MST" }}</time></p>{{ end }}
+    {{- with .excerpt }}<p>{{ . }}</p>{{ end }}
+    {{- with .content }}<div class="prose">{{ partial "rich.html" . }}</div>{{ end }}
+    {{- with .file }}<p><a href="{{ .url }}">{{ .file_name }}</a></p>{{ end }}
+  </section>
+  {{- end }}
+  {{- end }}
+
+  {{- with $r.references }}
+  <h2 id="texts-resources">References</h2>
+  <ul class="references">
+    {{- range sort . "sort_order" }}
+    <li>{{ partial "course-reference.html" . }}</li>
+    {{- end }}
+  </ul>
+  {{- end }}
+  {{- partial "tag-links.html" $r.tags }}
+</article>

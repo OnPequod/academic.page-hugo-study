@@ -1,0 +1,18 @@
+{{- /*
+  Generic list. API pages that have child pages are sections too; they show
+  their own content first, then their children.
+*/ -}}
+{{ define "main" }}
+{{- if eq .Params.api_type "page" -}}
+  {{- partial "records/page.html" . -}}
+{{- else }}
+<h1>{{ .Title }}</h1>
+{{- end }}
+{{- with .Pages }}
+<ul class="entries">
+  {{- range . }}
+  {{- partial "entry.html" . }}
+  {{- end }}
+</ul>
+{{- end }}
+{{ end }}

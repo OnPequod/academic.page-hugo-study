@@ -1,0 +1,32 @@
+{{- /*
+  The lab or study team. Current members are grouped by member_type in the
+  order Academic.page uses; alumni come last. Each person has an anchor
+  matching the API's path (/members#slug).
+*/ -}}
+{{- $members := partialCached "api/list.html" "lab-members" "lab-members" -}}
+{{- $order := slice "principal_investigator" "faculty" "postdoc" "staff" "graduate_student" "undergraduate" "member" "collaborator" -}}
+{{- $current := where $members "status" "current" -}}
+{{- $alumni := where $members "status" "alumni" -}}
+{{- $known := slice -}}
+<h1>{{ .Title }}</h1>
+{{- range $type := $order }}
+  {{- $known = $known | append $type }}
+  {{- with where $current "member_type" $type }}
+  <section>
+    <h2>{{ partial "labels.html" (dict "kind" "member" "value" $type) }}</h2>
+    <ul class="people">{{ range . }}{{ partial "person.html" . }}{{ end }}</ul>
+  </section>
+  {{- end }}
+{{- end }}
+{{- with where $current "member_type" "not in" $known }}
+<section>
+  <h2>Others</h2>
+  <ul class="people">{{ range . }}{{ partial "person.html" . }}{{ end }}</ul>
+</section>
+{{- end }}
+{{- with $alumni }}
+<section>
+  <h2>Alumni</h2>
+  <ul class="people">{{ range . }}{{ partial "person.html" . }}{{ end }}</ul>
+</section>
+{{- end }}

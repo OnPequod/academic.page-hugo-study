@@ -1,0 +1,104 @@
+[
+  {
+    "id": 3801,
+    "type": "lab_member",
+    "slug": "grace-liu",
+    "path": "/team#grace-liu",
+    "url": "https://hearth.biostatistician.page/team#grace-liu",
+    "name": "Grace Liu",
+    "role": "Principal Investigator",
+    "member_type": "principal_investigator",
+    "status": "current",
+    "bio": {
+      "html": "<p>Pediatric pulmonologist.</p>",
+      "json": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Pediatric pulmonologist."
+              }
+            ]
+          }
+        ]
+      },
+      "markdown": "Pediatric pulmonologist."
+    },
+    "email": "grace.liu@example.edu",
+    "website_url": null,
+    "research_interests": [
+      "asthma"
+    ],
+    "joined_on": "2024-01-01",
+    "left_on": null,
+    "sort_order": 1,
+    "photo": null,
+    "published_at": "2024-01-01T14:00:00Z",
+    "created_at": "2024-01-01T09:00:00Z",
+    "updated_at": "2026-09-15T09:00:00Z"
+  },
+  {
+    "id": 3802,
+    "type": "lab_member",
+    "slug": "imani-castellanos",
+    "path": "/team#imani-castellanos",
+    "url": "https://hearth.biostatistician.page/team#imani-castellanos",
+    "name": "Imani Castellanos",
+    "role": "Co-Investigator, Biostatistics",
+    "member_type": "faculty",
+    "status": "current",
+    "bio": {
+      "html": "<p>Leads the statistical analysis plan.</p>",
+      "json": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Leads the statistical analysis plan."
+              }
+            ]
+          }
+        ]
+      },
+      "markdown": "Leads the statistical analysis plan."
+    },
+    "email": null,
+    "website_url": "https://castellanos.biostatistician.page",
+    "research_interests": [],
+    "joined_on": "2024-01-01",
+    "left_on": null,
+    "sort_order": 2,
+    "photo": null,
+    "published_at": "2024-01-01T14:00:00Z",
+    "created_at": "2024-01-01T09:00:00Z",
+    "updated_at": "2026-09-15T09:00:00Z"
+  },
+  {
+    "id": 3803,
+    "type": "lab_member",
+    "slug": "rosa-delgado",
+    "path": "/team#rosa-delgado",
+    "url": "https://hearth.biostatistician.page/team#rosa-delgado",
+    "name": "Rosa Delgado",
+    "role": "Study Coordinator",
+    "member_type": "staff",
+    "status": "current",
+    "bio": null,
+    "email": "hearth@example.edu",
+    "website_url": null,
+    "research_interests": [],
+    "joined_on": "2024-03-01",
+    "left_on": null,
+    "sort_order": 3,
+    "photo": null,
+    "published_at": "2024-03-01T14:00:00Z",
+    "created_at": "2024-03-01T09:00:00Z",
+    "updated_at": "2026-09-15T09:00:00Z"
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "name": "HEARTH Study",
+  "summary": {
+    "html": "<p>HEARTH studies how homes affect breathing in young children.</p>",
+    "json": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "HEARTH studies how homes affect breathing in young children."
+            }
+          ]
+        }
+      ]
+    },
+    "markdown": "HEARTH studies how homes affect breathing in young children."
+  },
+  "body": null,
+  "about_page": null,
+  "headings": {
+    "body": null,
+    "credentials": null,
+    "positions": null
+  },
+  "location": "Northbridge County",
+  "email": "hearth@example.edu",
+  "photo": null,
+  "cv": null,
+  "credentials": [],
+  "positions": [],
+  "links": [],
+  "updated_at": "2026-07-21T14:00:00Z"
+}

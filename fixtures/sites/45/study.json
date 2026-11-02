@@ -1,0 +1,119 @@
+{
+  "id": 4501,
+  "type": "study",
+  "title": "HEARTH Study",
+  "summary": "A cohort study of how the home environment affects breathing in young children.",
+  "description": {
+    "html": "<p>HEARTH follows 800 families from the child's first year to age five. We measure indoor air, housing conditions, and respiratory symptoms.</p><h2>Aims</h2><ol><li><p>Estimate the effect of gas stoves on wheeze.</p></li><li><p>Identify housing repairs that reduce symptoms.</p></li></ol>",
+    "json": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "HEARTH follows 800 families from the child's first year to age five. We measure indoor air, housing conditions, and respiratory symptoms."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Aims"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Estimate the effect of gas stoves on wheeze."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Identify housing repairs that reduce symptoms."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "markdown": "HEARTH follows 800 families from the child's first year to age five. We measure indoor air, housing conditions, and respiratory symptoms.\n\n## Aims\n\n1. Estimate the effect of gas stoves on wheeze.\n2. Identify housing repairs that reduce symptoms."
+  },
+  "study_type": "Observational cohort",
+  "status": "Recruiting",
+  "topic": "Pediatric respiratory health",
+  "starts_on": "2024-03-01",
+  "ends_on": "2029-02-28",
+  "institution": "Northbridge University",
+  "funder": "National Institute of Environmental Health Sciences (example grant R01ES000000)",
+  "registry_label": "NCT00000000",
+  "registry_url": "https://clinicaltrials.gov/study/NCT00000000",
+  "protocol_url": "https://doi.org/10.5555/bmjopen.2025.0099",
+  "contact": {
+    "email": "hearth@example.edu",
+    "text": "Call 555-0142 on weekdays from 9 a.m. to 5 p.m."
+  },
+  "resources": [
+    {
+      "title": "Participant information sheet",
+      "url": "https://example.edu/hearth/info.pdf",
+      "description": "What taking part involves."
+    },
+    {
+      "title": "Data dictionary",
+      "url": "https://example.edu/hearth/dictionary",
+      "description": null
+    }
+  ],
+  "featured_image": {
+    "id": 4551,
+    "file_name": "hearth-banner.svg",
+    "mime_type": "image/svg+xml",
+    "size": 4096,
+    "alt": "A drawing of a house with a child and a parent",
+    "url": "{{ASSETS}}/4551/hearth-banner.svg",
+    "conversions": {
+      "thumb": {
+        "url": "{{ASSETS}}/4551/conversions/hearth-banner-thumb.svg",
+        "width": 300,
+        "height": 300
+      },
+      "large": {
+        "url": "{{ASSETS}}/4551/conversions/hearth-banner-large.svg",
+        "width": 1200,
+        "height": 630
+      }
+    }
+  },
+  "updated_at": "2026-07-21T14:00:00Z"
+}

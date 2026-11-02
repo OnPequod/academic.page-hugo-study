@@ -1,0 +1,11 @@
+# Build output and Hugo's generated resources
+/public/
+/resources/_gen/
+.hugo_build.lock
+
+# The pinned Hugo binary from `make bin/hugo`
+/bin/
+
+# Local settings, which may hold an API key
+.env
+.envrc

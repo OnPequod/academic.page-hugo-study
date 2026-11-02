@@ -1,0 +1,21 @@
+{{- $site := .site }}
+<footer class="site-footer">
+  <div class="container">
+    {{- with $site.navigation.footer }}
+    <nav aria-label="Footer">
+      <ul class="menu">
+        {{- range . }}
+        {{- partial "menu-item.html" (dict "item" . "page" $.page) }}
+        {{- end }}
+      </ul>
+    </nav>
+    {{- end }}
+    {{- with $site.footer_text }}
+    <p>{{ . }}</p>
+    {{- end }}
+    <p class="muted">
+      {{- with site.GetPage "/posts" }}{{ with .OutputFormats.Get "rss" }}<a href="{{ .RelPermalink }}">RSS</a> · {{ end }}{{ end -}}
+      Built with <a href="https://gohugo.io/">Hugo</a> from the <a href="https://academic.page/api/docs">Academic.page API</a>.
+    </p>
+  </div>
+</footer>

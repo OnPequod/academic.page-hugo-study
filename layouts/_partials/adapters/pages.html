@@ -1,0 +1,12 @@
+{{- /*
+  Pages keep their nested paths (research/methods). A page with children
+  becomes a Hugo section so its children list under it.
+*/ -}}
+{{- $a := .adapter -}}
+{{- $pages := partialCached "api/list.html" "pages" "pages" -}}
+{{- $parents := slice -}}
+{{- range $pages -}}{{- with .parent_id -}}{{- $parents = $parents | append . -}}{{- end -}}{{- end -}}
+{{- range $pages -}}
+  {{- $kind := cond (in $parents .id) "section" "page" -}}
+  {{- $a.AddPage (partial "adapters/record-page.html" (dict "record" . "collection" "pages" "type" "page" "body" .content "date" .published_at "weight" .sort_order "kind" $kind)) -}}
+{{- end -}}

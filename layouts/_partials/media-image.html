@@ -1,0 +1,21 @@
+{{- /*
+  An <img> for an API MediaFile, using the first conversion that exists.
+  Context: dict with file (a MediaFile), prefer (conversion names to try,
+  in order), alt (used when the file has none), and class.
+*/ -}}
+{{- $f := .file -}}
+{{- with $f -}}
+  {{- $src := .url -}}
+  {{- $w := 0 -}}
+  {{- $h := 0 -}}
+  {{- $chosen := false -}}
+  {{- range $.prefer | default (slice "large" "medium" "thumb") -}}
+    {{- if not $chosen -}}
+      {{- with index $f.conversions . -}}
+        {{- $src = .url -}}{{- $w = .width | default 0 -}}{{- $h = .height | default 0 -}}{{- $chosen = true -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $alt := .alt | default $.alt | default "" -}}
+  <img src="{{ $src }}" alt="{{ $alt }}"{{ if and $w $h }} width="{{ $w }}" height="{{ $h }}"{{ end }}{{ with $.class }} class="{{ . }}"{{ end }} loading="lazy" decoding="async">
+{{- end -}}

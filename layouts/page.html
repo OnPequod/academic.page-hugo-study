@@ -1,0 +1,13 @@
+{{- /*
+  Every regular page comes from a content adapter, which sets api_type.
+  The matching partial in _partials/records/ renders the body.
+*/ -}}
+{{ define "main" }}
+{{- $type := .Params.api_type | default "page" -}}
+{{- $tpl := printf "records/%s.html" $type -}}
+{{- if templates.Exists (printf "_partials/%s" $tpl) -}}
+  {{- partial $tpl . -}}
+{{- else -}}
+  {{- partial "records/page.html" . -}}
+{{- end -}}
+{{ end }}

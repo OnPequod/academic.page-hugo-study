@@ -1,0 +1,6 @@
+{{- $p := partialCached "api/single.html" "profile" "profile" }}
+<h1>{{ .Title }}</h1>
+{{- with $p.cv }}{{ with .file }}
+<p><a class="button" href="{{ .url }}">Download the CV ({{ .file_name }})</a></p>
+<object class="pdf" data="{{ .url }}" type="application/pdf" aria-label="CV"></object>
+{{- end }}{{ end }}

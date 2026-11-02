@@ -1,0 +1,31 @@
+{{- /*
+  One navigation item. nav-href.html picks the link: the item's path for
+  internal links, its url for external ones. An item whose link has no page
+  in this build is left out. A group heading (an item with children and no
+  link of its own) shows its label as a button that opens its submenu.
+*/ -}}
+{{- $item := .item -}}
+{{- $href := partial "nav-href.html" $item -}}
+{{- $current := false -}}
+{{- with $item.path -}}
+  {{- $here := $.page.RelPermalink -}}
+  {{- if and $href (eq (strings.TrimSuffix "/" $here) (strings.TrimSuffix "/" $href)) -}}{{- $current = true -}}{{- end -}}
+  {{- if and (eq . "/") (not $.page.IsHome) -}}{{- $current = false -}}{{- end -}}
+{{- end -}}
+{{- if or $href $item.children }}
+<li{{ if $item.children }} class="has-children"{{ end }}>
+  {{- if $href }}
+  <a href="{{ $href }}"{{ if $current }} aria-current="page"{{ end }}{{ if $item.open_in_new_tab }} target="_blank" rel="noopener"{{ end }}{{ with $item.description }} title="{{ . }}"{{ end }}>{{ $item.label }}</a>
+  {{- else }}
+  {{- /* A button, so keyboard focus opens the submenu (see .has-children:focus-within). */}}
+  <button type="button" class="menu-heading">{{ $item.label }}</button>
+  {{- end }}
+  {{- with $item.children }}
+  <ul class="submenu">
+    {{- range . }}
+    {{- partial "menu-item.html" (dict "item" . "page" $.page) }}
+    {{- end }}
+  </ul>
+  {{- end }}
+</li>
+{{- end }}

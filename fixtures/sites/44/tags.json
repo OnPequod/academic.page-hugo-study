@@ -1,0 +1,40 @@
+[
+  {
+    "id": 341,
+    "type": "tag",
+    "slug": "survival-analysis",
+    "path": "/tags/survival-analysis",
+    "url": "https://bios621.biostatistician.page/tags/survival-analysis",
+    "name": "Survival analysis",
+    "description": "Time-to-event methods.",
+    "counts": {
+      "posts": 0,
+      "pages": 0,
+      "projects": 0,
+      "courses": 1,
+      "talks": 0,
+      "publications": 0
+    },
+    "created_at": "2025-01-05T14:00:00Z",
+    "updated_at": "2026-10-01T14:00:00Z"
+  },
+  {
+    "id": 340,
+    "type": "tag",
+    "slug": "teaching",
+    "path": "/tags/teaching",
+    "url": "https://bios621.biostatistician.page/tags/teaching",
+    "name": "Teaching",
+    "description": null,
+    "counts": {
+      "posts": 1,
+      "pages": 0,
+      "projects": 0,
+      "courses": 1,
+      "talks": 0,
+      "publications": 0
+    },
+    "created_at": "2025-01-05T14:00:00Z",
+    "updated_at": "2026-10-01T14:00:00Z"
+  }
+]

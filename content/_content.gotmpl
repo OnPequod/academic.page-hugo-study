@@ -1,0 +1,26 @@
+{{- /*
+  Content adapter: builds the whole site from the Academic.page Content API
+  at build time. Hugo runs this file while it reads content, so `hugo build`
+  needs no separate sync step.
+
+  It reads the site record first and fetches only the sections that record
+  lists in "sections". Site types differ (courses exist only on course sites,
+  lab members only on lab and study sites), and the API answers 404
+  section_not_enabled for the rest.
+
+  Each section has its own partial in layouts/_partials/adapters/. Pages keep
+  their public paths (/posts/<slug>, /publications/<slug>, /<page path>), so
+  links inside rich text keep working.
+*/ -}}
+{{- $site := partialCached "api/site.html" "site" -}}
+{{- $ctx := dict "adapter" . "site" $site -}}
+{{- range $site.sections -}}
+  {{- $tpl := printf "adapters/%s.html" . -}}
+  {{- if templates.Exists (printf "_partials/%s" $tpl) -}}
+    {{- partial $tpl $ctx -}}
+  {{- else -}}
+    {{- warnf "Academic.page section %q has no adapter in layouts/_partials/adapters/; skipping it." . -}}
+  {{- end -}}
+{{- end -}}
+{{- partial "adapters/profile.html" $ctx -}}
+{{- partial "adapters/tags.html" $ctx -}}
