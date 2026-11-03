@@ -2925,6 +2925,72 @@
         }
       }
     },
+    "/sites/{site}/pages/order": {
+      "put": {
+        "tags": [
+          "Management"
+        ],
+        "summary": "Put the pages under one parent in the order given",
+        "operationId": "manageReorderPages",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/site"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A page of records.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/ManagementPage"
+                      }
+                    },
+                    "links": {
+                      "$ref": "#/components/schemas/PaginationLinks"
+                    },
+                    "meta": {
+                      "$ref": "#/components/schemas/PaginationMeta"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Error"
+          },
+          "403": {
+            "$ref": "#/components/responses/Error"
+          },
+          "404": {
+            "$ref": "#/components/responses/Error"
+          },
+          "429": {
+            "$ref": "#/components/responses/Error"
+          },
+          "422": {
+            "$ref": "#/components/responses/Error"
+          }
+        },
+        "description": "Pages form a tree, so one request orders one set of siblings. Send parent_page_id (null or left out for top-level pages) and the ID of every page with that parent, drafts included, once each. sort_order is numbered again from 1 among them. IDs that are not pages on this site, or are under another parent, or a list that leaves a page out, are refused and nothing changes. To move a page to another parent, PATCH its parent_page_id. The response lists the siblings in their new order.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PageReorderInput"
+              }
+            }
+          }
+        }
+      }
+    },
     "/sites/{site}/pages/{pageId}": {
       "get": {
         "tags": [
@@ -3175,6 +3241,72 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/ManagementProjectInput"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sites/{site}/projects/order": {
+      "put": {
+        "tags": [
+          "Management"
+        ],
+        "summary": "Put published projects in the order given",
+        "operationId": "manageReorderProjects",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/site"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A page of records.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/ManagementProject"
+                      }
+                    },
+                    "links": {
+                      "$ref": "#/components/schemas/PaginationLinks"
+                    },
+                    "meta": {
+                      "$ref": "#/components/schemas/PaginationMeta"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Error"
+          },
+          "403": {
+            "$ref": "#/components/responses/Error"
+          },
+          "404": {
+            "$ref": "#/components/responses/Error"
+          },
+          "429": {
+            "$ref": "#/components/responses/Error"
+          },
+          "422": {
+            "$ref": "#/components/responses/Error"
+          }
+        },
+        "description": "Send every published project's ID once, in the order the Projects page should show them. Drafts have no place in the order and are refused, as are IDs that are not projects on this site; nothing changes then. The response lists the published projects in their new order. A project published later goes to the end.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReorderInput"
               }
             }
           }
@@ -4415,6 +4547,63 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/ManagementSectionOrderInput"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sites/{site}/publications/order": {
+      "put": {
+        "tags": [
+          "Management"
+        ],
+        "summary": "Put publications in the order given within their years, and switch publications to custom order",
+        "operationId": "manageReorderPublications",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/site"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The record.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/ManagementYearOrder"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Error"
+          },
+          "403": {
+            "$ref": "#/components/responses/Error"
+          },
+          "404": {
+            "$ref": "#/components/responses/Error"
+          },
+          "429": {
+            "$ref": "#/components/responses/Error"
+          },
+          "422": {
+            "$ref": "#/components/responses/Error"
+          }
+        },
+        "description": "Within each year, the listed publications take the listed order and the year's other publications keep their places. List every publication of a year to set that whole year. Publications of different years can be sent together. Answers 422 when an ID is not a publication on this site.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/YearReorderInput"
               }
             }
           }
@@ -5986,6 +6175,72 @@
         }
       }
     },
+    "/sites/{site}/courses/order": {
+      "put": {
+        "tags": [
+          "Management"
+        ],
+        "summary": "Put published courses in the order given",
+        "operationId": "manageReorderCourses",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/site"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A page of records.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/ManagementCourse"
+                      }
+                    },
+                    "links": {
+                      "$ref": "#/components/schemas/PaginationLinks"
+                    },
+                    "meta": {
+                      "$ref": "#/components/schemas/PaginationMeta"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Error"
+          },
+          "403": {
+            "$ref": "#/components/responses/Error"
+          },
+          "404": {
+            "$ref": "#/components/responses/Error"
+          },
+          "429": {
+            "$ref": "#/components/responses/Error"
+          },
+          "422": {
+            "$ref": "#/components/responses/Error"
+          }
+        },
+        "description": "Send every published course's ID once, in the order the Courses page should show them. Drafts have no place in the order and are refused, as are IDs that are not courses on this site; nothing changes then. The response lists the published courses in their new order. A course published later goes to the end.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReorderInput"
+              }
+            }
+          }
+        }
+      }
+    },
     "/sites/{site}/courses/{courseId}": {
       "get": {
         "tags": [
@@ -6239,6 +6494,72 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/ManagementLabMemberInput"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sites/{site}/lab-members/order": {
+      "put": {
+        "tags": [
+          "Management"
+        ],
+        "summary": "Put every lab member in the order given",
+        "operationId": "manageReorderLabMembers",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/site"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A page of records.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/ManagementLabMember"
+                      }
+                    },
+                    "links": {
+                      "$ref": "#/components/schemas/PaginationLinks"
+                    },
+                    "meta": {
+                      "$ref": "#/components/schemas/PaginationMeta"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Error"
+          },
+          "403": {
+            "$ref": "#/components/responses/Error"
+          },
+          "404": {
+            "$ref": "#/components/responses/Error"
+          },
+          "429": {
+            "$ref": "#/components/responses/Error"
+          },
+          "422": {
+            "$ref": "#/components/responses/Error"
+          }
+        },
+        "description": "Send every member's ID once, drafts, current members, and alumni together. The members page still groups people, current members before alumni and then by member_type, so the order sets who comes first within each group; the response lists everyone in the order the page shows them. IDs that are not members on this site, or a list that leaves someone out, are refused and nothing changes. Sites without lab members or a study team answer 404 section_not_enabled.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReorderInput"
               }
             }
           }
@@ -6753,6 +7074,63 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/ManagementSectionOrderInput"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sites/{site}/talks/order": {
+      "put": {
+        "tags": [
+          "Management"
+        ],
+        "summary": "Put talks in the order given within their years, and switch talks to custom order",
+        "operationId": "manageReorderTalks",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/site"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The record.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/ManagementYearOrder"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Error"
+          },
+          "403": {
+            "$ref": "#/components/responses/Error"
+          },
+          "404": {
+            "$ref": "#/components/responses/Error"
+          },
+          "429": {
+            "$ref": "#/components/responses/Error"
+          },
+          "422": {
+            "$ref": "#/components/responses/Error"
+          }
+        },
+        "description": "Within each year, the listed talks take the listed order and the year's other talks keep their places. List every talk of a year to set that whole year. Talks of different years can be sent together. Answers 422 when an ID is not a talk on this site.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/YearReorderInput"
               }
             }
           }
@@ -7835,6 +8213,75 @@
         }
       }
     },
+    "/sites/{site}/courses/{courseId}/assignments/order": {
+      "put": {
+        "tags": [
+          "Management"
+        ],
+        "summary": "Put every assignment of the course in the order given",
+        "operationId": "manageReorderCourseAssignments",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/site"
+          },
+          {
+            "$ref": "#/components/parameters/courseId"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A page of records.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/ManagementCourseAssignment"
+                      }
+                    },
+                    "links": {
+                      "$ref": "#/components/schemas/PaginationLinks"
+                    },
+                    "meta": {
+                      "$ref": "#/components/schemas/PaginationMeta"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Error"
+          },
+          "403": {
+            "$ref": "#/components/responses/Error"
+          },
+          "404": {
+            "$ref": "#/components/responses/Error"
+          },
+          "429": {
+            "$ref": "#/components/responses/Error"
+          },
+          "422": {
+            "$ref": "#/components/responses/Error"
+          }
+        },
+        "description": "Send every assignment's ID once, drafts included, in the order the Assignments page should show them. sort_order is numbered again from 1. IDs that are not assignments of this course, or a list that leaves one out, are refused and nothing changes.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReorderInput"
+              }
+            }
+          }
+        }
+      }
+    },
     "/sites/{site}/courses/{courseId}/assignments/{assignmentId}": {
       "get": {
         "tags": [
@@ -8857,7 +9304,7 @@
           },
           "code": {
             "type": "string",
-            "description": "section_not_enabled (404) means the site does not have the section: on the content endpoints, the public site does not show it; on the management endpoints, the admin does not let this site type edit it. One of: missing_api_token, missing_ability, api_scope_mismatch, site_not_found, site_disabled, api_access_requires_pro, upload_too_large, storage_quota_exceeded, bucket_quota_exceeded, media_processing_failed, media_upload_failed, idempotency_key_conflict, multipart_upload_not_found, multipart_upload_invalid_parts, section_not_enabled, not_found, invalid_parameter, validation_failed, and the management codes."
+            "description": "section_not_enabled (404) means the site does not have the section: on the content endpoints, the public site does not show it; on the management endpoints, the admin does not let this site type edit it. One of: missing_api_token, api_key_invalid, account_suspended, missing_ability, unknown_field, api_scope_mismatch, site_not_found, site_disabled, api_access_requires_pro, upload_too_large, storage_quota_exceeded, bucket_quota_exceeded, media_processing_failed, media_upload_failed, idempotency_key_conflict, multipart_upload_not_found, multipart_upload_invalid_parts, section_not_enabled, not_found, invalid_parameter, validation_failed, and the management codes."
           },
           "errors": {
             "type": "object",
@@ -10286,9 +10733,7 @@
           "excerpt",
           "content",
           "status",
-          "project_url",
-          "repository_url",
-          "technologies",
+          "links",
           "start_date",
           "end_date",
           "display_order",
@@ -10296,7 +10741,6 @@
           "gallery",
           "tags",
           "seo",
-          "published_at",
           "created_at",
           "updated_at"
         ],
@@ -10354,24 +10798,10 @@
               "null"
             ]
           },
-          "project_url": {
-            "type": [
-              "string",
-              "null"
-            ],
-            "format": "uri"
-          },
-          "repository_url": {
-            "type": [
-              "string",
-              "null"
-            ],
-            "format": "uri"
-          },
-          "technologies": {
+          "links": {
             "type": "array",
             "items": {
-              "type": "string"
+              "$ref": "#/components/schemas/ProjectLink"
             }
           },
           "start_date": {
@@ -10432,13 +10862,6 @@
                 ]
               }
             }
-          },
-          "published_at": {
-            "type": [
-              "string",
-              "null"
-            ],
-            "format": "date-time"
           },
           "created_at": {
             "type": [
@@ -12331,7 +12754,9 @@
             "type": [
               "string",
               "null"
-            ]
+            ],
+            "pattern": "^[a-z0-9]([a-z0-9-]*[a-z0-9])?$",
+            "description": "Unique on this site, including deleted records. Generated from the title when publishing without a slug."
           },
           "excerpt": {
             "type": [
@@ -12388,7 +12813,8 @@
             },
             "description": "Tag IDs from this site, replacing the record's tags. Leave out to keep them; send [] to remove them all."
           }
-        }
+        },
+        "additionalProperties": false
       },
       "ManagementPage": {
         "type": "object",
@@ -12478,6 +12904,10 @@
             ],
             "format": "date-time"
           },
+          "sort_order": {
+            "type": "integer",
+            "description": "The page's place among pages with the same parent. Set it with PUT /pages/order."
+          },
           "edit_version": {
             "type": "integer",
             "description": "Goes up each time the record is saved. Send it back on PATCH to refuse the write if the record changed since you read it."
@@ -12548,6 +12978,25 @@
             "minimum": 0,
             "description": "The edit_version you read. When the record has been saved since, the write is refused with 409 and the code edit_conflict, and nothing changes. Leave it out, or send null, to write regardless."
           }
+        },
+        "additionalProperties": false
+      },
+      "ProjectLink": {
+        "type": "object",
+        "required": [
+          "title",
+          "url"
+        ],
+        "properties": {
+          "title": {
+            "type": "string",
+            "maxLength": 255
+          },
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "maxLength": 2048
+          }
         }
       },
       "ManagementProject": {
@@ -12593,25 +13042,11 @@
             ],
             "description": "content_structured as Markdown. Images are written as Markdown images with their URL."
           },
-          "technologies": {
+          "links": {
             "type": "array",
             "items": {
-              "type": "string"
+              "$ref": "#/components/schemas/ProjectLink"
             }
-          },
-          "project_url": {
-            "type": [
-              "string",
-              "null"
-            ],
-            "format": "uri"
-          },
-          "repository_url": {
-            "type": [
-              "string",
-              "null"
-            ],
-            "format": "uri"
           },
           "status": {
             "type": [
@@ -12645,12 +13080,8 @@
               "null"
             ]
           },
-          "published_at": {
-            "type": [
-              "string",
-              "null"
-            ],
-            "format": "date-time"
+          "published": {
+            "type": "boolean"
           },
           "created_at": {
             "type": [
@@ -12665,6 +13096,13 @@
               "null"
             ],
             "format": "date-time"
+          },
+          "published_order": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": "The project's place on the Projects page, from 1. Null for a draft. Set it with PUT /projects/order."
           },
           "edit_version": {
             "type": "integer",
@@ -12689,7 +13127,9 @@
             "type": [
               "string",
               "null"
-            ]
+            ],
+            "pattern": "^[a-z0-9]([a-z0-9-]*[a-z0-9])?$",
+            "description": "Unique on this site, including deleted records. Generated from the title when publishing without a slug."
           },
           "excerpt": {
             "type": [
@@ -12709,30 +13149,18 @@
             ],
             "description": "The normal way to set content_structured: Markdown, converted on the server and saved as if the document had been sent. Supported: CommonMark with GFM strikethrough: paragraphs, headings (levels 4 to 6 become 3), bold, italic, strikethrough, inline code, links (http, https, and mailto only; other links keep only their text), bulleted and numbered lists (nested, with a start number), quotes, fenced and indented code with a language, horizontal rules, and hard line breaks. Images become links to the image, because a document image must be a file in the site's media library. Tables become one paragraph per row. Raw HTML is kept as plain text, never as HTML. Send content_markdown or content_structured, not both: a request with both is refused with 422 and the code validation_failed."
           },
-          "technologies": {
+          "links": {
             "type": "array",
             "items": {
-              "type": "string"
+              "$ref": "#/components/schemas/ProjectLink"
             }
           },
-          "project_url": {
-            "type": [
-              "string",
-              "null"
-            ],
-            "format": "uri"
-          },
-          "repository_url": {
-            "type": [
-              "string",
-              "null"
-            ],
-            "format": "uri"
-          },
           "status": {
-            "type": [
-              "string",
-              "null"
+            "type": "string",
+            "enum": [
+              "in-progress",
+              "completed",
+              "archived"
             ]
           },
           "start_date": {
@@ -12761,12 +13189,8 @@
               "null"
             ]
           },
-          "published_at": {
-            "type": [
-              "string",
-              "null"
-            ],
-            "format": "date-time"
+          "published": {
+            "type": "boolean"
           },
           "edit_version": {
             "type": [
@@ -12786,7 +13210,8 @@
             },
             "description": "Tag IDs from this site, replacing the record's tags. Leave out to keep them; send [] to remove them all."
           }
-        }
+        },
+        "additionalProperties": false
       },
       "ManagementPublication": {
         "type": "object",
@@ -13255,7 +13680,8 @@
             "default": "skip",
             "description": "When the entry matches a publication on the site: skip refuses with 409; suggest brings it into a publication that is the same work; create_anyway adds a possible duplicate, preprint, or ignored entry as its own publication."
           }
-        }
+        },
+        "additionalProperties": false
       },
       "ManagementPublicationUpdateInput": {
         "type": "object",
@@ -13460,7 +13886,8 @@
             "minimum": 0,
             "description": "The edit_version you read. When the record has been saved since, the write is refused with 409 and the code edit_conflict, and nothing changes. Leave it out, or send null, to write regardless."
           }
-        }
+        },
+        "additionalProperties": false
       },
       "PublicationSuggestionApplyInput": {
         "type": "object",
@@ -13480,7 +13907,8 @@
             "minimum": 0,
             "description": "The edit_version you read. When the record has been saved since, the write is refused with 409 and the code edit_conflict, and nothing changes. Leave it out, or send null, to write regardless."
           }
-        }
+        },
+        "additionalProperties": false
       },
       "PublicationMatch": {
         "type": "object",
@@ -13610,7 +14038,8 @@
             "minItems": 1,
             "description": "Entries to import, by index (from 0, in file order) or citation key. When sent, the entries left out are recorded as ignored. Wins over select in the query string."
           }
-        }
+        },
+        "additionalProperties": false
       },
       "PublicationImportUpload": {
         "type": "object",
@@ -13639,7 +14068,8 @@
             "minItems": 1,
             "description": "Entries to import, by index (from 0, in file order) or citation key. When sent, the entries left out are recorded as ignored. Wins over select in the query string."
           }
-        }
+        },
+        "additionalProperties": false
       },
       "PublicationImportEntry": {
         "type": "object",
@@ -14271,7 +14701,8 @@
               "null"
             ]
           }
-        }
+        },
+        "additionalProperties": false
       },
       "MediaUpdateInput": {
         "type": "object",
@@ -14297,7 +14728,8 @@
           "has_custom_defaults": {
             "type": "boolean"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Generic": {
         "type": "object"
@@ -14320,7 +14752,8 @@
             "type": "integer",
             "minimum": 1
           }
-        }
+        },
+        "additionalProperties": false
       },
       "MultipartInitResult": {
         "type": "object",
@@ -14352,7 +14785,8 @@
             "minimum": 1,
             "maximum": 10000
           }
-        }
+        },
+        "additionalProperties": false
       },
       "MultipartSignResult": {
         "type": "object",
@@ -14427,7 +14861,8 @@
               "null"
             ]
           }
-        }
+        },
+        "additionalProperties": false
       },
       "ManagementSectionOrder": {
         "type": "object",
@@ -14469,7 +14904,78 @@
             "type": "boolean",
             "description": "true clears every year_order in the section, so each year reads in date order."
           }
+        },
+        "additionalProperties": false
+      },
+      "ManagementYearOrder": {
+        "type": "object",
+        "description": "The section's order after a reorder, and each year it touched in its new order, newest year first.",
+        "required": [
+          "section",
+          "order",
+          "years"
+        ],
+        "properties": {
+          "section": {
+            "type": "string",
+            "enum": [
+              "talks",
+              "publications"
+            ]
+          },
+          "order": {
+            "type": "string",
+            "enum": [
+              "date",
+              "custom"
+            ]
+          },
+          "years": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "year",
+                "ids"
+              ],
+              "properties": {
+                "year": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "description": "The year, or null for items with no date."
+                },
+                "ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "integer"
+                  },
+                  "description": "Every item of that year, in order."
+                }
+              }
+            }
+          }
         }
+      },
+      "YearReorderInput": {
+        "type": "object",
+        "description": "IDs in the order you want them, from one year or several.",
+        "required": [
+          "ids"
+        ],
+        "properties": {
+          "ids": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            },
+            "minItems": 1,
+            "description": "Talk or publication IDs, in the order you want them"
+          }
+        },
+        "additionalProperties": false
       },
       "ReorderInput": {
         "type": "object",
@@ -14484,7 +14990,32 @@
               "type": "integer"
             }
           }
-        }
+        },
+        "additionalProperties": false
+      },
+      "PageReorderInput": {
+        "type": "object",
+        "description": "One set of sibling pages, in the new order.",
+        "required": [
+          "ids"
+        ],
+        "properties": {
+          "parent_page_id": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": "The parent whose child pages are ordered. Null or left out for top-level pages."
+          },
+          "ids": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            },
+            "description": "Every page with that parent, drafts included, once each, in the new order."
+          }
+        },
+        "additionalProperties": false
       },
       "ManagementProfile": {
         "type": "object",
@@ -14675,7 +15206,8 @@
             "minimum": 0,
             "description": "The edit_version you read. A newer save answers 409 edit_conflict and writes nothing. Leave it out, or send null, to save regardless."
           }
-        }
+        },
+        "additionalProperties": false
       },
       "ProfileDegree": {
         "type": "object",
@@ -14806,7 +15338,8 @@
             "minimum": 0,
             "description": "The edit_version you read. A newer save answers 409 edit_conflict and writes nothing. Leave it out, or send null, to save regardless."
           }
-        }
+        },
+        "additionalProperties": false
       },
       "ProfilePosition": {
         "type": "object",
@@ -14925,7 +15458,8 @@
             "minimum": 0,
             "description": "The edit_version you read. A newer save answers 409 edit_conflict and writes nothing. Leave it out, or send null, to save regardless."
           }
-        }
+        },
+        "additionalProperties": false
       },
       "ProfileLink": {
         "type": "object",
@@ -15066,7 +15600,8 @@
             "minimum": 0,
             "description": "The edit_version you read. A newer save answers 409 edit_conflict and writes nothing. Leave it out, or send null, to save regardless."
           }
-        }
+        },
+        "additionalProperties": false
       },
       "ManagementTalk": {
         "type": "object",
@@ -15556,7 +16091,8 @@
             "minimum": 0,
             "description": "The edit_version you read. A newer save answers 409 edit_conflict and writes nothing. Leave it out, or send null, to save regardless."
           }
-        }
+        },
+        "additionalProperties": false
       },
       "ManagementCourse": {
         "type": "object",
@@ -15583,6 +16119,7 @@
           "meta_title",
           "meta_description",
           "published_at",
+          "published_order",
           "edit_version",
           "created_at",
           "updated_at",
@@ -15740,6 +16277,13 @@
               "null"
             ],
             "format": "date-time"
+          },
+          "published_order": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": "The course's place on the Courses page, from 1. Null for a draft. Set it with PUT /courses/order."
           },
           "edit_version": {
             "type": "integer",
@@ -15941,7 +16485,8 @@
             "minimum": 0,
             "description": "The edit_version you read. A newer save answers 409 edit_conflict and writes nothing. Leave it out, or send null, to save regardless."
           }
-        }
+        },
+        "additionalProperties": false
       },
       "ManagementCourseLesson": {
         "type": "object",
@@ -16044,7 +16589,8 @@
             "minimum": 0,
             "description": "The edit_version you read. A newer save answers 409 edit_conflict and writes nothing. Leave it out, or send null, to save regardless."
           }
-        }
+        },
+        "additionalProperties": false
       },
       "ManagementLabMember": {
         "type": "object",
@@ -16320,7 +16866,8 @@
             "minimum": 0,
             "description": "The edit_version you read. A newer save answers 409 edit_conflict and writes nothing. Leave it out, or send null, to save regardless."
           }
-        }
+        },
+        "additionalProperties": false
       },
       "ManagementTag": {
         "type": "object",
@@ -16385,7 +16932,8 @@
             "minimum": 0,
             "description": "The edit_version you read. A newer save answers 409 edit_conflict and writes nothing. Leave it out, or send null, to save regardless."
           }
-        }
+        },
+        "additionalProperties": false
       },
       "ManagementStudy": {
         "type": "object",
@@ -16652,7 +17200,8 @@
             "minimum": 0,
             "description": "The edit_version you read. A newer save answers 409 edit_conflict and writes nothing. Leave it out, or send null, to save regardless."
           }
-        }
+        },
+        "additionalProperties": false
       },
       "ManagementCv": {
         "type": "object",
@@ -16759,7 +17308,8 @@
             "minimum": 0,
             "description": "The edit_version you read. A newer save answers 409 edit_conflict and writes nothing. Leave it out, or send null, to save regardless."
           }
-        }
+        },
+        "additionalProperties": false
       },
       "ManagementCourseMaterial": {
         "type": "object",
@@ -16935,7 +17485,8 @@
             "minimum": 0,
             "description": "The edit_version you read. A newer save answers 409 edit_conflict and writes nothing. Leave it out, or send null, to save regardless."
           }
-        }
+        },
+        "additionalProperties": false
       },
       "ManagementCourseAssignment": {
         "type": "object",
@@ -17135,7 +17686,8 @@
             "minimum": 0,
             "description": "The edit_version you read. A newer save answers 409 edit_conflict and writes nothing. Leave it out, or send null, to save regardless."
           }
-        }
+        },
+        "additionalProperties": false
       },
       "ManagementCourseReference": {
         "type": "object",
@@ -17317,7 +17869,8 @@
             "minimum": 0,
             "description": "The edit_version you read. A newer save answers 409 edit_conflict and writes nothing. Leave it out, or send null, to save regardless."
           }
-        }
+        },
+        "additionalProperties": false
       },
       "Markdown": {
         "type": [

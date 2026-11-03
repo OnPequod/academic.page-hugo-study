@@ -231,7 +231,9 @@ func TestPersonalSite(t *testing.T) {
 	mustContain(t, out, "projects/index.html", "Target Trial Emulation Toolkit", "toolkit-cover-thumb.svg")
 	mustContain(t, out, "projects/target-trial-toolkit/index.html",
 		`<span class="badge">Active</span>`, "September 2024 – present", "<h2>Gallery</h2>", "toolkit-output-medium.svg",
-		`<a href="https://github.com/example/ttetools">Source code</a>`, "R, Stan, Quarto")
+		`<a href="https://github.com/example/ttetools">Repository</a>`)
+
+	mustNotContain(t, out, "projects/target-trial-toolkit/index.html", "Technologies:")
 
 	// Publications: grouped by year, typed, with citations, DOIs, and BibTeX.
 	pubs := read(t, out, "publications/index.html")

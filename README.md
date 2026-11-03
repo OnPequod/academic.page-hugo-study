@@ -132,7 +132,7 @@ Pages keep the paths they have on the Academic.page site, so links inside rich t
 | `/about/`, `/cv/` | profile | Only when the profile has an about page or a CV file. |
 | `/posts/`, `/posts/<slug>/` | posts | Paginated, five per page. Tags, featured image, author, and previous and next links. RSS at `/posts/index.xml`. |
 | `/<path>/` | pages | Nested pages keep their paths (`/research/methods/`). A page with children lists them. |
-| `/projects/`, `/projects/<slug>/` | projects | Status, dates, links, technologies, featured image, and gallery. |
+| `/projects/`, `/projects/<slug>/` | projects | Status, project dates, titled links, featured image, and gallery. |
 | `/publications/`, `/publications/<slug>/` | publications | Grouped by year (or type), with the formatted citation, type, DOI, and supplementary links. Each publication also gets a CSL-JSON file. |
 | `/publications/publications.bib` | `publications.bib` | The whole list as one BibTeX file. |
 | `/talks/`, `/talks/<slug>/` | talks | Split into upcoming and past by the build date, in the site's order: newest year first, and within a year the order the site sets. Dates known only by year or month show as such. Slides, paper, and recording links. |

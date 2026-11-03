@@ -13,14 +13,10 @@
   <figure class="featured">{{ partial "media-image.html" (dict "file" . "prefer" (slice "large")) }}</figure>
   {{- end }}
   <div class="prose">{{ .Content }}</div>
-  {{- if or $r.project_url $r.repository_url }}
+  {{- with $r.links }}
   <ul class="links">
-    {{- with $r.project_url }}<li><a href="{{ . }}">Project website</a></li>{{ end }}
-    {{- with $r.repository_url }}<li><a href="{{ . }}">Source code</a></li>{{ end }}
+    {{- range . }}<li><a href="{{ .url }}">{{ .title }}</a></li>{{ end }}
   </ul>
-  {{- end }}
-  {{- with $r.technologies }}
-  <p><strong>Technologies:</strong> {{ delimit . ", " }}</p>
   {{- end }}
   {{- with $r.gallery }}
   <h2>Gallery</h2>

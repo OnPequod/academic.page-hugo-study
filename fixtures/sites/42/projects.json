@@ -35,13 +35,6 @@
       "markdown": "The toolkit takes a protocol written as a structured file and produces the analysis data set, weights, and estimates.\n\nIt is used in three ongoing studies."
     },
     "status": "active",
-    "project_url": "https://example.org/ttetools",
-    "repository_url": "https://github.com/example/ttetools",
-    "technologies": [
-      "R",
-      "Stan",
-      "Quarto"
-    ],
     "start_date": "2024-09-01",
     "end_date": null,
     "display_order": 1,
@@ -138,9 +131,18 @@
       "title": null,
       "description": "An R package that turns a trial protocol into a reproducible emulation."
     },
-    "published_at": "2024-10-01T14:00:00Z",
     "created_at": "2024-10-01T08:00:00Z",
-    "updated_at": "2024-10-01T16:00:00Z"
+    "updated_at": "2024-10-01T16:00:00Z",
+    "links": [
+      {
+        "title": "Website",
+        "url": "https://example.org/ttetools"
+      },
+      {
+        "title": "Repository",
+        "url": "https://github.com/example/ttetools"
+      }
+    ]
   },
   {
     "id": 402,
@@ -169,12 +171,6 @@
       "markdown": "We linked 14 years of registry records to claims data to study delays between diagnosis and first treatment."
     },
     "status": "completed",
-    "project_url": null,
-    "repository_url": null,
-    "technologies": [
-      "R",
-      "SQL"
-    ],
     "start_date": "2021-01-15",
     "end_date": "2024-06-30",
     "display_order": 2,
@@ -196,9 +192,9 @@
       "title": null,
       "description": "Linking registry and claims data to study treatment delays."
     },
-    "published_at": "2023-03-01T14:00:00Z",
     "created_at": "2023-03-01T08:00:00Z",
-    "updated_at": "2023-03-01T16:00:00Z"
+    "updated_at": "2023-03-01T16:00:00Z",
+    "links": []
   },
   {
     "id": 403,
@@ -227,12 +223,6 @@
       "markdown": "All materials are licensed CC BY 4.0."
     },
     "status": "ongoing",
-    "project_url": "https://example.org/biostat-materials",
-    "repository_url": "https://github.com/example/biostat-materials",
-    "technologies": [
-      "Quarto",
-      "R"
-    ],
     "start_date": "2022-08-15",
     "end_date": null,
     "display_order": 3,
@@ -249,8 +239,17 @@
       "title": null,
       "description": "Slides, labs, and data sets for two graduate courses."
     },
-    "published_at": "2022-09-01T14:00:00Z",
     "created_at": "2022-09-01T08:00:00Z",
-    "updated_at": "2022-09-01T16:00:00Z"
+    "updated_at": "2022-09-01T16:00:00Z",
+    "links": [
+      {
+        "title": "Website",
+        "url": "https://example.org/biostat-materials"
+      },
+      {
+        "title": "Repository",
+        "url": "https://github.com/example/biostat-materials"
+      }
+    ]
   }
 ]
