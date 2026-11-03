@@ -193,6 +193,7 @@
       "type": "service",
       "service": "orcid",
       "label": "ORCID",
+      "path": null,
       "url": "https://orcid.org/0000-0002-1825-0097",
       "open_in_new_tab": true
     },
@@ -201,6 +202,7 @@
       "type": "service",
       "service": "google_scholar",
       "label": "Google Scholar",
+      "path": null,
       "url": "https://scholar.google.com/citations?user=EXAMPLE",
       "open_in_new_tab": true
     },
@@ -209,6 +211,7 @@
       "type": "service",
       "service": "github",
       "label": "GitHub",
+      "path": null,
       "url": "https://github.com/example",
       "open_in_new_tab": true
     },
@@ -217,7 +220,17 @@
       "type": "custom",
       "service": null,
       "label": "Lab website",
+      "path": null,
       "url": "https://castellanos-lab.biostatistician.page",
+      "open_in_new_tab": false
+    },
+    {
+      "id": 25,
+      "type": "internal",
+      "service": null,
+      "label": "My research",
+      "path": "/research",
+      "url": "https://castellanos.biostatistician.page/research",
       "open_in_new_tab": false
     }
   ],

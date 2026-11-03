@@ -18,7 +18,7 @@
     <ul class="contact-list">
       {{- with $p.location }}<li>{{ . }}</li>{{ end }}
       {{- with $p.email }}<li><a href="mailto:{{ . }}">{{ . }}</a></li>{{ end }}
-      {{- range $p.links }}<li><a href="{{ partial "path-url.html" .url }}"{{ if .open_in_new_tab }} target="_blank" rel="noopener"{{ end }}>{{ .label | default (humanize .service) }}</a></li>{{ end }}
+      {{- range $p.links }}<li><a href="{{ partial "path-url.html" (.path | default .url) }}"{{ if .open_in_new_tab }} target="_blank" rel="noopener"{{ end }}>{{ .label | default (humanize .service) }}</a></li>{{ end }}
     </ul>
     {{- with $p.about_page }}<p><a href="{{ partial "path-url.html" .path }}">More about {{ $p.name }}</a></p>{{ end }}
   </div>

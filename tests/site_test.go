@@ -400,7 +400,9 @@ func TestServedFromAFolder(t *testing.T) {
 	out, _ := build(t, ts.URL, "42", "HUGO_BASEURL=https://example.org/castellanos/")
 	mustContain(t, out, "index.html",
 		`<a class="site-name" href="/castellanos/">`,
-		`<a href="/castellanos/research/">Research</a>`)
+		`<a href="/castellanos/research/">Research</a>`,
+		`<a href="/castellanos/research/">My research</a>`)
+	mustNotContain(t, out, "index.html", `castellanos.biostatistician.page/research`)
 	mustContain(t, out, "posts/why-we-preregister-ehr-analyses/index.html",
 		`href="/castellanos/projects/registry-linkage"`)
 	mustNotContain(t, out, "posts/why-we-preregister-ehr-analyses/index.html", `href="/projects/`)

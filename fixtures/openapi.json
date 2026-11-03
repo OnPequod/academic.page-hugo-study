@@ -30,7 +30,7 @@
     },
     {
       "name": "Webhooks",
-      "description": "Requests Academic.page sends to your webhook URLs. Add webhooks on Account > API > Webhooks."
+      "description": "Requests Academic.page sends to your webhook URLs. Add webhooks on API & CLI > Webhooks."
     }
   ],
   "paths": {
@@ -574,6 +574,7 @@
                             "type": "academic",
                             "service": "orcid",
                             "label": "ORCID",
+                            "path": null,
                             "url": "https://orcid.org/0000-0002-1825-0097",
                             "open_in_new_tab": true
                           }
@@ -8407,7 +8408,7 @@
           "Webhooks"
         ],
         "summary": "A test from the account page",
-        "description": "Sent when you press **Send test** on Account > API > Webhooks. It is sent once, right away, and is not retried.\n\nTo check a request, split Academic-Page-Signature into `t` and `v1`. Compute the HMAC-SHA256, in lowercase hex, of `t`, a period, and the raw request body, keyed with the webhook's signing secret, and compare it with `v1` in constant time. Reject a request whose `t` is more than five minutes from your clock.",
+        "description": "Sent when you press **Send test** on API & CLI > Webhooks. It is sent once, right away, and is not retried.\n\nTo check a request, split Academic-Page-Signature into `t` and `v1`. Compute the HMAC-SHA256, in lowercase hex, of `t`, a period, and the raw request body, keyed with the webhook's signing secret, and compare it with `v1` in constant time. Reject a request whose `t` is more than five minutes from your clock.",
         "operationId": "webhookPing",
         "security": [],
         "parameters": [
@@ -8477,7 +8478,7 @@
       "bearerAuth": {
         "type": "http",
         "scheme": "bearer",
-        "description": "An API key from Account > API, sent as `Authorization: Bearer <key>`."
+        "description": "An API key from the API & CLI page, sent as `Authorization: Bearer <key>`."
       }
     },
     "parameters": {
@@ -9796,6 +9797,13 @@
                     "null"
                   ]
                 },
+                "path": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "description": "Path on the site for links to the site's own pages."
+                },
                 "url": {
                   "type": [
                     "string",
@@ -9925,6 +9933,7 @@
                 "type": "academic",
                 "service": "orcid",
                 "label": "ORCID",
+                "path": null,
                 "url": "https://orcid.org/0000-0002-1825-0097",
                 "open_in_new_tab": true
               }

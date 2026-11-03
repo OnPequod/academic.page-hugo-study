@@ -68,6 +68,7 @@
       "type": "service",
       "service": "github",
       "label": "GitHub",
+      "path": null,
       "url": "https://github.com/example",
       "open_in_new_tab": true
     }
