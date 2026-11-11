@@ -34,7 +34,9 @@ a:hover { text-decoration-thickness: 2px; }
 :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 img { max-width: 100%; height: auto; }
 .container { max-width: var(--measure); margin: 0 auto; padding: 0 1.25rem; }
-main { padding: 2rem 1.25rem 4rem; }
+/* main is also a .container, whose padding: 0 1.25rem outranks a bare
+   main selector and took away the space above and below the page. */
+main.container { padding-top: 2rem; padding-bottom: 4rem; }
 main:focus { outline: none; }
 
 .skip-link { position: absolute; left: -999px; top: .5rem; background: var(--bg); padding: .5rem 1rem; z-index: 10; }
